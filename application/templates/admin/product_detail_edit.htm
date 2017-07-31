@@ -1,0 +1,222 @@
+<div class="container-fluid"> 
+  <!-- BEGIN PAGE HEADER-->
+  <div class="row-fluid">
+    <div class="span12">
+      <h3 class="page-title"> <small> </small> </h3>
+      <ul class="breadcrumb">
+        <li> <i class="icon-home"></i> <a>商品管理</a> <span class="icon-angle-right"></span> </li>
+        <li> <a href="#">商品管理</a> <span class="icon-angle-right"></span> </li>
+        <li><a href="#">编辑商品详情</a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- END PAGE HEADER--> 
+  <!-- BEGIN PAGE CONTENT-->
+  <div class="row-fluid">
+    <div class="span12"> 
+      <!-- BEGIN VALIDATION STATES-->
+      <div class="portlet box blue">
+        <div class="portlet-title">
+          <div class="caption"><i class="icon-reorder"></i>编辑商品详情</div>
+        </div>
+        <div class="portlet-body form"> 
+          <!-- BEGIN FORM-->
+          <form action=""  id="sp_info" class="form-horizontal"  >
+            <{*验证提示*}>
+            <div id='alert-error_1' class="alert alert-error hide">
+              <button class="close" data-dismiss="alert"></button>
+              <span>提交失败</span> </div>
+            <div id='alert-success_1' class="alert alert-success hide">
+              <button class="close" data-dismiss="alert"></button>
+              <span>提交成功</span> </div>
+            <div class="control-group">
+              <div class="row-fluid" style="margin-top:10px;">
+                <div class="span12" >
+                  <label class="control-label">详情描述<span class="required">*</span></label>
+                  <div class="controls" > 
+                    <script>
+                       var server_auth="<{$ueditor_auth}>";
+                    </script> 
+                    <script type="text/javascript" charset="utf-8" src="/lib/ueditor/ueditor.config.js?v=<{$vsersion}>"></script> 
+                    <script type="text/javascript" charset="utf-8" src="/lib/ueditor/ueditor.all.js?v=<{$vsersion}>"> </script> 
+                    <script type="text/javascript" charset="utf-8" src="/lib/ueditor/lang/zh-cn/zh-cn.js?v=<{$vsersion}>"></script> 
+                    <!--建议手动加在语言，避免在ie下有时因为加载语言失败导致编辑器加载失败--> 
+                    <!--这里加载的语言文件会覆盖你在配置项目里添加的语言类型，比如你在配置项目里配置的是英文，这里加载的中文，那最后就是中文-->
+                    <textarea id="editor" style="width:100%; height:200px"  name="con"><{$re.con}></textarea>
+                    <script>
+                        var ue = UE.getEditor('editor');
+                    </script> 
+                    <!--script id="editor" type="text/plain" style="width:1024px;height:200px;"></script--> 
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-actions">
+              <input type="hidden" name="id" value="<{$re.id}>">
+              <span id="submit_sp_info"   class="btn green">提交</span> </div>
+          </form>
+          <!-- END FORM--> 
+        </div>
+      </div>
+      <!-- END VALIDATION STATES--> 
+    </div>
+  </div>
+  
+  <!-- END PAGE CONTENT--> 
+  
+</div>
+<script type="text/javascript" src="/static/js/jquery.validate.min.js?v=<{$vsersion}>"></script> 
+<script>
+    var server_auth="<{$ueditor_auth}>";
+</script> 
+<script>
+    function  set_back_pic(pic)
+    {
+        $('#upload_pic').val(pic);
+        $('#upload_pic_bg').attr('src',pic);
+        $('body').modalmanager('removeLoading');
+    }
+    function load_ini()
+    {
+        add_gg();
+        del_gg();
+        $('#upload_image').bind('click',function(){
+            $.fn.modal.defaults.width='80%';
+            $.fn.modal.defaults.height='400px';
+            $modal=$('#ajax-modal');
+            $modal.load('<{1|get_ueditor_image_url}><{$ueditor_auth}>','', function(){
+                $modal.modal();
+            });
+        });
+
+
+        var error1=$('#alert-error_1');
+        var success1=$('#alert-success_1');
+
+        var form1 = $('#sp_info');
+        form1.validate({
+            errorElement: 'span', //default input error message container
+            errorClass: 'help-inline', // default input error message class
+            focusInvalid: false, // do not focus the last invalid input
+            ignore: "",
+            rules: {
+                con: {
+                    required: true
+                }
+            },
+            messages : {
+                con:{
+                    required:'详情描述'
+                }
+            }
+            ,
+            invalidHandler: function (event, validator) { //display error alert on form submit
+                success1.hide();
+                error1.find('span').html('请完善提交内容再提交');
+                error1.show();
+                App.scrollTo(error1, -200);
+            },
+
+            highlight: function (element) { // hightlight error inputs
+                $(element)
+                        .closest('.help-inline').removeClass('ok'); // display OK icon
+                $(element)
+                        .closest('.control-group').removeClass('success').addClass('error'); // set error class to the control group
+            },
+
+            unhighlight: function (element) { // revert the change dony by hightlight
+                $(element)
+                        .closest('.control-group').removeClass('error'); // set error class to the control group
+            },
+
+            success: function (label) {
+                label.addClass('valid').addClass('help-inline ok') // mark the current input as valid and display OK icon
+                        .closest('.control-group').removeClass('error').addClass('success'); // set success class to the control group
+            },
+            submitHandler: function (form) {
+                /*
+                 $.post("?m=<{$smarty.get.m}>&s=<{$smarty.get.s}>&act_ajax=1",form1.serialize(),function(msg){
+                 success1.hide();
+                 if(msg==1)
+                 {
+                 success1.find('span').html('订阅成功');
+                 success1.show();
+                 }
+                 else
+                 {
+                 error1.find('span').html(msg);
+                 error1.show();
+                 }
+                 });
+                 */
+            }
+        });
+
+
+        $('#submit_sp_info').click(function(){
+
+            if(form1.valid()==true)
+            {
+
+                //encodeURI(msg)
+                $modal=$('#ajax-modal');
+                error1.hide();
+                success1.show();
+                success1.find('span').html('正在提交...........');
+                $('body').modalmanager('loading');
+                $.post('<{"product/product_add"|site_url}>/?act=product_detail_edit',form1.serialize(),function(msg){
+                    try
+                    {
+                        //alert(msg);
+                        eval("var str="+msg);
+                        //操作成功
+                        if(str.type==1)
+                        {
+                            //错误提示
+                            error1.show();
+                            success1.hide();
+                            error1.find('span').html(str.msg);
+                        }
+                        else if(str.type==2)
+                        {
+                            //提交成功
+                            error1.hide();
+                            success1.show();
+                            success1.find('span').html('提交成功');
+                        }
+                        else if(str.type==3)
+                        {
+                            //刷新主页面
+                            window.location='';
+                            return true;
+                        }
+                        setTimeout(modal_msg(str.msg),300);
+                    }catch(e){
+                        $('body').modalmanager('removeLoading');
+                        success1.hide();
+                        error1.find('span').html('系统异常');
+                        error1.show();
+                        setTimeout(modal_msg('系统异常'),300);
+                    };
+                });
+            }
+        });
+    }
+
+    var add_gg=function()
+    {
+        $('#add_gg').click(function(){
+
+            var ngg=$('<div class="control-group"> <label class="control-label"><span class="required"></span></label> <div class="controls"> <input type="text" name="con[]" class="span3 m-wrap"/>&nbsp;&nbsp;<p class="del" style="display: inline-block;color: red;line-height: 30px;">X</p></div></div>');
+            $(this).parents('div.control-group').before(ngg);
+
+        })
+    }
+
+    var del_gg=function(){
+        $('.del').live('click',function(){
+            $(this).parents('div.control-group').remove();
+        })
+    }
+
+</script>

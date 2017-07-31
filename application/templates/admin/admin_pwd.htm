@@ -1,0 +1,71 @@
+<div class="container-fluid"> 
+  
+  <!-- BEGIN PAGE HEADER-->
+  
+  <div class="row-fluid">
+    <div class="span12">
+    <h3 class="page-title"> <small> </small> </h3>
+      <ul class="breadcrumb">
+        <{$select_admin_name}>
+      </ul>
+    </div>
+  </div>
+  
+  <!-- END PAGE HEADER--> 
+  
+  <!-- BEGIN PAGE CONTENT-->
+  
+  <div class="row-fluid">
+    <div class="span12"> 
+      
+      <!-- BEGIN VALIDATION STATES-->
+      
+      <div class="portlet box blue">
+        <div class="portlet-title">
+          <div class="caption"><i class="icon-reorder"></i>密码修改</div>
+        </div>
+        <div class="portlet-body form"> 
+          <!-- BEGIN FORM-->
+          <form action=""  class="form-horizontal" method="post" >
+            <div class="control-group">
+              <label class="control-label">登陆账户<span class="required">*</span></label>
+              <div class="controls"> <span class="help-inline no-left-padding"><{$user}></span> </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label">旧密码<span class="required">*</span></label>
+              <div class="controls">
+                <input type="password" name="old_pwd" data-required="1" class="span6 m-wrap"/>
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label">新密码<span class="required">*</span></label>
+              <div class="controls">
+                <input type="password" name="new_pwd" data-required="1" class="span6 m-wrap"/>
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label">确认密码<span class="required">*</span></label>
+              <div class="controls">
+                <input type="password" name="new_pwd1" data-required="1" class="span6 m-wrap"/>
+              </div>
+            </div>
+            <div class="form-actions">
+               <input type="hidden" name="<{$csrf.name}>" value="<{$csrf.hash}>">
+              <button type="submit" class="btn green">提交</button>
+            </div>
+          </form>
+          <!-- END FORM--> 
+        </div>
+      </div>
+      <!-- END VALIDATION STATES--> 
+    </div>
+  </div>
+  <!-- END PAGE CONTENT--> 
+</div>
+<script>
+function load_ini()
+{
+	 
+}
+
+</script> 

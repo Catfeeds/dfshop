@@ -1,0 +1,240 @@
+<div class="container-fluid"> 
+  
+  <!-- BEGIN PAGE HEADER-->
+  
+  <div class="row-fluid">
+    <div class="span12"> 
+    <h3 class="page-title"> <small> </small> </h3>
+      <ul class="breadcrumb">
+         <{$select_admin_name}>
+      </ul>
+    </div>
+  </div>
+  <!-- END PAGE HEADER--> 
+
+  <!-- BEGIN PAGE CONTENT-->
+  <div class="row-fluid">
+        <div class="span12"> 
+          <!-- BEGIN VALIDATION STATES-->
+          <div class="portlet box blue">
+            <div class="portlet-title">
+              <div class="caption"><i class="icon-reorder"></i><{if empty($de.id)}>添加管理员<{else}>修改管理员<{/if}></div>
+            </div>
+            <div class="portlet-body form"> 
+              <!-- BEGIN FORM-->
+              <form action=""  id="form_admin_add"  class="form-horizontal" method="post" >
+               <{*验证提示*}>
+               <div id='alert-error_1' class="alert alert-error hide">
+                  <button class="close" data-dismiss="alert"></button>
+                  <span>提交失败</span></div>
+                <div id='alert-success_1' class="alert alert-success hide">
+                  <button class="close" data-dismiss="alert"></button>
+                  <span>提交成功</span></div>
+
+                <div class="control-group">
+                  <label class="control-label">用户账号<span class="required">*</span></label>
+                  <div class="controls">
+                   <{if empty($de.id)}>
+                   	   <input type="text" name="ps_user"  class="span6 m-wrap"/>
+                   <{else}>
+                    <label class="control-label" style="text-align:left;"><{$de.user}></label>
+                     <input type="hidden" name="ps_id"  value="<{$de.id}>" class="span6 m-wrap"/>
+                   <{/if}>
+                  </div>
+                </div>
+                
+                <div class="control-group">
+                  <label class="control-label">用户姓名<span class="required">*</span></label>
+                  <div class="controls">
+                   <input type="text" name="ps_name" value="<{$de.name}>" class="span6 m-wrap"/>
+                  </div>
+                </div>
+                
+                <div class="control-group">
+                  <label class="control-label">管理员组<span class="required">*</span></label>
+                  <div class="controls">
+                
+                  
+                   <select size="1" id="form_2_select2"  name="ps_group_id" class="form_2_select2 m-wrap span6">
+                      <option value="all" selected="selected" >所有组</option>
+                      <option value="0"   
+                      <{if $de.group_id==0&&isset($de.group_id)&&$de.group_id!='all'}>selected="selected"<{/if}>  >总管理员组</option>
+                      <{foreach item=v from=$group}>
+                      	<option value="<{$v.group_id}>"   <{if $de.group_id==$v.group_id}>selected="selected"<{/if}>  ><{$v.group_name}></option>
+                      <{/foreach}>
+                    </select>
+                  </div>
+                </div>   
+                
+                
+                
+                <div class="control-group">
+                  <label class="control-label">登陆密码<span class="required">*</span></label>
+                  <div class="controls">
+                    <input type="text" name="ps_password"  class="span6 m-wrap"/>
+                  </div>
+                </div>
+               
+               <div class="control-group">
+                  <label class="control-label">描述</label>
+                  <div class="controls">
+                   <textarea name="ps_desc" class="span6 m-wrap" ><{$de.desc}></textarea>
+                  </div>
+                </div>
+                
+                <div class="control-group">
+                  <label class="control-label">状态<span class="required">*</span></label>
+                  <div class="controls">
+                   <select size="1" id="form_2_select2"  name="ps_status" class="form_2_select2 m-wrap span6">
+                      <option value="all" selected="selected" >所有状态</option>
+                      <option value="0"   <{if $de.status==0}>selected="selected"<{/if}>   >关闭</option>
+					  <option value="1"   <{if $de.status==1}>selected="selected"<{/if}>   >启动</option>
+                    </select>
+                  </div>
+                </div>   
+                
+                <div class="form-actions">
+                  <input type="hidden" name="<{$csrf.name}>" value="<{$csrf.hash}>">
+                  <button type="button"  id='submit_admin_add'  class="btn green">提交</button>
+                </div>
+              </form>
+              <!-- END FORM--> 
+            </div>
+          </div>
+          <!-- END VALIDATION STATES--> 
+        </div>
+      </div>
+  
+  <!-- END PAGE CONTENT--> 
+  
+</div>
+
+<script type="text/javascript" src="/static/js/jquery.validate.min.js?v=<{$vsersion}>"></script> 
+<script>
+
+function load_ini()
+{
+	var error1=$('#alert-error_1'); 
+	var success1=$('#alert-success_1'); 
+	
+	var form1 = $('#form_admin_add');
+	form1.validate({
+		errorElement: 'span', //default input error message container
+		errorClass: 'help-inline', // default input error message class
+		focusInvalid: false, // do not focus the last invalid input
+		ignore: "",
+		rules: {
+			ps_name: {
+				required: true
+			}
+			,
+			ps_user: {
+				required: true
+			}
+		},
+		messages : {
+			ps_name:{
+				 required:'账号不能为空',
+			 }
+			,
+			ps_user: {
+				required: '登陆账号不能为空'
+			}
+		}
+		,
+		invalidHandler: function (event, validator) { //display error alert on form submit              
+			 success1.hide();
+			  error1.find('span').html('请完善提交内容再提交');
+			  error1.show();
+			  App.scrollTo(error1, -200);
+		},
+	
+		highlight: function (element) { // hightlight error inputs
+			$(element)
+				.closest('.help-inline').removeClass('ok'); // display OK icon
+			$(element)
+				.closest('.control-group').removeClass('success').addClass('error'); // set error class to the control group
+		},
+	
+		unhighlight: function (element) { // revert the change dony by hightlight
+			$(element)
+				.closest('.control-group').removeClass('error'); // set error class to the control group
+		},
+	
+		success: function (label) {
+			label.addClass('valid').addClass('help-inline ok') // mark the current input as valid and display OK icon
+			.closest('.control-group').removeClass('error').addClass('success'); // set success class to the control group
+		},
+		submitHandler: function (form) {
+			/*
+			$.post("?m=<{$smarty.get.m}>&s=<{$smarty.get.s}>&act_ajax=1",form1.serialize(),function(msg){
+				  success1.hide();
+				  if(msg==1)
+				  {
+					  success1.find('span').html('订阅成功');
+					  success1.show();	
+				  }
+				  else
+				  {
+					  error1.find('span').html(msg);
+					  error1.show();
+				  }
+			});
+			*/
+		}
+	});
+	
+	$("#submit_admin_add").click(function(){
+		if(form1.valid()==true)
+		{
+			//encodeURI(msg)
+			$modal=$('#ajax-modal');
+			error1.hide();
+			success1.show();
+			success1.find('span').html('正在提交...........');
+			$('body').modalmanager('loading');
+			$.post('<{"user/admin_add"|site_url}>',form1.serialize(),function(msg){
+				try
+				{
+					eval("var str="+msg);
+					//操作成功
+					if(str.type==1)
+					{
+						//错误提示
+						error1.show();
+						success1.hide();
+						error1.find('span').html(str.msg);
+					}
+					else if(str.type==2)
+					{
+						//提交成功
+						error1.hide();
+						success1.show();
+						success1.find('span').html('提交成功');
+					}
+					else if(str.type==3)
+					{
+						//刷新主页面
+						f_main_index();
+						return true;
+					}
+					
+					setTimeout(function(){
+					 $modal.load('<{"admin_index/admin_msg"|site_url}>?msg='+encodeURI(str.msg),'', function(){
+						$modal.modal();
+					 });
+					}, 300);
+				}catch(e){ 
+				    alert(msg);
+					$('body').modalmanager('removeLoading');
+					success1.hide();
+					error1.find('span').html('系统异常');
+					error1.show();
+			    };
+			});
+		}
+	});
+ 
+}
+
+</script> 

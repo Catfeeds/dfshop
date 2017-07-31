@@ -1,0 +1,52 @@
+<div class="row-fluid">
+  <div class="span12">
+    <form action="" id='sub_edit_from' method="post">
+      <table class="table table-striped table-bordered table-hover dataTable"  style="margin-left:10px;  width:570px;">
+        <thead>
+          <tr role="heading">
+            <th width="60" class="sorting_disabled" role="columnheader" tabindex="0" aria-controls="sample_1">ID</th>
+            <th width="*" class="sorting_disabled" role="columnheader" tabindex="0" aria-controls="sample_1">图片组名</th>
+            <th width="80" class="sorting_disabled" role="columnheader" tabindex="0" aria-controls="sample_1">操作</th>
+          </tr>
+        </thead>
+        <tbody role="alert" aria-live="polite" aria-relevant="all">
+            <{if $res}>
+                <{foreach item = item  from = $res}>
+                <tr>
+                  <td><{$item.id}></td>
+                  <td><input type="text"  name="old_name[<{$item.id}>]" value="<{$item.name}>" /></td>
+                  <td><a href="<{$url}>&del_id=<{$item.id}>"   class="btn red mini">删除</a></td>
+                </tr>
+                <{/foreach}>
+            <{/if}>
+        </tbody>
+      </table>
+    </form>
+    
+    <form action="" method="post">
+      <table class="table table-striped table-bordered table-hover dataTable"  style="margin-left:10px; width:570px;" >
+        <thead>
+          <tr role="heading">
+            <th colspan="4"> <input type="hidden" name="act" value="edit_cat" />
+              <div class="input-append" style="margin-left:10px; float:right;">
+                <input class="m-wrap small" style="border:1px solid red; background:#fff;" type="text" name="new_group" value="">
+                <button class="btn green" type="submit" name="new_sub">添加组</button>
+                <span class="btn blue"  id='sub_edit' style="margin-left:5px;" >修改</span>
+              </div>
+            </th>
+          </tr>
+        </thead>
+      </table>
+    </form>
+  </div>
+</div>
+
+<script>
+$('#sub_edit').bind('click',function(){
+	$("#sub_edit_from").submit();
+});
+
+<{if $msg_up}>
+window.parent.location.reload(true);
+<{/if}>
+</script>

@@ -1,0 +1,141 @@
+<div class="container-fluid"> 
+  <!-- BEGIN PAGE HEADER-->
+  <div class="row-fluid">
+    <div class="span12"> 
+      <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+      <h3 class="page-title"> <small> </small> </h3>
+      <ul class="breadcrumb">
+        <li> <i class="icon-home"></i> <a>网站管理</a> <span class="icon-angle-right"></span> </li>
+        <li> <a href="#">公共参数管理</a> <span class="icon-angle-right"></span> </li>
+        <li><a href="#">产品类型列表</a></li>
+      </ul>
+      <!-- END PAGE TITLE & BREADCRUMB--> 
+    </div>
+  </div>
+  <!-- END PAGE HEADER--> 
+  <!-- BEGIN PAGE CONTENT-->
+  <div class="row-fluid">
+    <div class="span12">
+      <div>
+        <div>
+          <div>
+            <form action="" method="post">
+              <table class="table table-striped table-bordered table-hover dataTable" id="product_cat" >
+                <thead>
+                  <tr role="heading">
+                    <th width="80" class="sorting_disabled" role="columnheader" tabindex="0" aria-controls="sample_1">操作</th>
+                    <th width="80" class="sorting_disabled" role="columnheader" tabindex="0" aria-controls="sample_1">品牌/规格</th>
+                    <th width="40" class="sorting_disabled" role="columnheader" tabindex="0" aria-controls="sample_1">ID</th>
+                    <th width="80" class="sorting_disabled" role="columnheader" tabindex="0" aria-controls="sample_1">上级分类ID</th>
+                    <th width="*" class="sorting_disabled" role="columnheader" tabindex="0" aria-controls="sample_1">分类名</th>
+                  </tr>
+                </thead>
+                <tbody role="alert" aria-live="polite" aria-relevant="all">
+                <{if $res_cat}>
+                    <{foreach item = item from = $res_cat}>
+                    <tr>
+                      <td width="80"><a href="<{"cat/cat_list"|site_url}>?del_id=<{$item.id}>"  style="<{if $item.pid!=0}>margin-left:15px;<{/if}>"  
+                       class="btn <{if $item.pid==0}>red<{/if}> mini">删除</a>
+                       </td>
+                      <td>
+                          <{if $item.pid!=0}>
+ 		                   <span data-id='<{$item.id}>' data-title='<{$item.cat|escape:"url"}>' class="btn  mini red act_gg">编辑规格</span>
+                           <span data-id='<{$item.id}>' data-title='<{$item.cat|escape:"url"}>' class="btn  mini blue act_brand">绑定品牌</span>
+                          <{/if}> 
+                      </td> 
+                      <td width="80"><{$item.id}><input type="hidden"  name="id[<{$item.id}>]" value="<{$item.id}>" /></td>
+                      <td width="80"><{$item.pid}>
+                      </td>
+                      <td width="*"><input type="text"  name="cat[<{$item.id}>]" value="<{$item.cat}>" /></td>
+                    </tr>
+                    <{/foreach}>
+                <{/if}>
+                </tbody>
+                <thead>
+                  <tr role="heading">
+                    <th colspan="4">
+                    <input type="hidden" name="act" value="edit_cat" />
+                     <button class="btn green" type="submit" style="float:left;"  name="edit_sub">修改分类</button>
+                    </th>
+                  </tr>
+                </thead>
+              </table>
+            </form>
+            <form action="" method="post">
+              <table class="table table-striped table-bordered table-hover dataTable">
+                <tr role="heading">
+                  <th colspan="4"> <select class="form_2_select2 m-wrap" style="float:left;" name="new_pid">
+                      <option value="0">顶级分类</option>
+                      <{foreach item=item from=$res_cat}> <{if $item.pid==0}>
+                      <option value="<{$item.id}>"><{$item.cat}></option>
+                      <{/if}> <{/foreach}>
+                    </select>
+                    <div class="span2" >
+                      <div class="input-append">
+                        <input class="m-wrap small" style="border:1px solid red; background:#fff;" type="text" name="new_cat" value="">
+                        <input type="hidden" name="act" value="add_cat" />
+                        <button class="btn green" type="submit" name="new_sub">添加分类</button>
+                      </div>
+                    </div>
+                  </th>
+                </tr>
+              </table>
+            </form>
+          </div>
+          <!--show window--> 
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END PAGE CONTENT--> 
+</div>
+<link href="/static/css/jquery.fancybox.css" rel="stylesheet">
+<script src="/static/js/jquery.fancybox.pack.js"></script>
+<link rel="stylesheet" type="text/css" href="/static/css/datepicker.css">
+<script type="text/javascript" src="/static/js/bootstrap-datepicker.js"></script> 
+<script>
+
+var bind_window=function()
+{
+	//编辑规格
+	$('#product_cat .act_gg').each(function(index, element) {
+        $(this).bind('click',function(){
+		     var select_id=$(this).attr('data-id');
+			 var select_title=$(this).attr('data-title');
+			 alertWin('编辑规格-'+decodeURIComponent(select_title),'','','<{"cat/cat_list"|site_url}>?act=product_gg&cat_id='+select_id);
+		});
+    });
+	
+	//编辑品牌
+	$('#product_cat .act_brand').each(function(index, element) {
+		$(this).bind('click',function(){
+			 var select_id=$(this).attr('data-id');
+			 var select_title=$(this).attr('data-title');
+			 alertWin('编辑规格-'+decodeURIComponent(select_title),800,400,'<{"cat/cat_list"|site_url}>?act=product_brand&cat_id='+select_id,1);
+		});
+    });
+}
+
+function load_ini()
+{
+	bind_window();
+
+	/*
+	jQuery('.group-checkable').change(function () {
+	  var set = jQuery(this).attr("data-set");
+	  var checked = jQuery(this).is(":checked");
+	  jQuery(set).each(function () {
+		  if (checked) {
+			  $(this).attr("checked", true);
+		  } else {
+			  $(this).attr("checked", false);
+		  }
+	  });
+	  jQuery.uniform.update(set);
+	});
+	*/
+	
+}
+
+</script> 

@@ -1,0 +1,210 @@
+<div class="container-fluid"> 
+  
+  <!-- BEGIN PAGE HEADER-->
+  
+  <div class="row-fluid">
+    <div class="span12"> 
+    <h3 class="page-title"> <small> </small> </h3>
+      <ul class="breadcrumb">
+        <li> <i class="icon-home"></i> <a>网站管理</a> <span class="icon-angle-right"></span> </li>
+        <li> <a href="#">公共参数管理</a> <span class="icon-angle-right"></span> </li>
+        <li><a href="#"><{if empty($cat_res)}>添加产品类型<{else}>修改产品类型<{/if}></a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <!-- END PAGE HEADER--> 
+  
+  <!-- BEGIN PAGE CONTENT-->
+  
+  <div class="row-fluid">
+        <div class="span12"> 
+          
+          <!-- BEGIN VALIDATION STATES-->
+          
+          <div class="portlet box blue">
+            <div class="portlet-title">
+              <div class="caption"><i class="icon-reorder"></i><{if empty($cat_res)}>添加产品类型<{else}>修改产品类型<{/if}></div>
+            </div>
+            <div class="portlet-body form"> 
+              <!-- BEGIN FORM-->
+              <form action="" id="form_cat_add" class="form-horizontal" method="post" >               
+                
+                <{*验证提示*}>
+                <div id='alert-error_1' class="alert alert-error hide">
+                  <button class="close" data-dismiss="alert"></button>
+                  <span>提交失败</span>
+                </div>
+                <div id='alert-success_1' class="alert alert-success hide">
+                  <button class="close" data-dismiss="alert"></button>
+                  <span>提交成功</span>
+                </div>
+                
+               <div class="control-group">
+                  <label class="control-label">上级分类<span class="required">*</span></label>
+                  <div class="controls">
+                    <select name="pcatid">
+                    	<option value="0">无上级分类</option>
+                        
+                        <{foreach item=d from=$pcat}>
+                         <option <{if $cat_res.pid==$d.id}>selected="selected"<{/if}> value="<{$d.id}>"><{$d.cat}></option>
+                        <{/foreach}>
+                        
+                    </select>(分类只允许有两级,上级分类不可修改只能修改分类名称)
+                  </div>
+                </div>
+                
+                <div class="control-group">
+                  <label class="control-label">分类名<span class="required">*</span></label>
+                  <div class="controls">
+                    <input type="text" name="cat" value="<{$cat_res.cat}>" data-required="1" class="span6 m-wrap"/>
+                  </div>
+                </div>
+                
+                <div class="form-actions">
+                  <input type="hidden" name="id" value="<{$cat_res.id}>"> 
+                  <input type="hidden" name="<{$csrf.name}>" value="<{$csrf.hash}>">			  
+                  <button type="submit" id='submit_cat_add' class="btn green">提交</button>
+                </div>
+              </form>
+              <!-- END FORM--> 
+            </div>
+          </div>
+          <!-- END VALIDATION STATES--> 
+        </div>
+      </div>
+  
+  <!-- END PAGE CONTENT--> 
+  
+</div>
+
+<script type="text/javascript" src="/static/js/jquery.validate.min.js?v=<{$vsersion}>"></script> 
+<script>
+
+function load_ini()
+{
+  var error1=$('#alert-error_1'); 
+  var success1=$('#alert-success_1'); 
+  
+  var form1 = $('#form_cat_add');
+  form1.validate({
+    errorElement: 'span', //default input error message container
+    errorClass: 'help-inline', // default input error message class
+    focusInvalid: false, // do not focus the last invalid input
+    ignore: "",
+    rules: {
+      ps_name: {
+        required: true
+      }
+      ,
+      ps_user: {
+        required: true
+      }
+    },
+    messages : {
+      ps_name:{
+         required:'账号不能为空',
+       }
+      ,
+      ps_user: {
+        required: '登陆账号不能为空'
+      }
+    }
+    ,
+    invalidHandler: function (event, validator) { //display error alert on form submit              
+       success1.hide();
+        error1.find('span').html('请完善提交内容再提交');
+        error1.show();
+        App.scrollTo(error1, -200);
+    },
+  
+    highlight: function (element) { // hightlight error inputs
+      $(element)
+        .closest('.help-inline').removeClass('ok'); // display OK icon
+      $(element)
+        .closest('.control-group').removeClass('success').addClass('error'); // set error class to the control group
+    },
+  
+    unhighlight: function (element) { // revert the change dony by hightlight
+      $(element)
+        .closest('.control-group').removeClass('error'); // set error class to the control group
+    },
+  
+    success: function (label) {
+      label.addClass('valid').addClass('help-inline ok') // mark the current input as valid and display OK icon
+      .closest('.control-group').removeClass('error').addClass('success'); // set success class to the control group
+    },
+    submitHandler: function (form) {
+      /*
+      $.post("?m=<{$smarty.get.m}>&s=<{$smarty.get.s}>&act_ajax=1",form1.serialize(),function(msg){
+          success1.hide();
+          if(msg==1)
+          {
+            success1.find('span').html('订阅成功');
+            success1.show();  
+          }
+          else
+          {
+            error1.find('span').html(msg);
+            error1.show();
+          }
+      });
+      */
+    }
+  });
+  
+  $("#submit_cat_add").click(function(){
+    if(form1.valid()==true)
+    {
+      //encodeURI(msg)
+      $modal=$('#ajax-modal');
+      error1.hide();
+      success1.show();
+      success1.find('span').html('正在提交...........');
+      $('body').modalmanager('loading');
+      $.post('<{"cat/cat_add"|site_url}>',form1.serialize(),function(msg){
+        try
+        {
+          eval("var str="+msg);
+          //操作成功
+          if(str.type==1)
+          {
+            //错误提示
+            error1.show();
+            success1.hide();
+            error1.find('span').html(str.msg);
+          }
+          else if(str.type==2)
+          {
+            //提交成功
+            error1.hide();
+            success1.show();
+            success1.find('span').html('提交成功');
+          }
+          else if(str.type==3)
+          {
+            //刷新主页面
+            f_main_index();
+            return true;
+          }
+          
+          
+          
+          setTimeout(function(){
+           $modal.load('<{"admin_index/admin_msg"|site_url}>?msg='+encodeURI(str.msg),'', function(){
+            $modal.modal();
+           });
+          }, 300);
+        }catch(e){ 
+          $('body').modalmanager('removeLoading');
+          success1.hide();
+          error1.find('span').html('系统异常');
+          error1.show();
+          };
+      });
+    }
+  });
+ 
+}
+
+</script> 

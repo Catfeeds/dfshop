@@ -1,0 +1,96 @@
+<div class="container-fluid">
+
+    <!-- BEGIN PAGE HEADER-->
+
+    <div class="row-fluid">
+        <div class="span12">
+            <h3 class="page-title"> <small> </small> </h3>
+            <ul class="breadcrumb">
+                <{$select_admin_name}>
+            </ul>
+        </div>
+    </div>
+    <!-- END PAGE HEADER-->
+
+    <!-- BEGIN PAGE CONTENT-->
+    <div class="row-fluid">
+        <div class="span12">
+            <!-- BEGIN VALIDATION STATES-->
+            <div class="portlet box blue">
+                <div class="portlet-title">
+                    <div class="caption"><i class="icon-reorder"></i>提现设置</div>
+                </div>
+                <div class="portlet-body form">
+                    <!-- BEGIN FORM-->
+                    <form action=""  id="form_submit"  class="form-horizontal" method="post" >
+
+                        <div class="control-group">
+
+                            <label class="control-label">提现支持账户<span class="required">*</span></label>
+
+                            <div class="controls">
+                                <label class="checkbox">
+                                    <input type="checkbox" name="config[account_wx]" value="1"  <{if $wx.account_wx==1}>checked<{/if}> >微信支付
+                                </label>
+                                <label class="checkbox">
+                                   <input type="checkbox"   name="config[account_xx]"   value="1" <{if $wx.account_xx==1}>checked<{/if}>>线下转账
+                                </label>
+                                <label class="checkbox">
+                                   <input type="checkbox"   name="config[account_hb]"   value="1"  <{if $wx.account_hb==1}>checked<{/if}> >微信红包
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="control-group">
+                            <label class="control-label">微信支持批量<span class="required">*</span></label>
+                            <div class="controls">
+                                <label class="radio">
+                                    <input type="radio" name="config[is_batch]" id="optionsRadios1" value="1" <{if $wx.is_batch==1}>checked<{/if}>>
+                                    开启
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="config[is_batch]" id="optionsRadios2" value="0" <{if $wx.is_batch==0}>checked<{/if}>>
+                                    关闭
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="control-group">
+                            <label class="control-label">姓名校验类型<span class="required">*</span></label>
+                            <div class="controls">
+                                <label class="radio">
+                                    <input type="radio" name="config[name_check_type]"  value="1" <{if $wx.name_check_type==1}>checked<{/if}> >
+                                    检验真实姓名
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="config[name_check_type]"  value="2" <{if $wx.name_check_type==2}>checked<{/if}>>
+                                    仅当用户是实名用户时校验真实姓名
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="config[name_check_type]"  value="0" <{if $wx.name_check_type==0}>checked<{/if}>>
+                                    不校验真实姓名
+                                </label>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">单次最低提现金额<span class="required">*</span></label>
+                            <div class="controls">
+                                <input type="text" name="config[min_money]"  class="span1 m-wrap" value="<{$wx.min_money}>"/>
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <input type="hidden" name="<{$csrf.name}>" value="<{$csrf.hash}>">
+                            <button type="submit"  id='submit_add'  class="btn green">保存</button>
+                        </div>
+
+                    </form>
+                    <!-- END FORM-->
+                </div>
+            </div>
+            <!-- END VALIDATION STATES-->
+        </div>
+    </div>
+
+    <!-- END PAGE CONTENT-->
+
+</div>

@@ -1,0 +1,385 @@
+<div class="container-fluid"> 
+  <!-- BEGIN PAGE HEADER-->
+  <div class="row-fluid">
+    <div class="span12">
+      <h3 class="page-title"> <small> </small> </h3>
+      <ul class="breadcrumb">
+        <{$select_admin_name}>
+      </ul>
+    </div>
+  </div>
+  <!-- END PAGE HEADER--> 
+  
+  <!-- BEGIN PAGE CONTENT-->
+  <div class="row-fluid">
+    <div class="span12"> 
+      <!-- BEGIN VALIDATION STATES-->
+      <div class="portlet box blue">
+        <div class="portlet-title">
+          <div class="caption"><i class="icon-reorder"></i>添加商品仓库和分类</div>
+        </div>
+        <div class="portlet-body form"> 
+          <!-- BEGIN FORM-->
+          <form action=''  id="form_submit"  class="form-horizontal" method="post" >
+            <{if empty($re.catid) OR empty($re.warehouse_id)}>
+            <div class="control-group">
+              <label class="control-label">仓库<span class="required">*</span></label>
+              <div class="controls">
+                <select size="1" name="proj_id" id="select_warehouse_id" aria-controls="sample_1" class="form_2_select2 m-wrap span6">
+                  <option value="">请选择</option>
+                  <{foreach item = item from = $re.warehouse}>
+                  <option value="<{$item.id}>|<{$item.name|escape:'url'}>"><{$item.name}></option>
+                  <{/foreach}>
+                </select>
+              </div>
+            </div>
+
+            <div class="control-group">
+              <label class="control-label">分类<span class="required">*</span></label>
+              <div class="controls">
+                <select size="1" name="proj_id"  id="select_cat" aria-controls="sample_1" class="form_2_select2 m-wrap span6">
+                  <option value="">请选择</option>
+                  <{foreach item = item from = $re.cat}>
+                  <option value="<{$item.id}>|<{$item.cat|escape:'url'}>"><{$item.cat}></option>
+                  <{/foreach}>
+                </select>
+              </div>
+            </div>
+            
+            <div class="control-group" id="c_ele"> </div>
+            <div class="form-actions">
+              <input type="hidden" name="<{$csrf.name}>" value="<{$csrf.hash}>">
+              <input type="hidden" value='<{$re.c_cat}>' id="c_cat">
+              <button type="button" id='submit_btn_next' class="btn green">下一步</button>
+            </div>
+            <{/if}>
+            
+            <{if !empty($re.catid) && !empty($re.warehouse_id)}>
+            <{*验证提示*}>
+            <div id='alert-error_1' class="alert alert-error hide">
+              <button class="close" data-dismiss="alert"></button>
+              <span>提交失败</span> </div>
+            <div id='alert-success_1' class="alert alert-success hide">
+              <button class="close" data-dismiss="alert"></button>
+              <span>提交成功</span> </div>
+            <table class="table table1">
+              <thead>
+                <tr>
+                  <th class="partition" colspan="99">商品基本信息</th>
+                </tr>
+              </thead>
+              <tr>
+			      <td colspan="99"><{include file='product_htm_info.htm'}> </td>
+               </tr>   
+              <thead>
+                <tr>
+                  <th class="partition" colspan="99">商品图片 </th>
+                </tr>
+              </thead>
+              <tr>
+                <td colspan="99"> <{include file='product_htm_pic.htm'}></td>
+              <thead>
+                <tr>
+                  <th class="partition" colspan="99">商品价格规格  </th>
+                </tr>
+              </thead>
+              <tr>
+                <td colspan="99"> 
+                      <{include file='product_htm_gg.htm'}>
+                      <{include file='product_htm_detail.htm'}>
+                 </td>
+              </tr>
+            </table>
+            <div class="form-actions">
+              <input type="hidden" name="type" value="add">
+              <input type="hidden" name="<{$csrf.name}>" value="<{$csrf.hash}>">
+              <button type="button"  id='submit_btn_prev' class="btn green">上一步</button>
+              <button type="button"  id='submit_btn' class="btn red">提交</button>
+            </div>
+            <{/if}>
+          </form>
+          <!-- END FORM--> 
+        </div>
+      </div>
+      <!-- END VALIDATION STATES--> 
+    </div>
+  </div>
+  <!-- END PAGE CONTENT--> 
+</div>
+<link href="/static/css/jquery.fancybox.css?v=<{$vsersion}>" rel="stylesheet">
+<script src="/static/js/jquery.fancybox.pack.js?v=<{$vsersion}>"></script> 
+<script type="text/javascript" src="/static/js/jquery.validate.min.js?v=<{$vsersion}>"></script>
+<link rel="stylesheet" type="text/css" href="/static/css/datepicker.css?v=<{$vsersion}>">
+<script type="text/javascript" src="/static/js/bootstrap-datepicker.js?v=<{$vsersion}>"></script> 
+<script>
+    var server_auth="<{$ueditor_auth}>";
+</script> 
+<script>
+    /*日期选择*/
+    $('.date-picker').datepicker({
+        format:'yyyy-mm-dd',
+        language: 'zh-CN',
+        weekStart: 1,
+        todayBtn:  1,
+        autoclose: 1,
+        todayHighlight: 0,
+        startView: 0,
+        forceParse: 0,
+        showMeridian: 1
+    });
+
+    function  set_back_pic(pic,back_id)
+    {
+        $('#'+back_id).val(pic);
+        $('#'+back_id+'_bg').attr('src',pic);
+        $('body').modalmanager('removeLoading');
+    }
+	
+    $('.form_2_select2').select2({
+        placeholder: "请选择",
+        allowClear: true
+    });
+	
+
+	var sub_from=function(){
+		var error1=$('#alert-error_1');
+        var success1=$('#alert-success_1');
+
+        var form1 = $('#form_submit');
+        form1.validate({
+            errorElement: 'span', //default input error message container
+            errorClass: 'help-inline', // default input error message class
+            focusInvalid: false, // do not focus the last invalid input
+            ignore: "",
+            rules: {
+                name: {
+                    required: true
+                }
+                ,
+                hg_type: {
+                    required: true
+                }
+                ,
+                brand:{
+                    required: true
+                }
+                ,
+                country:{
+                    required:true
+                }
+                ,
+				/*
+                temp_id:{
+                    required:true
+                }
+                ,*/
+                weight:{
+                    required:true
+                }
+                ,
+                cubage:{
+                    required:true
+                }
+
+                ,
+                rate:{
+                    required:true
+                }
+                ,
+                keywords:{
+                    required:true
+                }
+                ,
+               
+                start_time:{
+                    required:true
+                }
+                ,
+                valid_time:{
+                    required:true
+                }
+            },
+            messages : {
+                name:{
+                    required:'必填'
+                }
+                ,
+                hg_type: {
+                    required: '必填'
+                }
+                ,
+                brand: {
+                    required: '必填'
+                }
+                ,
+                country: {
+                    required: '必填'
+                }
+                ,
+               /* temp_id: {
+                    required: '必填'
+                }
+                ,*/
+                weight: {
+                    required: '必填'
+                }
+                ,
+                cubage: {
+                    required: '必填'
+                }
+
+
+                ,
+                rate: {
+                    required: '必填'
+                }
+                ,
+                keywords: {
+                    required: '必填'
+                }
+                ,
+               
+                start_time: {
+                    required: '必填'
+                }
+                ,
+                valid_time: {
+                    required: '必填'
+                }
+            }
+            ,
+            invalidHandler: function (event, validator) { //display error alert on form submit
+                success1.hide();
+                error1.find('span').html('请完善提交内容再提交');
+                error1.show();
+                App.scrollTo(error1, -200);
+            },
+
+            highlight: function (element) { // hightlight error inputs
+                $(element)
+                        .closest('.help-inline').removeClass('ok'); // display OK icon
+                $(element)
+                        .closest('.control-group').removeClass('success').addClass('error'); // set error class to the control group
+            },
+
+            unhighlight: function (element) { // revert the change dony by hightlight
+                $(element)
+                        .closest('.control-group').removeClass('error'); // set error class to the control group
+            },
+
+            success: function (label) {
+                label.addClass('valid').addClass('help-inline') // mark the current input as valid and display OK icon
+                        .closest('.control-group').removeClass('error').addClass('success'); // set success class to the control group
+            },
+            submitHandler: function (form) {
+
+            }
+        });
+		//无规格时
+				
+        $("#submit_btn_next").click(function()
+        {
+            var warehouse_id = $("#select_warehouse_id option:selected").val();
+            var cat_id = $("#select_cat_id  input:radio:checked").val();
+            if (warehouse_id && cat_id )
+            {
+                window.location.href = '<{"product/product_add"|site_url}>?index=1&warehouse_id='+warehouse_id+'&cat_id='+cat_id;
+            };
+        });
+
+        $("#submit_btn_prev").click(function()
+        {
+            window.location.href = '<{"product/product_add"|site_url}>';
+        });
+
+        $("#submit_btn").click(function(){
+			
+            if ( form1.valid()==true )
+            {
+                //encodeURI(msg)
+                $modal=$('#ajax-modal');
+                error1.hide();
+                success1.show();
+                success1.find('span').html('正在提交...........');
+                $('body').modalmanager('loading');
+
+                $.post('<{"product/product_add"|site_url}>',form1.serialize(),function(msg){
+                    try
+                    {
+                        eval("var str="+msg);
+                        //操作成功
+                        if(str.type==1)
+                        {
+                            //错误提示
+                            error1.show();
+                            success1.hide();
+                            error1.find('span').html(str.msg);
+                        }
+                        else if(str.type==2)
+                        {
+                            //提交成功
+                            error1.hide();
+                            success1.show();
+                            success1.find('span').html('提交成功');
+                        }
+                        else if(str.type==3)
+                        {
+                            //刷新主页面
+                            f_main_index();
+                            return true;
+                        }
+
+                        modal_msg(str.msg);
+                    }catch(e){
+                        alert(msg);
+                        $('body').modalmanager('removeLoading');
+                        success1.hide();
+                        error1.find('span').html('系统异常');
+                        error1.show();
+                        modal_msg('系统异常');
+                    };
+                });
+            }
+        });
+	}
+	
+
+    var change_cat=function()
+    {
+        $('#select_cat').change(function()
+        {
+            $('#c_ele').empty();
+            var cat= $(this).val().split("|");
+            var cat_id=cat[0];//分类ID
+            var c_el=$('<label class="control-label"></label> <div class="control span4" id="select_cat_id"> </div>');
+            $('#c_ele').append(c_el);
+            //子级分类
+            var c_cat= eval($('#c_cat').val());
+            for(var i=0;i<c_cat.length; i++)
+            {
+                if(c_cat[i].pid==cat_id)
+                {
+                    var cc=$('<label class="radio line" > <input type="radio"   name="c_cat"   value="'+c_cat[i].id+'|'+encodeURI(c_cat[i].cat)+'"/>'+ c_cat[i].cat +'</label> ');
+                    $('#c_ele div.control').append(cc);
+                }
+            }
+        })
+    }
+	
+
+    function load_ini()
+    {
+		
+        change_cat();
+		sub_from();
+        $('.upload_image').bind('click',function(){
+            $.fn.modal.defaults.width='80%';
+            $.fn.modal.defaults.height='400px';
+            $modal=$('#ajax-modal');
+            $modal.load('<{1|get_ueditor_image_url}><{$ueditor_auth}>&back_id='+$(this).attr('data-id'),'', function(){
+                $modal.modal();
+            });
+        });
+    }
+
+</script> 

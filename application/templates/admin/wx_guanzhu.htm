@@ -1,0 +1,62 @@
+<div class="container-fluid">
+
+    <!-- BEGIN PAGE HEADER-->
+
+    <div class="row-fluid">
+        <div class="span12">
+            <h3 class="page-title"> <small> </small> </h3>
+            <ul class="breadcrumb">
+                <li> <i class="icon-home"></i> <a>微信管理</a> <span class="icon-angle-right"></span> </li>
+                <li> <a href="#">微信设置</a> <span class="icon-angle-right"></span> </li>
+                <li><a href="#">一键关注</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- END PAGE HEADER-->
+
+    <!-- BEGIN PAGE CONTENT-->
+    <div class="row-fluid">
+        <div class="span12">
+            <!-- BEGIN VALIDATION STATES-->
+            <div class="portlet box blue">
+                <div class="portlet-title">
+                    <div class="caption"><i class="icon-reorder"></i>一键关注</div>
+                </div>
+                <div class="portlet-body form">
+                    <!-- BEGIN FORM-->
+                    <form action=""  id="form_submit"  class="form-horizontal" method="post" >
+                        <div class="control-group">
+                            <label class="control-label">是否开启关注引导<span class="required">*</span></label>
+                            <div class="controls">
+                                <label class="radio">
+                                    <input type="radio" name="config[is_open]" id="optionsRadios1" value="1" <{if $wx.is_open==1}>checked<{/if}>>
+                                    开启
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="config[is_open]" id="optionsRadios2"  value="0" <{if $wx.is_open==0}>checked<{/if}>>
+                                    关闭
+                                </label>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">微信引导页面地址<span class="required">*</span></label>
+                            <div class="controls">
+                                <input type="text" name="config[address]" class="span6 m-wrap" value="<{$wx.address}>" />
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <input type="hidden" name="<{$csrf.name}>" value="<{$csrf.hash}>">
+                            <button type="submit"  id='submit_add'  class="btn green">保存</button>
+                        </div>
+
+                    </form>
+                    <!-- END FORM-->
+                </div>
+            </div>
+            <!-- END VALIDATION STATES-->
+        </div>
+    </div>
+
+    <!-- END PAGE CONTENT-->
+
+</div>

@@ -1,0 +1,10 @@
+shop------url[Product/detail]----
+  【sql报错语句】 SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10004'ORDER BY `id` desc
+[0] D:\phpstudy\WWW\dfshop\application\models\Base_get_model.php line: 32
+[1] D:\phpstudy\WWW\dfshop\application\models\Base_Product_model.php line: 66---Unknown column 'gg_con_title_gg' in 'field list'
+
+shop------url[Product/detail]----
+  【sql报错语句】 SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10001'ORDER BY `id` desc
+[0] D:\phpstudy\WWW\dfshop\application\models\Base_get_model.php line: 32
+[1] D:\phpstudy\WWW\dfshop\application\models\Base_Product_model.php line: 66---Unknown column 'gg_con_title_gg' in 'field list'
+

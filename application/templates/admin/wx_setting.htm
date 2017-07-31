@@ -1,0 +1,70 @@
+<div class="container-fluid">
+
+    <!-- BEGIN PAGE HEADER-->
+
+    <div class="row-fluid">
+        <div class="span12">
+            <h3 class="page-title"> <small> </small> </h3>
+            <ul class="breadcrumb">
+                <li> <i class="icon-home"></i> <a>微信管理</a> <span class="icon-angle-right"></span> </li>
+                <li> <a href="#">公众号绑定</a> <span class="icon-angle-right"></span> </li>
+                <li><a href="#">设置</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- END PAGE HEADER-->
+
+    <!-- BEGIN PAGE CONTENT-->
+
+    <div class="row-fluid">
+        <div class="span12">
+
+            <!-- BEGIN VALIDATION STATES-->
+
+            <div class="portlet box blue">
+                <div class="portlet-title">
+                    <div class="caption"><i class="icon-reorder"></i>设置</div>
+                </div>
+                <div class="portlet-body form">
+                    <!-- BEGIN FORM-->
+                    <form action=""  id="sp_info" class="form-horizontal"  method="post" >
+                        <{*验证提示*}>
+                        <div id='alert-error_1' class="alert alert-error hide">
+                            <button class="close" data-dismiss="alert"></button>
+                            <span>提交失败</span> </div>
+                        <div id='alert-success_1' class="alert alert-success hide">
+                            <button class="close" data-dismiss="alert" ></button>
+                            <span>提交成功</span> </div>
+
+
+
+                        <div class="control-group">
+                            <label class="control-label">APPID<span class="required">*</span></label>
+                            <div class="controls">
+                                <input type="text" name="config[appid]" value="<{$wx.appid}>" class="span3 m-wrap"/>
+                            </div>
+                        </div>
+
+                        <div class="control-group" id="gg">
+                            <label class="control-label">AppSecret<span class="required">*</span></label>
+                            <div class="controls">
+                                <input type="text" name="config[appsecret]"  value="<{$wx.appsecret}>"  class="span3 m-wrap"/>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <input   type="submit"  class="btn green" value="提交">
+                        </div>
+
+                    </form>
+                    <!-- END FORM-->
+                </div>
+            </div>
+            <!-- END VALIDATION STATES-->
+        </div>
+    </div>
+
+    <!-- END PAGE CONTENT-->
+
+</div>

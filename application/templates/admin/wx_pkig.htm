@@ -1,0 +1,76 @@
+<div class="container-fluid">
+
+    <!-- BEGIN PAGE HEADER-->
+
+    <div class="row-fluid">
+        <div class="span12">
+            <h3 class="page-title"> <small> </small> </h3>
+            <ul class="breadcrumb">
+                <li> <i class="icon-home"></i> <a>微信管理</a> <span class="icon-angle-right"></span> </li>
+                <li> <a href="#">微信设置</a> <span class="icon-angle-right"></span> </li>
+                <li><a href="#">微信红包</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- END PAGE HEADER-->
+
+    <!-- BEGIN PAGE CONTENT-->
+    <div class="row-fluid">
+        <div class="span12">
+            <!-- BEGIN VALIDATION STATES-->
+            <div class="portlet box blue">
+                <div class="portlet-title">
+                    <div class="caption"><i class="icon-reorder"></i>微信红包设置</div>
+                </div>
+                <div class="portlet-body form">
+                    <!-- BEGIN FORM-->
+
+                    <form action=""  id="form_submit"  class="form-horizontal" method="post" >
+                        <div class="set-switch">
+                            <strong>提示</strong>
+                            <h3 style="font-size: 14px">还没开通微信支付？ <a target="_blank" href="https://mp.weixin.qq.com/cgi-bin/readtemplate?t=news/open-app-apply-guide_tmpl&amp;lang=zh_CN">立即免费申请开通微信支付接口</a></h3>
+                            <p>开通微信红包设置的前提是必须先开通微信支付，并在微信支付收款设置成功后才能使用。</p>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">是否开启<span class="required">*</span></label>
+                            <div class="controls">
+                                <label class="radio">
+                                    <input type="radio" name="config[is_open]" id="optionsRadios1" value="1"  <{if $wx.is_open==1}>checked<{/if}>>
+                                    开启
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="config[is_open]" id="optionsRadios2" value="0"  <{if $wx.is_open==0}>checked<{/if}>>
+                                    关闭
+                                </label>
+                            </div>
+                        </div>
+                        <div><a href="#" class="btn green">微信支付收款设置</a>如已成功设置微信支付收款，请忽略以上提示，直接设置微信红包。</div>
+                        <div class="control-group">
+                            <label class="control-label">微信证书：<span class="required">*</span></label>
+                            <div class="controls">
+                                <input type="text" name="config[certificate]" class="span3 m-wrap" value="<{$wx.certificate}>"/>
+                                <small class="help-block">上传格式为*****.p12,如：apiclient_cert.p12</small>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">证书密码：<span class="required">*</span></label>
+                            <div class="controls">
+                                <input type="text" name="config[certificate_pass]" class="span3 m-wrap" value="<{$wx.certificate_pass}>"/>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <input type="hidden" name="<{$csrf.name}>" value="<{$csrf.hash}>">
+                            <button type="submit"  id='submit_add'  class="btn green">保存</button>
+                        </div>
+                    </form>
+                    <!-- END FORM-->
+                </div>
+            </div>
+            <!-- END VALIDATION STATES-->
+        </div>
+    </div>
+
+    <!-- END PAGE CONTENT-->
+
+</div>

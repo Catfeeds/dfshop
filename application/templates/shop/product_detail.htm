@@ -1,0 +1,233 @@
+
+<link rel="stylesheet" href="/static/wap/detail.css?a=1" />
+<div id="cart1" style="display:none;"  class="cart-concern-btm-fixed five-column">
+  <div class="concern-cart"> 
+    <a class="dong-dong-icn  no_load"  id="imBottom"  href="#"> <em class="btm-act-icn"></em> <span class="focus-info"> 供应商 </span> </a> 
+    <a class="love-heart-icn no_load" id="focusOn" href="#"> <em class="btm-act-icn focus-out" id="attentionFocus"></em> <i class="focus-scale"></i> <span class="focus-info"> 关注 </span> </a> 
+    <a class="cart-car-icn  no_load" href="#"> <em class="btm-act-icn" id="shoppingCart"> <i class="order-numbers" id="carNum"></i> </em> <span class="focus-info">购物车</span> </a> </div>
+  <div class="action-list"> 
+    <a class="yellow-color add_cart no_load" id="add_cart_btn">加入购物车</a>  
+    <a class="red-color directorder no_load" id="buy_pay_btn">立即购买</a>  
+    <a class="yellow-color no_load" style="display:none" id="kanxs_btn" href="#" >查看相似</a> 
+    <a class="red-color directorder no_load" id="tz_btn" style="display:none" >到货通知</a> 
+  </div>   
+</div> 
+<div class="flick-menu-mask" id='spec_content_t1' style="display:block;"></div>
+<div class="spec-menu">
+  <div class="spec-menu-content spec-menu-show" id='spec_content_t2' style="display:block;">
+    <div class="spec-menu-top bdr-b">
+      <div class="spec-first-pic"> <img id="spec_image" src="<{$de.pic}>" > </div>
+      <a class="rt-close-btn-wrap spec-menu-close no_load">
+      <p class="flick-menu-close"></p>
+      </a>
+      <div class="spec-price" id="specJdPri" style="display: block; padding-top:10px;">
+     	  <span class="yang-pic spec-yang-pic"></span> <span id="spec_price"> <{$de.price}> 元</span> 
+       </div>
+        <div id="specWeightDiv" class="spec-weight"> 
+           <span>原价:</span> <span id="spec_mark_price"><i style="text-decoration:line-through;"><{$de.market_price}> 元</i></span>
+        </div>
+        <div id="specWeightDiv" class="spec-weight">
+           <span>库存:</span> <span id="spec_stock" style="color:red; font-weight:bold;"><{$de.stock}></span> 件  <span id="spec_weight">(0.39kg)</span> 
+       </div> 
+        <div id="specWeightDiv" class="spec-weight">
+           <span>货号:</span> <span id="spec_code"><{$de.stock}></span>  
+       </div> 
+       
+       <!--div id="specWeightDiv" class="spec-weight"> 
+      		
+      </div-->
+    </div>
+    <div class="spec-menu-middle">
+      <div class="prod-spec" id="prodSpecArea"> 
+        <!-- 已选 -->
+        <div class="spec-desc"> <span class="part-note-msg">已选</span>
+          <div id="select_spec" class="base-txt"> <{$de.name}> <{$gg_con.gg_con_title}> &nbsp;&nbsp;<span class="amount">1件</span> </div>
+        </div>
+        <{assign var=i  value=0}>
+        <div class="nature-container" > 
+          <div   id="gg_con" data-type='0'>
+           <{foreach item=item key=k1 from=$gg_con.cons}>
+              <div class="pro-color"> <span class="part-note-msg"><{$gg_con_title_gg.$i}></span>
+                <p class="item"> 
+                    <{foreach item=v key=k2 from=$item}>
+                    	<a data-id='<{$k2}>' class="a-item no_load <{if $selected_gg.$i==$k2}>selected<{/if}>" href="javascript:void(0)"><{$v}></a> 
+                    <{/foreach}>
+                    <{assign var=i  value=$i+1}>
+                </p>
+              </div>
+           <{/foreach}> 
+          </div> 
+          <!--数量-->
+          <div id="addCartNum" class="pro-count"> <span class="part-note-msg">数量</span>
+            <div class="quantity-wrapper">
+              <input type="hidden" id="limitSukNum1025423798" value="200">
+              <a class="quantity-decrease limited no_load"  onclick="minus()"> <em id="minus">-</em> </a>
+              <input type="tel" class="quantity"  style="height:24px; border-left:0px; border-right:0px;" size="4" value="1" id="number" onblur="modify();">
+              <a class="quantity-increase no_load"  onclick="plus()"> <em id="plus">+</em> </a> </div>
+            <span class="lowestbuy-tip">(限购200件)</span> </div>
+        </div>
+      </div>
+    </div>
+    <div class="flick-menu-btn spec-menu-btn"> 
+        <a class="yellow-color add_cart no_load" id="add_cart_btn_spec" style="transform-origin: 0px 0px 0px; opacity: 1; transform: scale(1, 1);">加入购物车</a> 
+        <a class="red-color directorder no_load" id="buy_pay_btn_spec" style="transform-origin: 0px 0px 0px; opacity: 1; transform: scale(1, 1);" >立即购买</a>
+        <a class="yellow-color no_load" id="kanxs_btn_spec" style="display:none;">查看相似</a> 
+        <a class="red-color  no_load"   id="tz_btn_spec" style="display:none;">到货通知</a> 
+        <!---
+        <{****************
+            <a class="red-color  disabled" style="display:none;"   id="waitingForAppointments_spec">等待预约</a> 
+            <a class="red-color" style="display:none;"   id="makeAppointments_spec">立即预约</a> 
+            <a class="red-color disabled"  style="display:none;"  id="waitingForBuying_spec">等待抢购</a> 
+            <a class="red-color" style="display: none;" id="buyImmediately_spec">立即抢购</a> 
+            <a class="red-color disabled" style="display: none;" id="appointmentsEnd_spec">预约结束</a> 
+            <a class="red-color" style="display: none;" id="yushou_add_cart_spec" onclick="specPresaleButtonToOrder();">立即预定</a> 
+        *****************}>
+        --->
+    </div>
+  </div>
+</div>
+<script>
+var default_product_id='<{$smarty.get.id}>';
+var product_id='<{$smarty.get.id}>';
+$('.flick-menu-close').bind('click',function(){
+	$('#spec_content_t1').hide();
+	$('#spec_content_t2').hide();
+	$('#cart1').show();
+	
+	if(default_product_id!=product_id)
+		window.location='?id='+product_id;
+});
+$('#gg_con .item').each(function(index, element) {
+	$(this).find('.a-item').bind('click',function(){
+		 if($('#gg_con').attr('data-type')!=0)
+		 	return '';
+		$('#gg_con').attr('data-type',1);	
+		 $('#gg_con .item').eq(index).find('.a-item').removeClass('selected');		
+		 $(this).addClass('selected');
+		 update_space();
+	});
+});
+function  update_space()
+{
+	var gg_group_md5='<{$gg_con.gg_group_id_md5}>';
+	var gg_group_id='<{$gg_con.gg_group_id}>';  
+	var title_str='';
+	var gg_ids=gg_group_id+"|gg";
+	$('#gg_con .item').each(function(index, element){
+		gg_ids+='|'+$('#gg_con .item').eq(index).find('.selected').attr('data-id');
+	});
+	$('body').modalmanager('loading');
+	$.post('<{"product/get_gg"|site_url}>',{gg_ids:gg_ids,gg_group_md5:gg_group_md5,gg_group_id:gg_group_id},function(msg){
+		 $('body').modalmanager('removeLoading');
+		 $('#gg_con').attr('data-type',0);
+		 try{
+		 	 eval("var json="+(msg)+";");
+			 if(json.msg=='1')
+			 {
+				$('#buy_pay_btn_spec').show();
+				$('#add_cart_btn_spec').show();
+				$('#kanxs_btn_spec').hide();
+				$('#tz_btn_spec').hide();
+				$('#spec_price').html(json.gg.price+' 元');
+				$('#spec_mark_price>i').html(json.gg.market_price+' 元');
+				$('#select_spec').html(json.gg.name+' '+json.gg.gg_con_title+'&nbsp;&nbsp;<span class="amount">1件</span>');
+				$('#spec_stock').html(json.gg.stock+'');
+				$('#spec_image').attr('src',json.gg.pic);
+				product_id=json.gg.product_id;
+			 }
+			 
+			 if(json.gg.stock==0||json.msg!='1')
+			 {
+				$('#add_cart_btn').hide();
+				$('#buy_pay_btn').hide();
+				$('#kanxs_btn').show();
+				$('#tz_btn').show();
+		     }
+			 
+		 }catch(e){}
+	});
+}
+/*<{if $de.stock==0}>*/
+$('#buy_pay_btn_spec').hide();
+$('#add_cart_btn_spec').hide();
+$('#kanxs_btn_spec').show();
+$('#tz_btn_spec').show();
+$('#add_cart_btn').hide();
+$('#buy_pay_btn').hide();
+$('#kanxs_btn').show();
+$('#tz_btn').show();
+/*<{/if}>*/
+$('#add_cart_btn,#buy_pay_btn').bind('click',function(){
+	var type=$(this).attr('id');
+	if(type=='add_cart_btn')
+	{
+		$('#spec_content_t1').show();
+		$('#spec_content_t2').show();
+		$('#cart1').hide();
+		$('#buy_pay_btn_spec').show();
+		$('#add_cart_btn_spec').show();
+		$('#kanxs_btn_spec').hide();
+		$('#tz_btn_spec').hide();
+		return;
+	}
+	
+	if(type=='buy_pay_btn')
+	{
+		$('#spec_content_t1').show();
+		$('#spec_content_t2').show();
+		$('#buy_pay_btn_spec').show();
+		$('#add_cart_btn_spec').hide();
+		$('#kanxs_btn_spec').hide();
+		$('#tz_btn_spec').hide();
+		return;
+	}
+});
+
+$('#add_cart_spec,#pay_spec,#ck_spec,#tz_spec').bind('click',function(){
+	var type=$(this).attr('id');
+	if(type=='add_cart_spec')
+	{
+
+	
+	}
+	
+	if(type=='pay_spec')
+	{
+		
+		
+	}
+	
+	if(type=='ck_spec')
+	{
+		
+		
+	}
+	
+	if(type=='tz_spec')
+	{
+		
+		
+	}
+	
+});
+
+
+function minus()
+{
+	$('#number').val($('#number').val()*1-1);
+	$('#number').val($('#number').val()<=0?1:$('#number').val());
+}
+
+function plus()
+{
+	$('#number').val($('#number').val()*1+1);
+}
+
+function modify()
+{
+	$('#number').val(($('#number').val()).replace(/[^0-9]*/g,""));
+	$('#number').val($('#number').val()==''?1:$('#number').val()*1);
+}
+
+
+</script>

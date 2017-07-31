@@ -1,0 +1,192 @@
+<div class="container-fluid">
+  <div class="modal-body">
+    <div class="tabbable tabbable-custom">
+      <ul class="nav nav-tabs">
+        <li class="active"><a href="#tab_1_1" class="tab_click" data-toggle="tab">产品规格</a></li>
+        <li ><a href="#tab_1_2"  class="tab_click" data-toggle="tab">基本信息</a></li>
+        <li ><a href="#tab_1_3"  class="tab_click" data-toggle="tab">详情图片</a></li>
+      </ul>
+      <div class="tab-content">
+        <div class="tab-pane active" id="tab_1_1">
+          <form action=''  id="form_submit_1"  class="form-horizontal" method="post" >
+            <{*验证提示*}>
+            <div id='alert-error_1' class="alert alert-error hide">
+              <button class="close" data-dismiss="alert"></button>
+              <span>提交失败</span> </div>
+            <div id='alert-success_1' class="alert alert-success hide">
+              <button class="close" data-dismiss="alert"></button>
+              <span>提交成功</span> </div>
+            <table class="table table1">
+              <thead>
+                <tr>
+                  <th> <{$re.name}> <{if $gg_con.gg_con_title}> - <font color="#990000"><{$gg_con.gg_con_title}></font><{/if}>   </th>
+                </tr>
+              </thead>
+              <tr>
+                <td><{include file='product_htm_gg.htm'}> </td>
+              </tr>
+            </table>
+            <div class="form-actions">
+              <input type="hidden" name="id" value="<{$re.id}>">
+              <input type="hidden" name="<{$csrf.name}>" value="<{$csrf.hash}>">
+              <button type="button" data-act='product_edit'  id='submit_btn_1' class="btn red">提交</button>
+            </div>
+          </form>
+        </div>
+        <div class="tab-pane" id="tab_1_2">
+          <form action=''  id="form_submit_2"  class="form-horizontal" method="post" >
+            <{*验证提示*}>
+            <div id='alert-error_2' class="alert alert-error hide">
+              <button class="close" data-dismiss="alert"></button>
+              <span>提交失败</span> </div>
+            <div id='alert-success_2' class="alert alert-success hide">
+              <button class="close" data-dismiss="alert"></button>
+              <span>提交成功</span> </div>
+            <table class="table table1">
+              <thead>
+                <tr>
+                  <th> <{$re.name}> <{if $gg_con.gg_con_title}> - <font color="#990000"><{$gg_con.gg_con_title}></font><{/if}></th>
+                </tr>
+              </thead>
+              
+              <tr>
+                <td><{include file='product_htm_info.htm'}> </td>
+              </tr>
+            </table>
+            <div class="form-actions">
+              <input type="hidden" name="id" value="<{$re.id}>">
+              <input type="hidden" name="<{$csrf.name}>" value="<{$csrf.hash}>">
+              <button type="button"  id='submit_btn_2' class="btn red">提交</button>
+            </div>
+          </form>
+        </div>
+        <div class="tab-pane" id="tab_1_3"> 
+          <form action=''  id="form_submit_3"  class="form-horizontal" method="post" >
+            <{*验证提示*}>
+            <div id='alert-error_3' class="alert alert-error hide">
+              <button class="close" data-dismiss="alert"></button>
+              <span>提交失败</span> </div>
+            <div id='alert-success_3' class="alert alert-success hide">
+              <button class="close" data-dismiss="alert"></button>
+              <span>提交成功</span> </div>
+              
+               <table class="table table1">
+              <thead>
+                <tr>
+                  <th> <{$re.name}><{if $gg_con.gg_con_title}> - <font color="#990000"><{$gg_con.gg_con_title}></font><{/if}></th>
+                </tr>
+              </thead>
+               <tr>
+                <td><{include file='product_htm_pic.htm'}></td>
+              </tr>
+             
+              <tr>
+                <td><{include file='product_htm_detail.htm'}></td>
+              </tr>
+            </table> 
+        		
+            <div class="form-actions">
+              <input type="hidden" name="id" value="<{$re.id}>">
+              <input type="hidden" name="<{$csrf.name}>" value="<{$csrf.hash}>">
+              <button type="button"  id='submit_btn_3' class="btn red">提交</button>
+            </div>
+          </form>      
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END PAGE CONTENT--> 
+</div>
+<link href="/static/css/jquery.fancybox.css?v=<{$vsersion}>" rel="stylesheet">
+<script src="/static/js/jquery.fancybox.pack.js?v=<{$vsersion}>"></script> 
+<script type="text/javascript" src="/static/js/jquery.validate.min.js?v=<{$vsersion}>"></script>
+<link rel="stylesheet" type="text/css" href="/static/css/datepicker.css?v=<{$vsersion}>">
+<script type="text/javascript" src="/static/js/bootstrap-datepicker.js?v=<{$vsersion}>"></script> 
+<script>
+
+    var server_auth="<{$ueditor_auth}>";
+</script> 
+<script>
+    /*日期选择*/
+    $('.date-picker').datepicker({
+        format:'yyyy-mm-dd',
+        language: 'zh-CN',
+        weekStart: 1,
+        todayBtn:  1,
+        autoclose: 1,
+        todayHighlight: 0,
+        startView: 0,
+        forceParse: 0,
+        showMeridian: 1
+    });
+
+    function  set_back_pic(pic,back_id)
+    {
+        $('#'+back_id).val(pic);
+        $('#'+back_id+'_bg').attr('src',pic);
+        $('body').modalmanager('removeLoading');
+    }
+    $('.form_2_select2').select2({
+        placeholder: "请选择",
+        allowClear: true
+    });
+	
+	var sub_from=function(type){
+		var url=new Array();
+		url[1]='<{"product/product_add"|site_url}>/?act=up_gg'; //更新规格
+		url[2]='<{"product/product_add"|site_url}>/?act=up_info'; //更新基本信息
+		url[3]='<{"product/product_add"|site_url}>/?act=up_detail'; //更新内容和图片
+		
+        $("#submit_btn_"+type).click(function(){
+			//encodeURI(msg)
+			$modal=$('#ajax-modal');
+			success1.find('span').html('正在提交...........');
+			$('body').modalmanager('loading');
+			$.post(url[type],$('#form_submit_'+type).serialize(),function(msg){
+				try
+				{
+					eval("var str="+msg);
+					//操作成功
+					if(str.type==1)
+					{
+						//错误提示
+						error1.show();
+						success1.hide();
+						error1.find('span').html(str.msg);
+					}
+					else if(str.type==2)
+					{
+						//提交成功
+						error1.hide();
+						success1.show();
+						success1.find('span').html('提交成功');
+					}
+					else if(str.type==3)
+					{
+						//刷新主页面
+						f_main_index();
+						return true;
+					}
+					modal_msg(str.msg);
+				}catch(e){
+					$('body').modalmanager('removeLoading');
+					modal_msg('系统异常');
+				};
+			});
+        });
+	
+	}
+	
+    function load_ini()
+    {
+        $('.upload_image').bind('click',function(){
+            $.fn.modal.defaults.width='80%';
+            $.fn.modal.defaults.height='400px';
+            $modal=$('#ajax-modal');
+            $modal.load('<{1|get_ueditor_image_url}><{$ueditor_auth}>&back_id='+$(this).attr('data-id'),'', function(){
+                $modal.modal();
+            });
+        });
+    }
+
+</script> 

@@ -1,0 +1,185 @@
+<div class="row-fluid">
+<form action="" id='form_add' method="post">
+      <table class="table table-striped table-bordered table-hover dataTable"  >
+        <thead>
+          <tr role="heading">
+            <th width="80" class="sorting_disabled" role="columnheader" tabindex="0" aria-controls="sample_1">操作</th>
+            <th width="100" class="sorting_disabled" role="columnheader" tabindex="0" aria-controls="sample_1">规格名称</th>
+            <th width="*" class="sorting_disabled" role="columnheader" tabindex="0" aria-controls="sample_1">规格项</th>
+          </tr>
+        </thead>
+         <tr >
+          <td></td>
+          <td>如:颜色</td>
+          <td>如:红色,白色,蓝色</td>
+        </tr>
+        <tbody role="alert" aria-live="polite" id='gg_list' aria-relevant="all">
+        <tr style="display:none;">
+          <td><span class="btn red mini gg_del">删除</span>
+                <!--span class="btn  yellow mini gg_del">不可删除</span-->
+          </td>
+          <td><input type="text" name="gg_name[]"  style="width:80px;" value="" />
+              <input type="hidden" name="gg_id[]"  style="width:80px;" value="" />
+          </td>
+          <td><div class="gg_list">
+          	   <label style="width:140px; float:left; display:none;"><input type="text" class="item"  data-id='0' style="width:80px;" value="" /> <span class="btn red mini delete">删</span> </label>
+          	  </div>
+              <div style="clear:both;"></div>
+              <input type="hidden" class='gg_name_list' name="gg_name_list[]" value="" />
+              <span  data-gg-id='<{$item.id}>'  class="btn green mini act_add" />新增项</span>
+         </td>
+        </tr>
+        <{foreach item=item  from=$res}>
+            <tr>
+              <td><span data-gg-id='<{$item.id}>' class="btn red mini gg_del">删除</span></td>
+              <td><input type="text" name="gg_name[]"  style="width:80px;" value="<{$item.name}>" />
+                  <input type="hidden" name="gg_id[]"  style="width:80px;" value="<{$item.id}>" />
+                  <input type="hidden" id='del_item_<{$item.id}>' name="gg_del_item_id[]"  style="width:80px;" value="" />
+              </td>
+              <td><div class="gg_list">
+                   <label style="width:140px; float:left; display:none;"><input type="text" class="item"   data-id='0' style="width:80px;" value="" /> <span class="btn red mini delete">删</span> </label>
+                   <{foreach item=v from=$item.list}>
+                  	 <label style="width:140px; float:left;"><input type="text" class="item"  data-id='<{$v.id}>' style="width:80px;" value="<{$v.name}>" /> <span  data-gg-id='<{$item.id}>' data-id='<{$v.id}>' class="btn red mini delete">删</span> </label>
+                   <{/foreach}>	
+                  </div>
+                  <div style="clear:both;"></div>
+                  <input type="hidden" class='gg_name_list' name="gg_name_list[]" value="" />
+                  <span class="btn green mini act_add" />新增项</span>
+             </td>
+            </tr>
+        <{/foreach}>
+        </tbody>
+        <tr>
+          <td><span class="btn blue mini" id='add_gg' />新增规格</span></td>
+          <td colspan="2">
+          <input type="hidden" name="gg_delete_id" id='gg_delete_id' value="" /> 
+          <input type="hidden" name="cat_id" value="<{$smarty.get.cat_id}>" /> <span class="btn red mini" id='up_gg' />更新规格</span></td>
+        </tr>
+      </table>
+</form>      
+</div>
+<script>
+
+var gg_action=function(){
+	$('#gg_list tr').each(function(index, element) {
+        $(this).find('.act_add').unbind('click').bind('click',function(){
+			$('#gg_list tr .gg_list').eq(index).append(function(index1, html1) {
+                return '<label style="width:140px; float:left;">'+$(this).find('label').html()+'</label>';
+            });
+			$(this).find('label').each(function(index, element){
+				if(index==0)
+					$(this).hide();
+				else
+					$(this).show();
+            });
+			gg_adction_del();
+			gg_list();
+		});
+    });
+	gg_adction_del();
+}
+
+var gg_adction_del=function(){
+	$('#gg_list tr .gg_del').each(function(index, element) {
+       	$(this).unbind('click').bind('click',function(){
+			 var ggid=$(this).attr('data-gg-id'); 
+			 $('#gg_delete_id').val($('#gg_delete_id').val()+','+ggid);
+			 $('#gg_list tr').eq(index).remove();
+			 gg_adction_del();
+		});
+    });
+}
+
+//绑定删除
+var gg_list_del=function(){	
+	$('#gg_list .gg_list label').each(function(index, element) {
+        $('#gg_list .gg_list label .delete').eq(index).unbind('click').bind('click',function(){
+			 var ggid=$(this).attr('data-gg-id'); 
+			 var id=$(this).attr('data-id');
+			 $('#del_item_'+ggid).val($('#del_item_'+ggid).val()+','+id);
+			 $('#gg_list .gg_list label').eq(index).remove();
+			 gg_list_del();
+		});
+    });
+}
+
+//添加规格
+var gg_list=function(){
+	gg_action();
+	$('#add_gg').unbind('click').bind('click',function(){
+		$('#gg_list').append(function(index, html) {
+           return  '<tr>'+$('#gg_list tr').eq(0).html()+'</tr>';
+        });
+		$('#gg_list tr').show();
+		$('#gg_list tr').eq(0).hide();
+		gg_list();
+	});
+	gg_list_del();
+}
+
+var gg_up_gg=function(){
+	$('#up_gg').unbind('click').bind('click',function(){
+		//gg_name_list
+		//.gg_list item
+		$('#form_add .gg_list').each(function(index, element) {
+			if(index!=0)
+			{
+				var str='';
+				$(this).find('.item').each(function(index, element) {
+					if(index!=0)
+						str+="|@|"+$(this).attr('data-id')+'|#|'+$(this).val();
+				});
+				$('#form_add .gg_name_list').eq(index).val(str);
+			}
+        });
+		$('#form_add').submit();
+	});
+}
+
+function load_ini()
+{
+	gg_list();
+	gg_up_gg();
+	var form1=$('#form1');
+	$('#form1_sub').bind('click',function(){
+		$('body').modalmanager('loading');
+		$.post('<{"cat/cat_list"|site_url}>?act=product_brand',form1.serialize(),function(msg){
+			try
+			{
+				eval("var str="+msg);
+				//操作成功
+				if(str.type==1)
+				{	
+					//失败
+				}
+				else if(str.type==2)
+				{
+					//弹出窗口不关闭
+				}
+				else if(str.type==3)
+				{
+					setTimeout(function(){
+						//1秒后关闭
+						modal_msg(str.msg +'  <font color="red">1秒后自动关闭</font>',function(){
+							setTimeout(function(){
+								window.parent.f_main_index();
+							},1000);
+						});
+					}
+					,300);
+					return true;
+				}
+				
+				setTimeout(function(){
+					modal_msg(str.msg );
+				}
+				,300);
+			}catch(e){
+				setTimeout(function(){
+					modal_msg('系统异常');
+				},300);
+			};
+		});
+	});
+}
+</script> 

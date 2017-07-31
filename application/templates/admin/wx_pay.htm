@@ -1,0 +1,98 @@
+<div class="container-fluid">
+
+    <!-- BEGIN PAGE HEADER-->
+
+    <div class="row-fluid">
+        <div class="span12">
+            <h3 class="page-title"> <small> </small> </h3>
+            <ul class="breadcrumb">
+                <li> <i class="icon-home"></i> <a>微信管理</a> <span class="icon-angle-right"></span> </li>
+                <li> <a href="#">微信设置</a> <span class="icon-angle-right"></span> </li>
+                <li><a href="#">微信支付</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- END PAGE HEADER-->
+
+    <!-- BEGIN PAGE CONTENT-->
+    <div class="row-fluid">
+        <div class="span12">
+            <!-- BEGIN VALIDATION STATES-->
+            <div class="portlet box blue">
+                <div class="portlet-title">
+                    <div class="caption"><i class="icon-reorder"></i>设置收款账号</div>
+                </div>
+            </div>
+                <div class="tabbable tabbable-custom" id='tab_all'>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="tab_1_1">
+                            <!-- BEGIN FORM-->
+                            <form action=""  id="form_submit"  class="form-horizontal" method="post" >
+                                <div class="set-switch">
+                                    <strong>微信支付收款设置</strong>
+                                    <p>还没开通微信支付？<a target="_blank" href="https://mp.weixin.qq.com/cgi-bin/readtemplate?t=news/open-app-apply-guide_tmpl&amp;lang=zh_CN">立即免费申请开通微信支付接口</a></p>
+                                    <p>微信支付只支持会员在微信客户端购买付款，如需支持客户在其他浏览器上购买，请设置其他收款方式。</p>
+
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">是否开启<span class="required">*</span></label>
+                                    <div class="controls">
+                                        <label class="radio">
+                                            <input type="radio" name="config[is_open]" id="optionsRadios1" value="1"  <{if $wx.is_open==1}>checked<{/if}>>
+                                            开启
+                                        </label>
+                                        <label class="radio">
+                                            <input type="radio" name="config[is_open]" id="optionsRadios2" value="0"  <{if $wx.is_open==0}>checked<{/if}>>
+                                            关闭
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">AppId：<span class="required">*</span></label>
+                                    <div class="controls">
+                                        <input type="text" name="config[appid]" class="span3 m-wrap" value="<{$wx.appid}>"/>
+                                        <small class="help-block">微信公众号身份的唯一标识</small>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">AppSecret：<span class="required">*</span></label>
+                                    <div class="controls">
+                                        <input type="text" name="config[appsecret]" class="span3 m-wrap" value="<{$wx.appsecret}>"/>
+                                        <small class="help-block">审核后在公众平台开启开发模式后可查看</small>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">MCH_ID：<span class="required">*</span></label>
+                                    <div class="controls">
+                                        <input type="text" name="config[mch_id]" class="span3 m-wrap" value="<{$wx.mch_id}>" />
+                                        <small class="help-block">微信支付商户号，审核通过后，在微信发送的邮件中查看。</small>
+
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">Key：<span class="required">*</span></label>
+                                    <div class="controls">
+                                        <input type="text" name="config[key]" class="span3 m-wrap" value="<{$wx.key}>"/>
+                                        <small class="help-block">商户支付密钥Key。请登录<a target="_blank" href="https://pay.weixin.qq.com/index.php/home/login?return_url=%2F"> 微信支付商户平台</a> ，在【账户设置-安全设置-API安全】中设置。</small>
+                                    </div>
+                                </div>
+
+                                <div class="form-actions">
+                                    <input type="hidden" name="<{$csrf.name}>" value="<{$csrf.hash}>">
+                                    <button type="submit"  id='submit_add'  class="btn green">保存</button>
+                                </div>
+
+                            </form>
+                        </div>
+
+                </div>
+
+            </div>
+            <!-- END VALIDATION STATES-->
+        </div>
+    </div>
+
+    <!-- END PAGE CONTENT-->
+
+</div>
+<script type="text/javascript" src="/static/js/bootstrap-switch.min.js"></script>

@@ -1,0 +1,240 @@
+<div class="container-fluid">
+
+    <!-- BEGIN PAGE HEADER-->
+
+    <div class="row-fluid">
+        <div class="span12">
+            <h3 class="page-title"> <small> </small> </h3>
+            <ul class="breadcrumb">
+                <li> <i class="icon-home"></i> <a>品牌管理</a> <span class="icon-angle-right"></span> </li>
+                <li> <a href="#">品牌分类</a> <span class="icon-angle-right"></span> </li>
+                <li><a href="#">编辑品牌</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- END PAGE HEADER-->
+
+    <!-- BEGIN PAGE CONTENT-->
+
+    <div class="row-fluid">
+        <div class="span12">
+
+            <!-- BEGIN VALIDATION STATES-->
+
+            <div class="portlet box blue">
+                <div class="portlet-title">
+                    <div class="caption"><i class="icon-reorder"></i>编辑品牌</div>
+                </div>
+                <div class="portlet-body form">
+                    <!-- BEGIN FORM-->
+                    <form action=""  id="sp_info" class="form-horizontal"  >
+                        <{*验证提示*}>
+                        <div id='alert-error_1' class="alert alert-error hide">
+                            <button class="close" data-dismiss="alert"></button>
+                            <span>提交失败</span> </div>
+                        <div id='alert-success_1' class="alert alert-success hide">
+                            <button class="close" data-dismiss="alert"></button>
+                            <span>提交成功</span> </div>
+                        <div class="control-group">
+                            <label class="control-label">品牌名<span class="required">*</span></label>
+                            <div class="controls">
+                                <input type="text" name="name" class="span3 m-wrap" value="<{$re.name}>"/>
+                            </div>
+                        </div>
+
+                        <div class="control-group">
+                            <label class="control-label">品牌Logo<span class="required">*</span></label>
+                            <div class="controls" >
+                                <div  style="width:300px; height:300px; border:1px solid red; display:block;"> <img width="100%"  id='upload_pic_bg' src="<{$re.pic}>" /> </div>
+                                <span class="btn"  id='upload_image' style="width:300px;padding:0px; ">上传主图</span>
+                                <input  type="hidden"  id='upload_pic' name="pic" value="<{$re.pic}>"/>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">是否开启<span class="required">*</span></label>
+                            <div class="controls">
+                                <label class="radio">
+                                    <input type="radio" name="status" id="optionsRadios1" value="1" <{if $re.status==1}>checked<{/if}>>
+                                    开启
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="status" id="optionsRadios2" value="0" <{if $re.status==0}>checked<{/if}>>
+                                    关闭
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <input type="hidden" name="id" value="<{$re.id}>">
+                            <span id="submit_sp_info"   class="btn green">提交</span>
+                        </div>
+
+                    </form>
+                    <!-- END FORM-->
+                </div>
+            </div>
+            <!-- END VALIDATION STATES-->
+        </div>
+    </div>
+
+    <!-- END PAGE CONTENT-->
+
+</div>
+<script type="text/javascript" src="/static/js/jquery.validate.min.js?v=<{$vsersion}>"></script>
+<script>
+
+    var server_auth="<{$ueditor_auth}>";
+</script>
+<script>
+    function  set_back_pic(pic)
+    {
+        $('#upload_pic').val(pic);
+        $('#upload_pic_bg').attr('src',pic);
+        $('body').modalmanager('removeLoading');
+    }
+    function load_ini()
+    {
+
+        $('#upload_image').bind('click',function(){
+            $.fn.modal.defaults.width='80%';
+            $.fn.modal.defaults.height='400px';
+            $modal=$('#ajax-modal');
+            $modal.load('<{1|get_ueditor_image_url}><{$ueditor_auth}>','', function(){
+                $modal.modal();
+            });
+        });
+
+
+        var error1=$('#alert-error_1');
+        var success1=$('#alert-success_1');
+
+        var form1 = $('#sp_info');
+        form1.validate({
+            errorElement: 'span', //default input error message container
+            errorClass: 'help-inline', // default input error message class
+            focusInvalid: false, // do not focus the last invalid input
+            ignore: "",
+            rules: {
+                name: {
+                    required: true
+                }
+                ,
+                pic: {
+                    required: true
+                }
+                ,
+                status: {
+                    required: true
+                }
+
+
+            },
+            messages : {
+                name:{
+                    required:'品牌名'
+                }
+                ,
+                pic: {
+                    required: '品牌Logo'
+                }
+                ,
+                status: {
+                    required: '是否开启'
+                }
+
+            }
+            ,
+            invalidHandler: function (event, validator) { //display error alert on form submit
+                success1.hide();
+                error1.find('span').html('请完善提交内容再提交');
+                error1.show();
+                App.scrollTo(error1, -200);
+            },
+
+            highlight: function (element) { // hightlight error inputs
+                $(element)
+                        .closest('.help-inline').removeClass('ok'); // display OK icon
+                $(element)
+                        .closest('.control-group').removeClass('success').addClass('error'); // set error class to the control group
+            },
+
+            unhighlight: function (element) { // revert the change dony by hightlight
+                $(element)
+                        .closest('.control-group').removeClass('error'); // set error class to the control group
+            },
+
+            success: function (label) {
+                label.addClass('valid').addClass('help-inline ok') // mark the current input as valid and display OK icon
+                        .closest('.control-group').removeClass('error').addClass('success'); // set success class to the control group
+            },
+            submitHandler: function (form) {
+                /*
+                 $.post("?m=<{$smarty.get.m}>&s=<{$smarty.get.s}>&act_ajax=1",form1.serialize(),function(msg){
+                 success1.hide();
+                 if(msg==1)
+                 {
+                 success1.find('span').html('订阅成功');
+                 success1.show();
+                 }
+                 else
+                 {
+                 error1.find('span').html(msg);
+                 error1.show();
+                 }
+                 });
+                 */
+            }
+        });
+
+
+        $('#submit_sp_info').click(function(){
+
+            if(form1.valid()==true)
+            {
+
+                //encodeURI(msg)
+                $modal=$('#ajax-modal');
+                error1.hide();
+                success1.show();
+                success1.find('span').html('正在提交...........');
+                $('body').modalmanager('loading');
+                $.post('<{"brand/brand_add_edit"|site_url}>',form1.serialize(),function(msg){
+                    try
+                    {
+                       // alert(msg);
+                        eval("var str="+msg);
+                        //操作成功
+                        if(str.type==1)
+                        {
+                            //错误提示
+                            error1.show();
+                            success1.hide();
+                            error1.find('span').html(str.msg);
+                        }
+                        else if(str.type==2)
+                        {
+                            //提交成功
+                            error1.hide();
+                            success1.show();
+                            success1.find('span').html('提交成功');
+                        }
+                        else if(str.type==3)
+                        {
+                            //刷新主页面
+                            f_main_index();
+                            return true;
+                        }
+                        setTimeout(modal_msg(str.msg),300);
+                    }catch(e){
+                        $('body').modalmanager('removeLoading');
+                        success1.hide();
+                        error1.find('span').html('系统异常');
+                        error1.show();
+                        setTimeout(modal_msg('系统异常'),300);
+                    };
+                });
+            }
+        });
+    }
+
+</script>

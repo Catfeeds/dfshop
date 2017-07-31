@@ -1,0 +1,201 @@
+<div class="container-fluid">
+
+    <!-- BEGIN PAGE HEADER-->
+
+    <div class="row-fluid">
+        <div class="span12">
+            <h3 class="page-title"> <small> </small> </h3>
+            <ul class="breadcrumb">
+                <li> <i class="icon-home"></i> <a>微信管理</a> <span class="icon-angle-right"></span> </li>
+                <li> <a href="#">微信设置</a> <span class="icon-angle-right"></span> </li>
+                <li><a href="#">自定义菜单</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- END PAGE HEADER-->
+
+    <!-- BEGIN PAGE CONTENT-->
+    <div class="row-fluid">
+        <div class="span12">
+            <!-- BEGIN VALIDATION STATES-->
+            <div class="portlet box blue">
+                <div class="portlet-title">
+                    <div class="caption"><i class="icon-reorder"></i>自定义菜单</div>
+                </div>
+            </div>
+                <style>
+                    .fl {
+                        float: left;
+                    }
+                    .mobile-border {
+                        width: 352px;
+                        border: 1px solid #ccc;
+                        border-radius: 15px;
+                    }
+                    .mobile-d {
+                        width: 320px;
+                        padding: 13px 15px 0;
+                        box-sizing: content-box;
+                    }
+
+                    .noborder {
+                        border: none;
+                    }
+                    li {
+                        line-height: 20px;
+                    }
+                    li {
+                        display: list-item;
+                        text-align: -webkit-match-parent;
+                    }
+                    ul li {
+                        list-style: none;
+                    }
+                    ol, ul, li {
+                        list-style: none;
+                    }
+                    .mobile-d i {
+                        display: block;
+                        width: 98px;
+                        height: 34px;
+                        margin: 0 auto 13px;
+                        background: url(/static/image/modules.png) no-repeat 0 -74px;
+                    }
+                    .mobile-d .mobile-title {
+                        width: 318px;
+                        height: 32px;
+                        line-height: 25px;
+                        padding-top: 32px;
+                        background: url(/static/image/modules.png) no-repeat 0 0;
+                        color: #000000;
+                        font-size: 16px;
+                        text-align: center;
+                        overflow: hidden;
+                        /* border: 1px solid #22292C; */
+                        border-bottom: none;
+                        cursor: pointer;
+                        box-sizing: content-box;
+                    }
+                    .set-overflow .white-box {
+                        height: 260px;
+                    }
+                    .clearfix {
+                        clear: both;
+                    }
+                    ol, ul, li {
+                        list-style: none;
+                    }
+                    ul li {
+                        list-style: none;
+                    }
+                    .clearfix {
+                        display: block;
+                    }
+                    .clearfix:before, .clearfix:after {
+                        display: table;
+                        content: "";
+                        line-height: 0;
+                    }
+                    .mobile-nav-text ul li {
+                        padding: 10px 0;
+                    }
+                    .mobile-nav ul li {
+                        float: left;
+                        text-align: center;
+                        cursor: pointer;
+                        position: relative;
+                        width: 25%;
+                    }
+
+                    .clear-line {
+                        border-top: 1px solid #ccc;
+                    }
+                    .mobile-nav ul li .inner-nav {
+                        position: absolute;
+                        left: -10px;
+                        padding: 5px 0;
+                        border: 1px solid #ccc;
+                        width: 118px;
+                        background-color: #F7F7F7;
+                        border-top-left-radius: 10px;
+                        border-top-right-radius: 10px;
+                        display: none;
+                    }
+                    .mobile-nav ul li .inner-nav ul li {
+                        width: 100%;
+                        clear: both;
+                        text-align: center;
+                        border-bottom: 1px dashed #ccc;
+                        height: 25px;
+                        line-height: 25px;
+                        padding: 0;
+                    }
+                    .mobile-footer {
+                        margin: 10px auto;
+                        width: 62px;
+                        height: 62px;
+                        background: url(/static/image/modules.png) no-repeat -253px -70px;
+                    }
+                    .mobile-nav-text ul li.noborder p {
+                        border: none;
+                    }
+
+                    .mobile-nav-text ul li p {
+                        border-left: 1px solid #8F8F8F;
+                    }
+
+                </style>
+                <div class="portlet-body form">
+                    <!-- BEGIN FORM-->
+
+                    <form action=""  id="form_submit"  class="form-horizontal" method="post" >
+                        <div>
+
+                        </div>
+                        <div class="fl">
+                            <div class="mobile-border">
+                                <div class="mobile-d">
+                                    <div class="mobile-header">
+                                        <i></i>
+                                        <div class="mobile-title">商城主页</div>
+                                    </div>
+                                    <div class="set-overflow">
+                                        <div class="white-box"></div>
+
+                                        <div class="mobile-nav mobile-nav-text" id="textmenu">
+                                            <ul class="clearfix" id="showtextul">
+                                                <li class="noborder" style="width: 90.667px;"><p>我的店铺</p></li>
+                                                <li style="width: 90.667px;"><p>会员中心</p></li>
+                                                <li style="width: 90.667px;"><p>我要开店</p>
+                                                    <div class="inner-nav">
+                                                        <ul style="display: none; top: -95px; left: 50%; margin-left: -58px;">
+                                                            <li>如何开店</li>
+                                                            <li>立即开店</li>
+                                                            <li>合伙人中心</li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clear-line">
+                                    <div class="mobile-footer"></div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                    </form>
+                    <!-- END FORM-->
+                </div>
+            </div>
+            <!-- END VALIDATION STATES-->
+        </div>
+    </div>
+
+    <!-- END PAGE CONTENT-->
+
+</div>

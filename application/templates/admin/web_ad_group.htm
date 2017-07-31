@@ -1,0 +1,279 @@
+<div class="container-fluid">
+    <!-- BEGIN PAGE HEADER-->
+
+    <div class="modal-body">
+        <div class="tabbable tabbable-custom" id='tab_all'>
+            <ul class="nav nav-tabs">
+
+                <li class="active"><a href="#tab_1_1" data-id='tab_1_1' class="tab_click" data-toggle="tab">添加广告组</a></li>
+                <li class=""><a href="#tab_1_2" data-id='tab_1_2' class="tab_click" data-toggle="tab">编辑广告组</a></li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="tab_1_1">
+                    <div class="container-fluid">
+
+                        <!-- BEGIN PAGE CONTENT-->
+
+                        <div class="row-fluid">
+                            <div class="span12">
+
+                                <!-- BEGIN VALIDATION STATES-->
+
+                                <div class="portlet box blue">
+                                    <div class="portlet-title">
+                                        <div class="caption"><i class="icon-reorder"></i>添加广告组</div>
+                                    </div>
+                                    <div class="portlet-body form">
+                                        <!-- BEGIN FORM-->
+                                        <form action=""  id="sp_info" class="form-horizontal"  >
+                                            <{*验证提示*}>
+                                            <div id='alert-error_1' class="alert alert-error hide">
+                                                <button class="close" data-dismiss="alert"></button>
+                                                <span>提交失败</span> </div>
+                                            <div id='alert-success_1' class="alert alert-success hide">
+                                                <button class="close" data-dismiss="alert"></button>
+                                                <span>提交成功</span> </div>
+                                            <div class="control-group">
+                                                <label class="control-label">广告组标题<span class="required">*</span></label>
+                                                <div class="controls">
+                                                    <input type="text" name="name" class="span3 m-wrap" value="<{$re.name}>"/>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="form-actions">
+                                                <span id="submit_sp_info"   class="btn green">提交</span>
+                                            </div>
+
+                                        </form>
+                                        <!-- END FORM-->
+                                    </div>
+                                </div>
+                                <!-- END VALIDATION STATES-->
+                            </div>
+                        </div>
+
+                        <!-- END PAGE CONTENT-->
+                    </div>
+                </div>
+                <div class="tab-pane " id="tab_1_2">
+                    <!-- END PAGE HEADER-->
+                    <!-- BEGIN PAGE CONTENT-->
+                    <div class="container-fluid">
+                        <!-- BEGIN PAGE HEADER-->
+                        <!-- END PAGE HEADER-->
+                        <!-- BEGIN PAGE CONTENT-->
+                        <div class="row-fluid">
+                            <div class="span12">
+                                <div>
+                                    <div>
+                                        <div>
+
+                                            <form action="" method="post" id="product_all">
+                                                <table class="table  table-bordered table-hover dataTable" id="product_1" >
+                                                    <thead>
+                                                    <tr role="heading">
+
+                                                        <th width="100"  class="sorting_disabled" role="columnheader" tabindex="0" aria-controls="sample_1">ID</th>
+                                                        <th width="*"  class="sorting_disabled" role="columnheader" tabindex="0" aria-controls="sample_1">广告组名称</th>
+                                                        <th width="150"  class="sorting_disabled" role="columnheader" tabindex="0" aria-controls="sample_1">添加时间</th>
+                                                        <th width="150"  class="sorting_disabled" role="columnheader" tabindex="0" aria-controls="sample_1">更新时间</th>
+
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody role="alert" aria-live="polite" aria-relevant="all">
+                                                    <{foreach item = item from = $re}>
+                                                    <tr>
+                                                        <td>
+                                                            <{$item.id}>
+                                                        </td>
+                                                        <td><input type="text" name="name[<{$item.id}>]"  value="<{$item.name}>" class="m-wrap large"></td>
+                                                        <td>
+                                                            <{$item.add_time}>
+                                                        </td>
+                                                        <td>
+                                                            <{$item.uptime}>
+                                                        </td>
+                                                    </tr>
+                                                    <{/foreach}>
+                                                    </tbody>
+                                                </table>
+                                                <div class="input-append">
+                                                    <button type="button" data-url="<{'district/district_list'|site_url}>" data-act="sort" class="btn green df_submit">修改</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <!--show window-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END PAGE CONTENT-->
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="/static/js/jquery.validate.min.js?v=<{$vsersion}>"></script>
+<link href="/static/css/jquery.fancybox.css" rel="stylesheet">
+<script src="/static/js/jquery.fancybox.pack.js"></script>
+<link rel="stylesheet" type="text/css" href="/static/css/datepicker.css">
+<script type="text/javascript" src="/static/js/bootstrap-datepicker.js"></script>
+<script>
+    function load_ini()
+    {
+        edit_ad_group();
+        var error1=$('#alert-error_1');
+        var success1=$('#alert-success_1');
+
+        var form1 = $('#sp_info');
+        form1.validate({
+            errorElement: 'span', //default input error message container
+            errorClass: 'help-inline', // default input error message class
+            focusInvalid: false, // do not focus the last invalid input
+            ignore: "",
+            rules: {
+                name: {
+                    required: true
+                }
+            },
+            messages : {
+                name:{
+                    required:'广告标题必须填写'
+                }
+            }
+            ,
+            invalidHandler: function (event, validator) { //display error alert on form submit
+                success1.hide();
+                error1.find('span').html('请完善提交内容再提交');
+                error1.show();
+                App.scrollTo(error1, -200);
+            },
+
+            highlight: function (element) { // hightlight error inputs
+                $(element)
+                        .closest('.help-inline').removeClass('ok'); // display OK icon
+                $(element)
+                        .closest('.control-group').removeClass('success').addClass('error'); // set error class to the control group
+            },
+
+            unhighlight: function (element) { // revert the change dony by hightlight
+                $(element)
+                        .closest('.control-group').removeClass('error'); // set error class to the control group
+            },
+
+            success: function (label) {
+                label.addClass('valid').addClass('help-inline ok') // mark the current input as valid and display OK icon
+                        .closest('.control-group').removeClass('error').addClass('success'); // set success class to the control group
+            },
+            submitHandler: function (form) {
+                /*
+                 $.post("?m=<{$smarty.get.m}>&s=<{$smarty.get.s}>&act_ajax=1",form1.serialize(),function(msg){
+                 success1.hide();
+                 if(msg==1)
+                 {
+                 success1.find('span').html('订阅成功');
+                 success1.show();
+                 }
+                 else
+                 {
+                 error1.find('span').html(msg);
+                 error1.show();
+                 }
+                 });
+                 */
+            }
+        });
+
+
+        $('#submit_sp_info').click(function(){
+
+            if(form1.valid()==true)
+            {
+                //encodeURI(msg)
+                $modal=$('#ajax-modal');
+                error1.hide();
+                success1.show();
+                success1.find('span').html('正在提交...........');
+                $('body').modalmanager('loading');
+                $.post('<{"adv/web_ad_list"|site_url}>?act=do_add_ad_group',form1.serialize(),function(msg){
+                    try
+                    {
+                        //alert(msg);
+                        eval("var str="+msg);
+                        //操作成功
+                        if(str.type==1)
+                        {
+                            //错误提示
+                            error1.show();
+                            success1.hide();
+                            error1.find('span').html(str.msg);
+                        }
+                        else if(str.type==2)
+                        {
+                            //提交成功
+                            error1.hide();
+                            success1.show();
+                            success1.find('span').html('提交成功');
+                        }
+                        else if(str.type==3)
+                        {
+                            //刷新主页面
+                            window.location.reload(true);
+                            return true;
+                        }
+                        setTimeout(modal_msg(str.msg),300);
+                    }catch(e){
+                        $('body').modalmanager('removeLoading');
+                        success1.hide();
+                        error1.find('span').html('系统异常');
+                        error1.show();
+                        setTimeout(modal_msg('系统异常'),300);
+                    };
+                });
+            }
+        });
+
+
+
+    }
+
+    var edit_ad_group=function()
+    {
+        $('#product_all .df_submit').click(function(){
+
+            var form1=$('#product_all');
+            $modal=$('#ajax-modal');
+            $('body').modalmanager('loading');
+            $.post('<{"adv/web_ad_list"|site_url}>?act=do_edit_ad_group',form1.serialize(),function(msg){
+                try
+                {
+                    //alert(msg);
+                    eval("var str="+msg);
+                    //操作成功
+                    if(str.type==1)
+                    {
+
+                    }
+                    else if(str.type==2)
+                    {
+
+                    }
+                    else if(str.type==3)
+                    {
+                        //刷新主页面
+                        window.location.reload(true);
+                        return true;
+                    }
+                    setTimeout(modal_msg(str.msg),300);
+                }catch(e){
+                    $('body').modalmanager('removeLoading');
+                    setTimeout(modal_msg('系统异常'),300);
+                };
+            })
+        })
+    }
+</script>

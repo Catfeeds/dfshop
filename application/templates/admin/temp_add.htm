@@ -1,0 +1,280 @@
+<div class="container-fluid">
+
+    <!-- BEGIN PAGE HEADER-->
+
+    <div class="row-fluid">
+        <div class="span12">
+            <h3 class="page-title"> <small> </small> </h3>
+            <ul class="breadcrumb">
+                <{$select_admin_name}>
+            </ul>
+        </div>
+    </div>
+
+    <!-- END PAGE HEADER-->
+
+    <!-- BEGIN PAGE CONTENT-->
+
+    <div class="row-fluid">
+        <div class="span12">
+
+            <!-- BEGIN VALIDATION STATES-->
+
+            <div class="portlet box blue">
+                <div class="portlet-title">
+                    <div class="caption"><i class="icon-reorder"></i><{if empty($re)}>添加<{else}>编辑<{/if}>运费模板</div>
+                </div>
+                <div class="portlet-body form">
+                    <!-- BEGIN FORM-->
+                    <form action=""  id="sp_info" class="form-horizontal"  >
+                        <{*验证提示*}>
+                        <div id='alert-error_1' class="alert alert-error hide">
+                            <button class="close" data-dismiss="alert"></button>
+                            <span>提交失败</span> </div>
+                        <div id='alert-success_1' class="alert alert-success hide">
+                            <button class="close" data-dismiss="alert"></button>
+                            <span>提交成功</span> </div>
+                        <div class="control-group">
+                            <label class="control-label">模板名称<span class="required">*</span></label>
+                            <div class="controls">
+                                <input type="text" name="title" class="span3 m-wrap" value="<{$re.title}>"/>
+                            </div>
+                        </div>
+                        <div class="control-group" >
+                            <label class="control-label">仓库<span class="required">*</span></label>
+                            <div class="controls">
+                                <select name="warehouse_id"  id="warehouse"  class="span3 m-wrap">
+                                    <option value="0">通用</option>
+                                    <{foreach item=d from=$warehouse}>
+                                    <option <{if $re.warehouse_id==$d.id}>selected="selected"<{/if}> value="<{$d.id}>"><{$d.name}></option>
+                                    <{/foreach}>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="control-group">
+                            <label class="control-label">计价方式<span class="required">*</span></label>
+                            <div class="controls">
+                                <label class="radio">
+                                    <input type="radio" name="logc_type" id="optionsRadios1"  <{if !empty($re)}>disabled="disabled"<{/if}> value="1" <{if $re.logc_type==1}>checked  <{/if}> >
+                                    按件数
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="logc_type" id="optionsRadios2" <{if !empty($re)}>disabled="disabled"<{/if}> value="2" <{if $re.logc_type==2}>checked <{/if}> >
+                                    按重量
+                                </label>
+                                <div id="form_1_membership_error"></div>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">是否包邮<span class="required">*</span></label>
+                            <div class="controls">
+                                <label class="radio">
+                                    <input type="radio" name="type" <{if !empty($re)}>disabled="disabled"<{/if}> value="1" <{if $re.type==1}>checked disabled="disabled" <{/if}> >
+                                    自定义运费
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="type" <{if !empty($re)}>disabled="disabled"<{/if}> value="2" <{if $re.type==2}>checked disabled="disabled"<{/if}> >
+                                   包邮
+                                </label>
+                                <div id="form_2_membership_error"></div>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <{if empty($re)}>
+                            <input type="hidden" name="s_type" value="add">
+                            <{else}>
+                            <input type="hidden" name="id" value="<{$re.id}>">
+                            <{/if}>
+                            <span id="submit_sp_info"   class="btn green">提交</span>
+                        </div>
+
+                    </form>
+                    <!-- END FORM-->
+                </div>
+            </div>
+            <!-- END VALIDATION STATES-->
+        </div>
+    </div>
+
+    <!-- END PAGE CONTENT-->
+
+</div>
+<script type="text/javascript" src="/static/js/jquery.validate.min.js?v=<{$vsersion}>"></script>
+<link rel="stylesheet" type="text/css" href="/static/css/datepicker.css">
+<script type="text/javascript" src="/static/js/bootstrap-datepicker.js"></script>
+<script>
+
+    var server_auth="<{$ueditor_auth}>";
+</script>
+<script>
+    $('#warehouse').select2({
+        placeholder: "请选择",
+        allowClear: true
+    });
+
+    function load_ini()
+    {
+
+
+        var error1=$('#alert-error_1');
+        var success1=$('#alert-success_1');
+
+        var form1 = $('#sp_info');
+        form1.validate({
+            errorElement: 'span', //default input error message container
+            errorClass: 'help-inline', // default input error message class
+            focusInvalid: false, // do not focus the last invalid input
+            ignore: "",
+            rules: {
+                title: {
+                    required: true
+                }
+                ,
+                warehouse_id: {
+                    required: true
+                }
+                ,
+                logc_type: {
+                    required: true
+                }
+                ,
+                type: {
+                    required: true
+                }
+
+
+
+            },
+            messages : {
+                title:{
+                    required:'模板名称必须填写'
+                }
+                ,
+                warehouse_id: {
+                    required: '仓库必须选择'
+                }
+                ,
+                logc_type: {
+                    required:'计价方式必须选择'
+                }
+                ,
+                type: {
+                    required:'是否包邮必须选择'
+                }
+
+
+
+            }
+            ,
+            invalidHandler: function (event, validator) { //display error alert on form submit
+                success1.hide();
+                error1.find('span').html('请完善提交内容再提交');
+                error1.show();
+                App.scrollTo(error1, -200);
+            },
+
+            highlight: function (element) { // hightlight error inputs
+                $(element)
+                        .closest('.help-inline').removeClass('ok'); // display OK icon
+                $(element)
+                        .closest('.control-group').removeClass('success').addClass('error'); // set error class to the control group
+            },
+            errorPlacement: function (error, element) { // render error placement for each input type
+                if (element.attr("name") == "type"  ) { // for chosen elements, need to insert the error after the chosen container
+                    error.addClass("no-left-padding").insertAfter("#form_1_membership_error");
+                }else if(element.attr("name") == "logc_type"){
+                    error.addClass("no-left-padding").insertAfter("#form_2_membership_error");
+                }else{
+                    error.insertAfter(element); // for other inputs, just perform default behavoir
+                }
+            },
+
+            unhighlight: function (element) { // revert the change dony by hightlight
+                $(element)
+                        .closest('.control-group').removeClass('error'); // set error class to the control group
+            },
+
+            success: function (label) {
+                    if (label.attr("for") == "type" || label.attr("for") == "logc_type" ) { // for checkboxes and radip buttons, no need to show OK icon
+                        label
+                                .closest('.control-group').removeClass('error').addClass('success');
+                        label.remove(); // remove error label here
+                    } else { // display success icon for other inputs
+                        label
+                                .addClass('valid').addClass('help-inline ok') // mark the current input as valid and display OK icon
+                                .closest('.control-group').removeClass('error').addClass('success'); // set success class to the control group
+                    }
+            },
+            submitHandler: function (form) {
+                /*
+                 $.post("?m=<{$smarty.get.m}>&s=<{$smarty.get.s}>&act_ajax=1",form1.serialize(),function(msg){
+                 success1.hide();
+                 if(msg==1)
+                 {
+                 success1.find('span').html('订阅成功');
+                 success1.show();
+                 }
+                 else
+                 {
+                 error1.find('span').html(msg);
+                 error1.show();
+                 }
+                 });
+                 */
+            }
+        });
+
+
+        $('#submit_sp_info').click(function(){
+
+            if(form1.valid()==true)
+            {
+
+                //encodeURI(msg)
+                $modal=$('#ajax-modal');
+                error1.hide();
+                success1.show();
+                success1.find('span').html('正在提交...........');
+                $('body').modalmanager('loading');
+                $.post('<{"logistics/temp_list"|site_url}>?act=do_add',form1.serialize(),function(msg){
+                    try
+                    {
+                        //alert(msg);
+                        eval("var str="+msg);
+                        //操作成功
+                        if(str.type==1)
+                        {
+                            //错误提示
+                            error1.show();
+                            success1.hide();
+                            error1.find('span').html(str.msg);
+                        }
+                        else if(str.type==2)
+                        {
+                            //提交成功
+                            error1.hide();
+                            success1.show();
+                            success1.find('span').html('提交成功');
+                        }
+                        else if(str.type==3)
+                        {
+                            //刷新主页面
+                            f_main_index();
+                            return true;
+                        }
+                        setTimeout(modal_msg(str.msg),300);
+                    }catch(e){
+                        $('body').modalmanager('removeLoading');
+                        success1.hide();
+                        error1.find('span').html('系统异常');
+                        error1.show();
+                        setTimeout(modal_msg('系统异常'),300);
+                    };
+                });
+            }
+        });
+    }
+
+</script>

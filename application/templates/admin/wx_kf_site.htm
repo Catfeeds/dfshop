@@ -1,0 +1,62 @@
+<div class="container-fluid">
+
+    <!-- BEGIN PAGE HEADER-->
+
+    <div class="row-fluid">
+        <div class="span12">
+            <h3 class="page-title"> <small> </small> </h3>
+            <ul class="breadcrumb">
+                <li> <i class="icon-home"></i> <a>微信管理</a> <span class="icon-angle-right"></span> </li>
+                <li> <a href="#">微信设置</a> <span class="icon-angle-right"></span> </li>
+                <li><a href="#">客服设置</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- END PAGE HEADER-->
+
+    <!-- BEGIN PAGE CONTENT-->
+    <div class="row-fluid">
+        <div class="span12">
+            <!-- BEGIN VALIDATION STATES-->
+            <div class="portlet box blue">
+                <div class="portlet-title">
+                    <div class="caption"><i class="icon-reorder"></i>多客服设置</div>
+                </div>
+                <div class="portlet-body form">
+                    <!-- BEGIN FORM-->
+                    <form action=""  id="form_submit"  class="form-horizontal" method="post" >
+                        <div class="control-group">
+                            <label class="control-label">是否开启<span class="required">*</span></label>
+                            <div class="controls">
+                                <label class="radio">
+                                    <input type="radio" name="config[is_open]" id="optionsRadios1" value="1"  <{if $wx.is_open==1}>checked<{/if}>>
+                                    开启
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="config[is_open]" id="optionsRadios2" value="0"  <{if $wx.is_open==0}>checked<{/if}>>
+                                    关闭
+                                </label>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <h1>注释</h1>
+                            <p style="color:red">微信多客户系统能够全面帮助您在微信上与用户沟通,及时了解用户咨询信息,不错过任何一个客户。
+                                (仅认证服务号可在公众平台开通多客服）。开启微信多客服以后，自动回复功能会自动失效。</p>
+
+                        </div>
+                        <div class="form-actions">
+                            <input type="hidden" name="<{$csrf.name}>" value="<{$csrf.hash}>">
+                            <button type="submit"  id='submit_add'  class="btn green">保存</button>
+                        </div>
+
+                    </form>
+                    <!-- END FORM-->
+                </div>
+            </div>
+            <!-- END VALIDATION STATES-->
+        </div>
+    </div>
+
+    <!-- END PAGE CONTENT-->
+
+</div>

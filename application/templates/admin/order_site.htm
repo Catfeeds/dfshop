@@ -1,0 +1,56 @@
+<div class="container-fluid">
+
+    <!-- BEGIN PAGE HEADER-->
+
+    <div class="row-fluid">
+        <div class="span12">
+            <h3 class="page-title"> <small> </small> </h3>
+            <ul class="breadcrumb">
+                <{$select_admin_name}>
+            </ul>
+        </div>
+    </div>
+    <!-- END PAGE HEADER-->
+
+    <!-- BEGIN PAGE CONTENT-->
+    <div class="row-fluid">
+        <div class="span12">
+            <!-- BEGIN VALIDATION STATES-->
+            <div class="portlet box blue">
+                <div class="portlet-title">
+                    <div class="caption"><i class="icon-reorder"></i>提现设置</div>
+                </div>
+                <div class="portlet-body form">
+                    <!-- BEGIN FORM-->
+                    <form action=""  id="form_submit"  class="form-horizontal" method="post" >
+
+                        <div class="control-group">
+                            <label class="control-label">拍下<span class="required">*</span></label>
+                            <div class="controls" style="line-height:35px;">
+                                <input type="text" name="name" value="1" class="span1 m-wrap"/>天没付款的订单自动关闭
+                            </div>
+                        </div>
+
+
+                        <div class="control-group">
+                            <label class="control-label">发货<span class="required">*</span></label>
+                            <div class="controls" style="line-height:35px;">
+                                <input type="text" name="name" value="1" class="span1 m-wrap"/>天后自动完成订单
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <input type="hidden" name="<{$csrf.name}>" value="<{$csrf.hash}>">
+                            <button type="button"  id='submit_add'  class="btn green">保存</button>
+                        </div>
+
+                    </form>
+                    <!-- END FORM-->
+                </div>
+            </div>
+            <!-- END VALIDATION STATES-->
+        </div>
+    </div>
+
+    <!-- END PAGE CONTENT-->
+
+</div>

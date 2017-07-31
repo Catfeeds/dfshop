@@ -1,0 +1,415 @@
+<?php /* Smarty version 2.6.20, created on 2017-07-28 10:04:28
+         compiled from district_add.htm */ ?>
+<?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
+smarty_core_load_plugins(array('plugins' => array(array('modifier', 'config_item', 'district_add.htm', 195, false),array('modifier', 'site_url', 'district_add.htm', 354, false),)), $this); ?>
+<body class="page-header-fixed page-boxed">
+<style>
+    .form .form-bordered .form-body {
+        margin: 0;
+        padding: 0; }
+
+    .form .form-row-seperated .form-body {
+        padding: 0; }
+    .portlet-form .form-body,
+    .form .form-body {
+        padding: 20px; }
+    .portlet.light .portlet-form .form-body, .portlet.light
+    .form .form-body {
+        padding-left: 0;
+        padding-right: 0; }
+
+</style>
+<div class="container">
+    <div class="portlet box blue">
+        <div class="portlet-body form">
+                <form action="" id="form_delivery"  method="post">
+                                        <div class="form-body">
+                        <div id='alert-error_1' class="alert alert-error hide">
+                            <button class="close" data-dismiss="alert"></button>
+                            <span>提交失败</span> </div>
+                        <div id='alert-success_1' class="alert alert-success hide">
+                            <button class="close" data-dismiss="alert"></button>
+                            <span>提交成功</span> </div>
+                        <div class="control-group">
+                            <label class="control-label">收货人<span class="required"></span></label>
+                            <div class="controls" >
+                                <input type="text" placeholder="请输入收货人姓名" name="name" <?php if (! empty ( $this->_tpl_vars['re'] )): ?>value="<?php echo $this->_tpl_vars['re']['name']; ?>
+"<?php endif; ?> class="m-wrap span12"/>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label ">手机号<span class="required"></span></label>
+                            <div class="controls" >
+                                <input type="text" placeholder="请输入手机号" name="mobile"  <?php if (! empty ( $this->_tpl_vars['re'] )): ?>value="<?php echo $this->_tpl_vars['re']['mobile']; ?>
+"<?php endif; ?> class="m-wrap span12"/>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label ">邮政编码<span class="required"></span></label>
+                            <div class="controls" >
+                                <input type="text"  placeholder="请输入邮政编码" name="zip" <?php if (! empty ( $this->_tpl_vars['re'] )): ?>value="<?php echo $this->_tpl_vars['re']['zip']; ?>
+"<?php endif; ?> class="m-wrap span12"/>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">省市区<span class="required"></span></label>
+                            <div class="controls">
+                                <input type="hidden" name="t" id="t" value="<?php echo $this->_tpl_vars['re']['address']; ?>
+" />
+                                <input type="hidden" name="province" id="id_1" value="<?php echo $this->_tpl_vars['re']['provinceid']; ?>
+" />
+                                <input type="hidden" name="city" id="id_2" value="<?php echo $this->_tpl_vars['re']['cityid']; ?>
+" />
+                                <input type="hidden" name="area" id="id_3" value="<?php echo $this->_tpl_vars['re']['areaid']; ?>
+" />
+                <span id="d_2"  class="<?php if ($this->_tpl_vars['de']['area']): ?>hidden<?php endif; ?>">
+                <select id="select_1" style="width:100px;" name="select_1"  onchange="changedistrict(this.value,this)"  >
+                  <option value="">--请选择--</option>
+                  <option value="110000|1">北京市</option>
+                  <option value="120000|1">天津市</option>
+                  <option value="130000|1">河北省</option>
+                  <option value="140000|1">山西省</option>
+                  <option value="150000|1">内蒙古自治区</option>
+                  <option value="210000|1">辽宁省</option>
+                  <option value="220000|1">吉林省</option>
+                  <option value="230000|1">黑龙江省</option>
+                  <option value="310000|1">上海市</option>
+                  <option value="320000|1">江苏省</option>
+                  <option value="330000|1">浙江省</option>
+                  <option value="340000|1">安徽省</option>
+                  <option value="350000|1">福建省</option>
+                  <option value="360000|1">江西省</option>
+                  <option value="370000|1">山东省</option>
+                  <option value="410000|1">河南省</option>
+                  <option value="420000|1">湖北省</option>
+                  <option value="430000|1">湖南省</option>
+                  <option value="440000|1">广东省</option>
+                  <option value="450000|1">广西壮族自治区</option>
+                  <option value="460000|1">海南省</option>
+                  <option value="500000|1">重庆市</option>
+                  <option value="510000|1">四川省</option>
+                  <option value="520000|1">贵州省</option>
+                  <option value="530000|1">云南省</option>
+                  <option value="540000|1">西藏自治区</option>
+                  <option value="610000|1">陕西省</option>
+                  <option value="620000|1">甘肃省</option>
+                  <option value="630000|1">青海省</option>
+                  <option value="640000|1">宁夏回族自治区</option>
+                  <option value="650000|1">新疆维吾尔自治区</option>
+                </select>
+                <select id="select_2" style="width:100px;" name="select_2" onchange="changedistrict(this.value,this)" class="hidden">
+                </select>
+                <select id="select_3" style="width:100px;" name="select_3" onchange="changedistrict(this.value,1)"  class="hidden">
+                </select>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label ">详细地址<span class="required"></span></label>
+                            <div class="controls" >
+                                <textarea class="span12 m-wrap"   name="address" rows="3"><?php echo $this->_tpl_vars['re']['address']; ?>
+</textarea>
+                            </div>
+                        </div>
+
+                        <div class="control-group">
+                            <label class="control-label"></label>
+                            <div class="controls" >
+                                <input type="checkbox" name="default"  value="1" <?php if ($this->_tpl_vars['re']['default'] == 1): ?>checked="checked"<?php endif; ?> >设为默认地址
+                            </div>
+
+                        </div>
+
+                        <input type="hidden" name="id" value="<?php echo $this->_tpl_vars['re']['id']; ?>
+"/>
+                        <div class="form-actions">
+                            <a href="#"  id='btn_confirm'class="btn blue btn-block">提交</a>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+<script type="text/javascript" src="/static/js/jquery.validate.min.js?v=<?php echo $this->_tpl_vars['vsersion']; ?>
+"></script>
+<script type="text/javascript" charset="utf-8" src="/static/district.js?v=<?php echo $this->_tpl_vars['vsersion']; ?>
+" ></script>
+<script>
+    var district_ini=function (){
+        try
+        {
+            var addrlist={id_1:'<?php echo $this->_tpl_vars['re']['provinceid']; ?>
+',id_2:'<?php echo $this->_tpl_vars['re']['cityid']; ?>
+',id_3:'<?php echo $this->_tpl_vars['re']['areaid']; ?>
+'};
+            $('#select_1 option').each(function(){
+                if( $(this).val() == addrlist.id_1+"|1"){
+                    $(this).attr("selected","selected");
+                    changedistrict(addrlist.id_1+"|1",function(){
+                        $('#select_2 option').each(function(){
+                            if( $(this).val() == addrlist.id_2+"|2"){
+                                $(this).attr("selected","selected");
+                                changedistrict(addrlist.id_2+"|2",function(){
+                                    $('#select_3 option').each(function(){
+                                        if( $(this).val() == addrlist.id_3+"|3"){
+                                            $(this).attr("selected","selected");
+                                            changedistrict(addrlist.id_3+"|3");
+                                        }
+                                    });
+                                });
+                            }
+                        });
+                    });
+                }
+            });
+
+
+
+        }catch(e){};
+
+
+    }
+
+
+    function changedistrict(value,ojb){
+        var valarray = value.split('|');
+
+        //thisURL = document.URL;
+        //var wd=thisURL.split('/');
+        if(valarray[1]==3)
+        {
+            for(var i= parseInt(valarray[1]); i<4; i++){
+                $('#select_'+(i+1)).empty();
+                $('#select_'+(i+1)).addClass('hidden');
+            }
+            var str="";
+            $('#id_'+valarray[1]).val(valarray[0]);
+            str+=$('#select_1').find('option:selected').text();
+            str+=','+$('#select_2').find('option:selected').text();
+            str+=','+$('#select_3').find('option:selected').text();
+            $('#t').val(str);
+            return false;
+        }
+
+        if(valarray[1]==2)
+        {
+            $('#t').val('');
+        }
+
+        if(valarray[1]==1)
+        {
+            $('#t').val('');
+        }
+
+
+        if(valarray[1]==2||valarray[1]==1)
+        {
+            //weburl=wd[0]+'//'+wd[2]+'/';
+            var url = '<?php echo ((is_array($_tmp='base_url')) ? $this->_run_mod_handler('config_item', true, $_tmp) : config_item($_tmp)); ?>
+/'+'static/city/'+valarray[0]+'.htm';//(new Date()).getTime()
+            $.get(url,'',function(originalRequest)
+            {
+                var class_div_id = parseInt(valarray[1])+1;
+                var tempStr = 'var MyMe = ' + originalRequest;
+                eval(tempStr);
+                var a='<option value="">--请选择--</option>';
+
+                for(var k in MyMe)
+                {
+                    var Id=MyMe[k][0];
+                    var Name=MyMe[k][1];
+                    a+='<option value="'+Id+'|'+class_div_id+'">'+Name+'</option>';
+                }
+                $('#select_'+class_div_id).removeClass('hidden');
+                $('#id_'+valarray[1]).val(valarray[0]);
+                for (j=class_div_id; j<=4; j++) {
+                    $('#select_'+(j+1)).addClass('hidden');
+                    $('#id_'+j).val('');
+                }
+
+                $('#select_'+class_div_id).empty();
+                $('#select_'+class_div_id).append(a);
+                $('#select_'+class_div_id).nextAll('select').empty();
+
+                var str="";
+                str=str.substring(0,str.length-1);
+                $('#t').val(str);
+
+                if(typeof(ojb)=='function')
+                    ojb();
+            });
+        }
+        else if(valarray[1]!=3)
+        {
+            $('#select_2').empty().addClass('hidden');
+            $('#select_3').empty().addClass('hidden');
+            $('#t').val('');
+        }
+    }
+
+    function load_ini()
+    {
+        district_ini();
+
+        var error1=$('#alert-error_1');
+        var success1=$('#alert-success_1');
+        jQuery.validator.addMethod("isPhone", function (value, element) {
+            var length = value.length;
+            var mobile = /^(((13[0-9]{1})|(15[0-9]{1}))+\d{8})$/;
+            var tel = /^\d{3,4}-?\d{7,9}$/;
+            return this.optional(element) || (tel.test(value) || mobile.test(value));
+
+
+        }, "请正确填写您的联系电话");
+        // 邮政编码验证
+        jQuery.validator.addMethod("isZipCode", function (value, element) {
+            var tel = /^[0-9]{6}$/;
+            return this.optional(element) || (tel.test(value));
+        }, "请正确填写您的邮政编码");
+
+        var form1 = $('#form_delivery');
+        form1.validate({
+            errorElement: 'span', //default input error message container
+            errorClass: 'help-inline', // default input error message class
+            focusInvalid: false, // do not focus the last invalid input
+            ignore: "hidden",
+            rules: {
+                name: {
+                    required: true
+                }
+                ,
+                zip: {
+                    required: true,
+                    isZipCode:true
+                }
+                ,
+                mobile: {
+                    required: true,
+                    isPhone:true
+                }
+                ,
+
+                address:{
+                    required:true
+                }
+
+            },
+            messages : {
+                name:{
+                    required:'收件人不能为空'
+                }
+                ,
+                mobile: {
+                    required: '手机号不能为空'
+
+                }
+                ,
+                zip: {
+                    required: '邮政编码不能为空'
+
+                }
+                ,
+                address:{
+                    required:'详细地址不能为空'
+                }
+            }
+            ,
+            invalidHandler: function (event, validator) { //display error alert on form submit
+                success1.hide();
+                error1.find('span').html('请完善提交内容再提交');
+                error1.show();
+                App.scrollTo(error1, -200);
+            },
+
+            highlight: function (element) { // hightlight error inputs
+                $(element)
+                        .closest('.control-group').removeClass('success').addClass('error'); // set error class to the control group
+            },
+
+            unhighlight: function (element) { // revert the change dony by hightlight
+                $(element)
+                        .closest('.control-group').removeClass('error'); // set error class to the control group
+            },
+
+            success: function (label) {
+                label.remove();
+                error1.hide();
+                //label.addClass('valid').addClass('help-inline') // mark the current input as valid and display OK icon
+                 //       .closest('.control-group').removeClass('error').addClass('success'); // set success class to the control group
+            },
+            submitHandler: function (form) {
+                /*
+                 $.post("?m=<?php echo $_GET['m']; ?>
+&s=<?php echo $_GET['s']; ?>
+&act_ajax=1",form1.serialize(),function(msg){
+                 success1.hide();
+                 if(msg==1)
+                 {
+                 success1.find('span').html('订阅成功');
+                 success1.show();
+                 }
+                 else
+                 {
+                 error1.find('span').html(msg);
+                 error1.show();
+                 }
+                 });
+                 */
+            }
+        });
+
+        $("#btn_confirm").click(function(){
+            if(form1.valid()==true)
+            {
+                //encodeURI(msg)
+                $modal=$('#ajax-modal');
+                error1.hide();
+                success1.show();
+                success1.find('span').html('正在提交...........');
+                $('body').modalmanager('loading');
+                $.post('<?php echo ((is_array($_tmp="district/district_add")) ? $this->_run_mod_handler('site_url', true, $_tmp) : site_url($_tmp)); ?>
+',form1.serialize(),function(msg){
+                    try
+                    {
+                        //alert(msg)
+                        eval("var str="+msg);
+                        //操作成功
+                        if(str.type==1)
+                        {
+                            //错误提示
+                            error1.show();
+                            success1.hide();
+                            error1.find('span').html(str.msg);
+                        }
+                        else if(str.type==2)
+                        {
+                            //提交成功
+                            error1.hide();
+                            success1.show();
+                            success1.find('span').html('提交成功');
+                        }
+                        else if(str.type==3)
+                        {
+                            //刷新主页面
+                            window.location='<?php echo ((is_array($_tmp="district/district_list")) ? $this->_run_mod_handler('site_url', true, $_tmp) : site_url($_tmp)); ?>
+';
+                            return true;
+                        }
+                        setTimeout(modal_msg(str.msg),300);
+                    }catch(e){
+                        $('body').modalmanager('removeLoading');
+                        success1.hide();
+                        error1.find('span').html('系统异常');
+                        error1.show();
+                        setTimeout(modal_msg('系统异常'),300);
+                    };
+                });
+            }
+        });
+    }
+
+</script>

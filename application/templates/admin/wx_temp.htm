@@ -1,0 +1,173 @@
+<div class="container-fluid">
+
+    <!-- BEGIN PAGE HEADER-->
+
+    <div class="row-fluid">
+        <div class="span12">
+            <h3 class="page-title"> <small> </small> </h3>
+            <ul class="breadcrumb">
+                <li> <i class="icon-home"></i> <a>微信管理</a> <span class="icon-angle-right"></span> </li>
+                <li> <a href="#">微信设置</a> <span class="icon-angle-right"></span> </li>
+                <li><a href="#">消息模板</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- END PAGE HEADER-->
+    <style>
+         table td label {
+            display: inline-block;
+            margin-right: 40px;
+            margin-top: 3px;
+            margin-bottom: 3px;
+            font-weight: normal;
+        }
+
+    </style>
+    <!-- BEGIN PAGE CONTENT-->
+    <div class="row-fluid">
+        <div class="span12">
+            <!-- BEGIN VALIDATION STATES-->
+            <div class="portlet box blue">
+                <div class="portlet-title">
+                    <div class="caption"><i class="icon-reorder"></i>消息模板设定</div>
+                </div>
+            </div>
+            <div class="tabbable tabbable-custom" id='tab_all'>
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#tab_1_1" data-id='tab_1_1' data-toggle="tab">基本设置</a></li>
+                    <li class=""><a href="#tab_1_2" data-id='tab_1_2' data-toggle="tab">消息设置</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="tab_1_1">
+                        <!-- BEGIN FORM-->
+                        <form action=""  id="form_submit"  class="form-horizontal" method="post" >
+                            <p class="y-textborderleft">您可以根据运营者角色绑定多个微信账户用于接收消息提醒</p>
+                            <span onclick="alertWin('绑定运营者微信',800,400,'<{"base/base_add"|site_url}>/')" class="btn green">绑定运营者微信</span>
+
+                            <table class="table table-striped table-bordered table-hover "  >
+                                <thead>
+                                <tr role="heading">
+                                    <th width="79"  role="columnheader" tabindex="0" aria-controls="sample_1">姓名</th>
+                                    <th width="119"   role="columnheader" tabindex="0" aria-controls="sample_1">运营者角色</th>
+                                    <th width="399"   role="columnheader" tabindex="0" aria-controls="sample_1">接受消息类型</th>
+                                    <th width="202"  role="columnheader" tabindex="0" aria-controls="sample_1">操作</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>jessy_shijiao</td>
+                                    <td>运营</td>
+                                    <td>
+                                        <ul class="clearfix">
+
+                                        <li>新订单提醒</li>
+                                        <li>订单付款提醒</li>
+                                        <li>退款申请</li>
+
+                                        <li>用户咨询提醒</li>
+                                        <li>提现申请提醒</li>
+                                        <li>合伙人申请成功提醒</li>
+                                        </ul>
+                                    </td>
+
+                                    <td><a href="#">编辑</a>&nbsp;&nbsp;<a href="#">删除</a></td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                            <p class="y-textborderleft">微信消息模板ID设置</p>
+                            <table class="table table-striped table-bordered table-hover "  >
+                                <thead>
+                                <tr role="heading">
+                                    <th width="200"  role="columnheader" tabindex="0" aria-controls="sample_1">消息主题</th>
+                                    <th width="200"   role="columnheader" tabindex="0" aria-controls="sample_1">模板编号</th>
+                                    <th width="399"   role="columnheader" tabindex="0" aria-controls="sample_1">微信模板ID</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>订单消息提醒</td>
+                                    <td>OPENTM205109409</td>
+                                    <td>
+                                        <input type="text" value="VOFRKtnASjDshcsdTeZbXCR3zkV02TM2Slx6W2i5obM">
+                                    </td>
+
+                                </tr>
+                                </tbody>
+                            </table>
+                        </form>
+                    </div>
+                    <div class="tab-pane" id="tab_1_2">
+                        <table class="table table-bordered table-hover">
+                            <thead>
+                            <tr>
+                                <th align="center">消息接收对象</th>
+                                <th width="85%">消息类型</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td align="center">合伙人</td>
+                                <td>
+                                    <table id="ctl00_ContentPlaceHolder1_cbPowerListDistributors"  border="0">
+                                        <tbody>
+                                        <tr>
+                                            <td>
+                                                <input id="ctl00_ContentPlaceHolder1_cbPowerListDistributors_0" type="checkbox" name="ctl00$ContentPlaceHolder1$cbPowerListDistributors$0" checked="checked">
+                                                <label for="ctl00_ContentPlaceHolder1_cbPowerListDistributors_0">新订单提醒</label>
+                                            </td>
+                                            <td>
+                                                <input id="ctl00_ContentPlaceHolder1_cbPowerListDistributors_3" type="checkbox" name="ctl00$ContentPlaceHolder1$cbPowerListDistributors$3" checked="checked">
+                                                <label for="ctl00_ContentPlaceHolder1_cbPowerListDistributors_3">密码重置提醒</label>
+                                            </td>
+                                            <td>
+                                                <input id="ctl00_ContentPlaceHolder1_cbPowerListDistributors_5" type="checkbox" name="ctl00$ContentPlaceHolder1$cbPowerListDistributors$5" checked="checked">
+                                                <label for="ctl00_ContentPlaceHolder1_cbPowerListDistributors_5">提现发放提醒</label>
+                                            </td>
+                                            <td>
+                                                <input id="ctl00_ContentPlaceHolder1_cbPowerListDistributors_7" type="checkbox" name="ctl00$ContentPlaceHolder1$cbPowerListDistributors$7" checked="checked">
+                                                <label for="ctl00_ContentPlaceHolder1_cbPowerListDistributors_7">冻结提醒</label>
+                                            </td>
+                                            <td>
+                                                <input id="ctl00_ContentPlaceHolder1_cbPowerListDistributors_9" type="checkbox" name="ctl00$ContentPlaceHolder1$cbPowerListDistributors$9" checked="checked">
+                                                <label for="ctl00_ContentPlaceHolder1_cbPowerListDistributors_9">解冻提醒</label>
+                                            </td>
+                                        </tr><tr>
+                                            <td><input id="ctl00_ContentPlaceHolder1_cbPowerListDistributors_1" type="checkbox" name="ctl00$ContentPlaceHolder1$cbPowerListDistributors$1" checked="checked"><label for="ctl00_ContentPlaceHolder1_cbPowerListDistributors_1">订单付款提醒</label></td><td><input id="ctl00_ContentPlaceHolder1_cbPowerListDistributors_4" type="checkbox" name="ctl00$ContentPlaceHolder1$cbPowerListDistributors$4" checked="checked"><label for="ctl00_ContentPlaceHolder1_cbPowerListDistributors_4">合伙人等级变化提醒</label></td><td><input id="ctl00_ContentPlaceHolder1_cbPowerListDistributors_6" type="checkbox" name="ctl00$ContentPlaceHolder1$cbPowerListDistributors$6" checked="checked"><label for="ctl00_ContentPlaceHolder1_cbPowerListDistributors_6">提现驳回提醒</label></td><td><input id="ctl00_ContentPlaceHolder1_cbPowerListDistributors_8" type="checkbox" name="ctl00$ContentPlaceHolder1$cbPowerListDistributors$8" checked="checked"><label for="ctl00_ContentPlaceHolder1_cbPowerListDistributors_8">取消合伙人资质提醒</label></td><td><input id="ctl00_ContentPlaceHolder1_cbPowerListDistributors_10" type="checkbox" name="ctl00$ContentPlaceHolder1$cbPowerListDistributors$10" checked="checked"><label for="ctl00_ContentPlaceHolder1_cbPowerListDistributors_10">优惠券发放提醒</label></td>
+                                        </tr><tr>
+                                            <td><input id="ctl00_ContentPlaceHolder1_cbPowerListDistributors_2" type="checkbox" name="ctl00$ContentPlaceHolder1$cbPowerListDistributors$2" checked="checked"><label for="ctl00_ContentPlaceHolder1_cbPowerListDistributors_2">订单成功获得佣金提醒</label></td><td></td><td></td><td></td><td></td>
+                                        </tr>
+                                        </tbody></table>
+
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center">会员</td>
+                                <td>
+
+                                    <table id="ctl00_ContentPlaceHolder1_cbPowerListMember" class="middle" border="0" style="border-style:None;">
+                                        <tbody><tr>
+                                            <td><input id="ctl00_ContentPlaceHolder1_cbPowerListMember_0" type="checkbox" name="ctl00$ContentPlaceHolder1$cbPowerListMember$0" checked="checked"><label for="ctl00_ContentPlaceHolder1_cbPowerListMember_0">密码重置提醒</label></td><td><input id="ctl00_ContentPlaceHolder1_cbPowerListMember_2" type="checkbox" name="ctl00$ContentPlaceHolder1$cbPowerListMember$2" checked="checked"><label for="ctl00_ContentPlaceHolder1_cbPowerListMember_2">会员等级变化提醒</label></td><td><input id="ctl00_ContentPlaceHolder1_cbPowerListMember_4" type="checkbox" name="ctl00$ContentPlaceHolder1$cbPowerListMember$4" checked="checked"><label for="ctl00_ContentPlaceHolder1_cbPowerListMember_4">订单成功获得优惠券提醒</label></td><td><input id="ctl00_ContentPlaceHolder1_cbPowerListMember_6" type="checkbox" name="ctl00$ContentPlaceHolder1$cbPowerListMember$6" checked="checked"><label for="ctl00_ContentPlaceHolder1_cbPowerListMember_6">奖品发放提醒</label></td><td><input id="ctl00_ContentPlaceHolder1_cbPowerListMember_7" type="checkbox" name="ctl00$ContentPlaceHolder1$cbPowerListMember$7" checked="checked"><label for="ctl00_ContentPlaceHolder1_cbPowerListMember_7">优惠券发放提醒</label></td>
+                                        </tr><tr>
+                                            <td><input id="ctl00_ContentPlaceHolder1_cbPowerListMember_1" type="checkbox" name="ctl00$ContentPlaceHolder1$cbPowerListMember$1" checked="checked"><label for="ctl00_ContentPlaceHolder1_cbPowerListMember_1">订单发货提醒</label></td><td><input id="ctl00_ContentPlaceHolder1_cbPowerListMember_3" type="checkbox" name="ctl00$ContentPlaceHolder1$cbPowerListMember$3" checked="checked"><label for="ctl00_ContentPlaceHolder1_cbPowerListMember_3">订单成功获得积分提醒</label></td><td><input id="ctl00_ContentPlaceHolder1_cbPowerListMember_5" type="checkbox" name="ctl00$ContentPlaceHolder1$cbPowerListMember$5" checked="checked"><label for="ctl00_ContentPlaceHolder1_cbPowerListMember_5">退款成功提醒</label></td><td></td><td></td>
+                                        </tr>
+                                        </tbody></table>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- END VALIDATION STATES-->
+        </div>
+    </div>
+
+    <!-- END PAGE CONTENT-->
+
+</div>
+<script type="text/javascript" src="/static/js/bootstrap-switch.min.js"></script>

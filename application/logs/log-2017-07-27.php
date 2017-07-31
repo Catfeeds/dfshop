@@ -1,0 +1,66 @@
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+
+ERROR - 2017-07-27 09:22:21 --> 404 Page Not Found: spuser/Spuser_index/info
+ERROR - 2017-07-27 09:22:31 --> 404 Page Not Found: spuser/Assets/layouts
+ERROR - 2017-07-27 09:22:31 --> 404 Page Not Found: spuser/Assets/layouts
+ERROR - 2017-07-27 09:22:31 --> 404 Page Not Found: spuser/Assets/layouts
+ERROR - 2017-07-27 09:22:31 --> 404 Page Not Found: spuser/Assets/layouts
+ERROR - 2017-07-27 09:23:50 --> 404 Page Not Found: spuser/Spuser_index/info
+ERROR - 2017-07-27 09:24:11 --> 404 Page Not Found: spuser/Assets/layouts
+ERROR - 2017-07-27 09:24:11 --> 404 Page Not Found: spuser/Assets/layouts
+ERROR - 2017-07-27 09:24:11 --> 404 Page Not Found: spuser/Assets/layouts
+ERROR - 2017-07-27 09:24:11 --> 404 Page Not Found: spuser/Assets/layouts
+ERROR - 2017-07-27 09:24:11 --> 404 Page Not Found: spuser/Assets/layouts
+ERROR - 2017-07-27 09:24:11 --> 404 Page Not Found: spuser/Assets/layouts
+ERROR - 2017-07-27 09:29:56 --> 404 Page Not Found: spuser/Assets/layouts
+ERROR - 2017-07-27 09:29:56 --> 404 Page Not Found: spuser/Assets/layouts
+ERROR - 2017-07-27 09:29:56 --> 404 Page Not Found: spuser/Assets/layouts
+ERROR - 2017-07-27 09:29:56 --> 404 Page Not Found: spuser/Assets/layouts
+ERROR - 2017-07-27 09:29:56 --> 404 Page Not Found: spuser/Assets/layouts
+ERROR - 2017-07-27 09:29:56 --> 404 Page Not Found: spuser/Assets/layouts
+ERROR - 2017-07-27 09:29:56 --> 404 Page Not Found: spuser/Assets/layouts
+ERROR - 2017-07-27 09:31:36 --> 404 Page Not Found: spuser/Assets/layouts
+ERROR - 2017-07-27 09:31:36 --> 404 Page Not Found: spuser/Assets/layouts
+ERROR - 2017-07-27 09:31:36 --> 404 Page Not Found: spuser/Assets/layouts
+ERROR - 2017-07-27 09:31:36 --> 404 Page Not Found: spuser/Assets/layouts
+ERROR - 2017-07-27 09:31:36 --> 404 Page Not Found: spuser/Assets/layouts
+ERROR - 2017-07-27 09:31:36 --> 404 Page Not Found: spuser/Assets/layouts
+ERROR - 2017-07-27 09:31:36 --> 404 Page Not Found: spuser/Assets/layouts
+ERROR - 2017-07-27 09:32:21 --> 404 Page Not Found: spuser/Assets/layouts
+ERROR - 2017-07-27 09:32:21 --> 404 Page Not Found: spuser/Assets/layouts
+ERROR - 2017-07-27 09:32:21 --> 404 Page Not Found: spuser/Assets/layouts
+ERROR - 2017-07-27 09:32:21 --> 404 Page Not Found: spuser/Assets/layouts
+ERROR - 2017-07-27 09:32:21 --> 404 Page Not Found: spuser/Assets/layouts
+ERROR - 2017-07-27 09:32:21 --> 404 Page Not Found: spuser/Assets/layouts
+ERROR - 2017-07-27 09:32:21 --> 404 Page Not Found: spuser/Assets/layouts
+ERROR - 2017-07-27 09:32:21 --> 404 Page Not Found: spuser/Assets/layouts
+ERROR - 2017-07-27 09:34:27 --> 404 Page Not Found: spuser/Assets/layouts
+ERROR - 2017-07-27 09:34:27 --> 404 Page Not Found: spuser/Assets/layouts
+ERROR - 2017-07-27 09:34:27 --> 404 Page Not Found: spuser/Assets/layouts
+ERROR - 2017-07-27 09:34:28 --> 404 Page Not Found: spuser/Assets/layouts
+ERROR - 2017-07-27 09:36:31 --> 404 Page Not Found: spuser/Assets/layouts
+ERROR - 2017-07-27 09:36:31 --> 404 Page Not Found: spuser/Assets/layouts
+ERROR - 2017-07-27 09:36:31 --> 404 Page Not Found: spuser/Assets/layouts
+ERROR - 2017-07-27 09:36:31 --> 404 Page Not Found: spuser/Assets/layouts
+ERROR - 2017-07-27 09:36:31 --> 404 Page Not Found: spuser/Assets/layouts
+ERROR - 2017-07-27 09:36:31 --> 404 Page Not Found: spuser/Assets/layouts
+ERROR - 2017-07-27 09:36:31 --> 404 Page Not Found: spuser/Assets/layouts
+ERROR - 2017-07-27 09:36:31 --> 404 Page Not Found: spuser/Assets/layouts
+ERROR - 2017-07-27 09:36:54 --> 404 Page Not Found: spuser/Assets/layouts
+ERROR - 2017-07-27 09:36:54 --> 404 Page Not Found: spuser/Assets/layouts
+ERROR - 2017-07-27 09:36:54 --> 404 Page Not Found: spuser/Assets/layouts
+ERROR - 2017-07-27 09:36:54 --> 404 Page Not Found: spuser/Assets/layouts
+ERROR - 2017-07-27 09:36:54 --> 404 Page Not Found: spuser/Assets/layouts
+ERROR - 2017-07-27 09:36:54 --> 404 Page Not Found: spuser/Assets/layouts
+ERROR - 2017-07-27 09:36:54 --> 404 Page Not Found: spuser/Assets/layouts
+ERROR - 2017-07-27 09:36:54 --> 404 Page Not Found: spuser/Assets/layouts
+ERROR - 2017-07-27 11:06:47 --> 404 Page Not Found: spuser/Spuser_index/info
+ERROR - 2017-07-27 11:20:41 --> 404 Page Not Found: spuser/Spuser_index/info
+ERROR - 2017-07-27 13:12:23 --> 404 Page Not Found: spuser/Spuser_index/info
+ERROR - 2017-07-27 13:12:33 --> Severity: User Warning --> Smarty error: unable to read resource: "collection_list.htm" D:\phpstudy\WWW\dfshop\application\libraries\smarty\Smarty.class.php 1121
+ERROR - 2017-07-27 13:28:44 --> 404 Page Not Found: spuser/ProductDetailsaspx/index
+ERROR - 2017-07-27 14:23:22 --> Severity: User Warning --> Smarty error: unable to read resource: "consult_list.htm" D:\phpstudy\WWW\dfshop\application\libraries\smarty\Smarty.class.php 1121
+ERROR - 2017-07-27 14:35:13 --> 404 Page Not Found: spuser/Spuser_index/info
+ERROR - 2017-07-27 15:00:45 --> 404 Page Not Found: spuser/Spuser_index/info
+ERROR - 2017-07-27 16:16:27 --> Severity: User Warning --> Smarty error: unable to read resource: "score_list.htm" D:\phpstudy\WWW\dfshop\application\libraries\smarty\Smarty.class.php 1121
+ERROR - 2017-07-27 17:06:24 --> 404 Page Not Found: spuser/Spuser_index/info

@@ -1,0 +1,67 @@
+<div class="container-fluid">
+  <div class="portlet-body form"> 
+    <!-- BEGIN FORM-->
+    <form action="" id='form1'  class="form-horizontal" method="post" >
+      <div class="control-group">
+        <div class="controls" style=" height:180px; margin-left:20px;">
+          <{foreach item=item from=$res}>
+              <label class="checkbox inline">
+               	 <input type="checkbox" <{if in_array($item.id,$brand_ids)}>checked<{/if}> name="ids[]" value="<{$item.id}>"><{$item.name}>
+              </label>
+          <{/foreach}>
+        </div>
+      </div>
+      <div class="form-actions">
+        <input type="hidden" name="cat_id" value="<{$smarty.get.cat_id}>">
+        <button type="button" id='form1_sub' style="margin-left:200px;" class="btn green  btn-success">绑定品牌</button>
+      </div>
+    </form>
+    <!-- END FORM--> 
+  </div>
+</div>
+<script>
+function load_ini()
+{
+	var form1=$('#form1');
+	$('#form1_sub').bind('click',function(){
+		$('body').modalmanager('loading');
+		$.post('<{"cat/cat_list"|site_url}>?act=product_brand',form1.serialize(),function(msg){
+			try
+			{
+				eval("var str="+msg);
+				//操作成功
+				if(str.type==1)
+				{	
+					//失败
+				}
+				else if(str.type==2)
+				{
+					//弹出窗口不关闭
+				}
+				else if(str.type==3)
+				{
+					setTimeout(function(){
+						//1秒后关闭
+						modal_msg(str.msg +'  <font color="red">1秒后自动关闭</font>',function(){
+							setTimeout(function(){
+								f_main_index();
+							},1000);
+						});
+					}
+					,300);
+					return true;
+				}
+				
+				setTimeout(function(){
+					modal_msg(str.msg );
+				}
+				,300);
+			}catch(e){
+				setTimeout(function(){
+					modal_msg('系统异常');
+				},300);
+			};
+		});
+	});
+}
+</script>    

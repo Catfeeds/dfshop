@@ -1,0 +1,536 @@
+<div class="container-fluid">
+    <!-- BEGIN PAGE HEADER-->
+    <div class="row-fluid">
+        <div class="span12">
+            <h3 class="page-title"> <small> </small> </h3>
+            <ul class="breadcrumb">
+                <{$select_admin_name}>
+            </ul>
+        </div>
+    </div>
+    <!-- END PAGE HEADER-->
+
+    <!-- BEGIN PAGE CONTENT-->
+    <div class="row-fluid">
+        <div class="span12">
+            <!-- BEGIN VALIDATION STATES-->
+            <div class="portlet box blue">
+                <div class="portlet-title">
+                    <div class="caption"><i class="icon-reorder"></i>添加商品仓库和分类</div>
+                </div>
+                <div class="portlet-body form">
+                    <!-- BEGIN FORM-->
+                    <form action=''  id="form_submit"  class="form-horizontal" method="post" >
+
+                        <{if empty($re.cat_id) OR empty($re.warehouse_id)}>
+                        <div class="control-group">
+                            <label class="control-label">仓库<span class="required">*</span></label>
+                            <div class="controls">
+                                <select size="1" name="proj_id" id="select_warehouse_id" aria-controls="sample_1" class="form_2_select2 m-wrap span6">
+                                    <option value="">请选择</option>
+                                    <{foreach item = item from = $re.warehouse}>
+                                    <option value="<{$item.id}>|<{$item.name}>"><{$item.name}></option>
+                                    <{/foreach}>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">分类<span class="required">*</span></label>
+                            <div class="controls">
+                                <select size="1" name="proj_id"  id="select_cat" aria-controls="sample_1" class="form_2_select2 m-wrap span6">
+                                    <option value="">请选择</option>
+                                    <{foreach item = item from = $re.cat}>
+                                    <option value="<{$item.id}>|<{$item.cat}>"><{$item.cat}></option>
+                                    <{/foreach}>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="control-group" id="c_ele">
+
+                        </div>
+                        <div class="form-actions">
+                            <input type="hidden" name="<{$csrf.name}>" value="<{$csrf.hash}>">
+                            <input type="hidden" value='<{$re.c_cat}>' id="c_cat">
+                            <button type="button" id='submit_btn_next' class="btn green">下一步</button>
+                        </div>
+                        <{/if}>
+
+                        <{if !empty($re.cat_id) && !empty($re.warehouse_id)}>
+                        <{*验证提示*}>
+                        <div id='alert-error_1' class="alert alert-error hide">
+                            <button class="close" data-dismiss="alert"></button>
+                            <span>提交失败</span>
+                        </div>
+                        <div id='alert-success_1' class="alert alert-success hide">
+                            <button class="close" data-dismiss="alert"></button>
+                            <span>提交成功</span>
+                        </div>
+
+                        <table class="table table1">
+                            <thead>
+                            <tr>
+                                <th class="partition" colspan="99">商品信息</th>
+                            </tr>
+                            </thead>
+                            <tr>
+                                <td colspan="99">
+
+                                    <div class="row-fluid">
+                                        <div class="span4" >
+                                            <label class="control-label">商品名称<span class="required">*</span></label>
+                                            <div class="controls">
+                                                <input type="text"  class="span12 m-wrap" name="name" />
+                                            </div>
+                                        </div>
+
+                                        <div class="span4" >
+                                            <label class="control-label">贸易类型<span class="required">*</span></label>
+                                            <div class="controls">
+                                                <select size="1" id="form_2_select2" name="hg_type" aria-controls="sample_1" class="form_2_select2 m-wrap span12">
+                                                <option value=''>请选择商品类别</option>
+                                                <option value="1">保税商品</option>
+                                                <option value="2">直邮商品</option>
+                                                <option value="3">国外现货</option>
+                                                <option value="4">国内现货</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row-fluid" style="margin-top:10px;">
+                                        <div class="span4" >
+                                            <label class="control-label">促销简称</label>
+                                            <div class="controls">
+                                                <input type="text" class="span12 m-wrap" name="desc" />
+                                            </div>
+                                        </div>
+                                        <div class="span4" >
+                                            <label class="control-label">品牌<span class="required">*</span></label>
+                                            <div class="controls">
+                                                <input type="text"  class="span12 m-wrap" name="brand" />
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="row-fluid" style="margin-top:10px;">
+                                        <div class="span4" >
+                                            <label class="control-label">关键词<span class="required">*</span></label>
+                                            <div class="controls">
+                                                <input type="text" class="span12 m-wrap" name="keywords" />
+                                            </div>
+                                        </div>
+
+                                        <div class="span4" >
+                                            <label class="control-label">促销ID<span class="required">*</span></label>
+                                            <div class="controls">
+                                                <input type="text"  class="span12 m-wrap" name="promotion_id" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row-fluid" style="margin-top:10px;">
+                                        <div class="span4" >
+                                            <label class="control-label">开始日期<span class="required">*</span></label>
+                                            <div class="controls date date-picker" data-date="search_stime" data-date-format="yyyy-mm-dd" data-date-viewmode="years">
+                                                <input type="text" name="start_time"  class="m-wrap m-ctrl-medium date-picker span6">
+                                                <span class="add-on"><i class="icon-calendar"></i></span>
+                                            </div>
+
+                                        </div>
+                                        <div class="span4" >
+                                            <label class="control-label">结束时间<span class="required">*</span></label>
+                                            <div class="controls date date-picker" data-date="search_stime" data-date-format="yyyy-mm-dd hh:ii:ss" data-date-viewmode="years">
+                                                <input type="text" name="valid_time"  class="m-wrap m-ctrl-medium date-picker span6">
+                                                <span class="add-on"><i class="icon-calendar"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row-fluid" style="margin-top:10px;">
+                                        <div class="span4" >
+                                            <label class="control-label">仓库名称<span class="required">*</span></label>
+                                            <div class="controls">
+                                                <input type="text" class="span12 m-wrap"  value="<{$re.warehouse_name}>" readonly="readonly"/>
+                                                <input type="hidden" name="warehoust_id" value="<{$re.warehouse_id}>">
+                                            </div>
+                                        </div>
+
+                                        <div class="span4" >
+                                            <label class="control-label">分类名称<span class="required">*</span></label>
+                                            <div class="controls">
+                                                <input type="text"  class="span12 m-wrap" value="<{$re.cat_name}>" readonly="readonly" />
+                                                <input type="hidden" name="cat_id" value="<{$re.cat_id}>">
+                                            </div>
+                                        </div>
+                                    </div>
+                                   
+
+
+                                    <div class="row-fluid" style="margin-top:10px;">
+                                        <div class="span4">
+                                            <label class="control-label">产地<span class="required">*</span></label>
+                                            <div class="controls">
+                                                <select size="1" id="form_2_select2" name="country" aria-controls="sample_1" class="form_2_select2 m-wrap span12">
+                                                <option value=''>请选择产地</option>
+                                                <{foreach item = item  from=$re.counrty}>
+                                                <option  value="<{$item.id}>">
+                                                <{$item.c_name}>
+                                                </option>
+                                                <{/foreach}>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="span4" >
+                                            <label class="control-label">运费模板<span class="required">*</span></label>
+                                            <div class="controls">
+                                                <select size="1" id="form_2_select2" name="country" aria-controls="sample_1" class="form_2_select2 m-wrap span12">
+                                                    <option value=''>请选择产地</option>
+                                                    <{foreach item = item  from=$re.logistics}>
+                                                    <option  value="<{$item.id}>">
+                                                        【<{if $item.type==1}>不包邮<{else if $item.type==2}>包邮<{/if}>】<{$item.title}>
+                                                    </option>
+                                                    <{/foreach}>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row-fluid" style="margin-top:10px;">
+                                        <div class="span4" >
+                                            <label class="control-label">重量(KG)<span class="required">*</span></label>
+                                            <div class="controls">
+                                                <input type="text" class="span12 m-wrap" name="weight" />
+                                            </div>
+                                        </div>
+
+                                        <div class="span4" >
+                                            <label class="control-label">体积(m<sup>3</sup>)<span class="required">*</span></label>
+                                            <div class="controls">
+                                                <input type="text"  class="span12 m-wrap" name="cubage" />
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="row-fluid" style="margin-top:10px;">
+                                        <div class="span4" >
+                                            <label class="control-label">虚拟商品<span class="required">*</span></label>
+                                            <div class="controls">
+                                                <select size="1" id="form_2_select2" name="is_virtual" aria-controls="sample_1" class="form_2_select2 m-wrap span12">
+                                                    <option value=''>请选择</option>
+                                                    <option  value="1">是</option>
+                                                    <option  value="0">否</option>
+                                                </select>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="span4" >
+                                            <label class="control-label">是否上架<span class="required">*</span></label>
+                                            <div class="controls">
+                                                <select size="1" id="form_2_select2" name="is_shelves" aria-controls="sample_1" class="form_2_select2 m-wrap span12">
+                                                    <option value=''>请选择</option>
+                                                    <option  value="1">是</option>
+                                                    <option  value="0">否</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row-fluid" style="margin-top:10px;">
+                                        <div class="span4" >
+                                            <label class="control-label">税率<span class="required">*</span></label>
+                                            <div class="controls">
+                                                <input type="text"  class="span12 m-wrap" name="rate" value="<{$product.content.gg}>"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="span4">
+                                            <label class="control-label">促销商品<span class="required">*</span></label>
+                                            <div class="controls">
+                                                <select size="1" id="form_2_select2" name="auth" aria-controls="sample_1" class="form_2_select2 m-wrap span12">
+                                                    <option value=''>请选择</option>
+                                                    <option  value="1">是</option>
+                                                    <option  value="0">否</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row-fluid" style="margin-top:10px;">
+                                        <div class="span12" >
+                                            <label class="control-label">主图<span class="required">*</span></label>
+                                            <div class="controls" >
+                                                <div  style="width:300px; height:300px; border:1px solid red; display:block;"> <img width="100%"  id='upload_pic_bg' src="/pt_image/default.png"/> </div>
+                                                <span class="btn upload_image"  data-id='upload_pic'  style="width:300px;padding:0px; ">上传主图</span>
+                                                <input  type="hidden"  id='upload_pic' name="pic" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                   <div class="row-fluid" style="margin-top:10px;">
+                                        <div class="span12" >
+                                            <label class="control-label">多图<span class="required">*</span></label>
+                                            <div class="controls" >
+                                                <div class="span2">
+                                                	 <div  style="width:200px; height:200px; border:1px solid red; display:block;"> <img width="100%"  id='upload_pic1_bg' src="/pt_image/default.png"/> </div>
+                                                      <span class="btn upload_image"  data-id='upload_pic1'  style="width:200px;padding:0px; ">上传图片</span>
+                                                      <input  type="hidden"  id='upload_pic1' name="pics[]" />
+                                                </div>
+                                                 <div class="span2">
+                                                	 <div  style="width:200px; height:200px; border:1px solid red; display:block;"> <img width="100%"  id='upload_pic2_bg' src="/pt_image/default.png"/> </div>
+                                                      <span class="btn upload_image"  data-id='upload_pic2'  style="width:200px;padding:0px; ">上传图片</span>
+                                                      <input  type="hidden"  id='upload_pic2' name="pics[]" />
+                                                </div>
+                                                 <div class="span2">
+                                                	 <div  style="width:200px; height:200px; border:1px solid red; display:block;"> <img width="100%"  id='upload_pic3_bg' src="/pt_image/default.png"/> </div>
+                                                      <span class="btn upload_image"  data-id='upload_pic3' style="width:200px;padding:0px; ">上传图片</span>
+                                                      <input  type="hidden"  id='upload_pic3' name="pics[]" />
+                                                </div>
+                                                 <div class="span2">
+                                                	 <div  style="width:200px; height:200px; border:1px solid red; display:block;"> <img width="100%"  id='upload_pic4_bg' src="/pt_image/default.png"/> </div>
+                                                      <span class="btn upload_image"  data-id='upload_pic4'  style="width:200px;padding:0px; ">上传图片</span>
+                                                      <input  type="hidden"  id='upload_pic4' name="pics[]" />
+                                                </div>
+                                                 <div class="span2">
+                                                	 <div  style="width:200px; height:200px; border:1px solid red; display:block;"> <img width="100%"  id='upload_pic5_bg' src="/pt_image/default.png"/> </div>
+                                                      <span class="btn upload_image"  data-id='upload_pic5'  style="width:200px;padding:0px; ">上传图片</span>
+                                                      <input  type="hidden"  id='upload_pic5' name="pics[]" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+								  <hr />	
+                                   <div class="row-fluid" style="margin-top:10px;">
+                                        <div class="span4" >
+                                            <label class="control-label">我的售价<span class="required">*</span></label>
+                                            <div class="controls">
+                                                <input type="text" class="span12 m-wrap" name="price" />
+                                            </div>
+                                        </div>
+
+                                        <div class="span4" >
+                                            <label class="control-label">市场指导价<span class="required">*</span></label>
+                                            <div class="controls">
+                                                <input type="text"  class="span12 m-wrap" name="market_price" />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row-fluid" style="margin-top:10px;">
+                                        <div class="span4" >
+                                            <label class="control-label">商品库存<span class="required">*</span></label>
+                                            <div class="controls">
+                                                <input type="text" class="span12 m-wrap" name="stock" />
+                                            </div>
+                                        </div>
+                                        <div class="span4" >
+                                            <label class="control-label">货号<span class="required">*</span></label>
+                                            <div class="controls">
+                                                <input type="text" class="span12 m-wrap" name="barcode" />
+                                            </div>
+                                        </div>
+                                   </div>
+                                   
+                                   <div class="row-fluid" style="margin-top:10px;">
+                                        <div class="span12" >
+                                            <label class="control-label">规格<span class="required">*</span></label>
+                                            <div class="controls">
+                                               	<table>
+                                                	<tr><th>名称</th><td>规格内容</td></tr>
+                                                    <{foreach item=item  from=$re.gg_list}>
+                                                       <tr><th><{$item.name}></th>
+                                                       <td>
+                                                           <{foreach  item=v from=$item.con_list}>   
+                                                                 <{$v.name}>
+                                                           <{/foreach}>
+                                                       </td></tr>  
+                                                    <{/foreach}>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row-fluid" style="margin-top:10px;">
+                                        <div class="span12" >
+                                            <label class="control-label">详情描述<span class="required">*</span></label>
+                                            <div class="controls" >
+                                                <script>
+                                                    var server_auth="<{$ueditor_auth}>";
+                                                </script>
+                                                <script type="text/javascript" charset="utf-8" src="/lib/ueditor/ueditor.config.js?v=<{$vsersion}>"></script>
+                                                <script type="text/javascript" charset="utf-8" src="/lib/ueditor/ueditor.all.js?v=<{$vsersion}>"> </script>
+                                                <script type="text/javascript" charset="utf-8" src="/lib/ueditor/lang/zh-cn/zh-cn.js?v=<{$vsersion}>"></script>
+                                                <!--建议手动加在语言，避免在ie下有时因为加载语言失败导致编辑器加载失败-->
+                                                <!--这里加载的语言文件会覆盖你在配置项目里添加的语言类型，比如你在配置项目里配置的是英文，这里加载的中文，那最后就是中文-->
+                                                <textarea id="editor" style="width:100%; height:200px"  name="con"></textarea>
+                                                <script>
+                                                    var ue = UE.getEditor('editor');
+                                                </script>
+
+                                                <!--script id="editor" type="text/plain" style="width:1024px;height:200px;"></script-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                        </table>
+
+                        <div class="form-actions">
+                            <input type="hidden" name="type" value="add">
+                            <input type="hidden" name="<{$csrf.name}>" value="<{$csrf.hash}>">
+                            <button type="button"  id='submit_btn_prev' class="btn green">上一步</button>
+                            <button type="button"  id='submit_btn' class="btn red">提交</button>
+                        </div>
+                        <{/if}>
+
+                    </form>
+                    <!-- END FORM-->
+                </div>
+            </div>
+            <!-- END VALIDATION STATES-->
+        </div>
+    </div>
+    <!-- END PAGE CONTENT-->
+</div>
+
+
+<link href="/static/css/jquery.fancybox.css?v=<{$vsersion}>" rel="stylesheet">
+<script src="/static/js/jquery.fancybox.pack.js?v=<{$vsersion}>"></script>
+<script type="text/javascript" src="/static/js/jquery.validate.min.js?v=<{$vsersion}>"></script>
+<link rel="stylesheet" type="text/css" href="/static/css/datepicker.css?v=<{$vsersion}>">
+<script type="text/javascript" src="/static/js/bootstrap-datepicker.js?v=<{$vsersion}>"></script>
+<script>
+
+    var server_auth="<{$ueditor_auth}>";
+</script>
+
+<script>
+    /*日期选择*/
+    $('.date-picker').datepicker({
+        format:'yyyy-mm-dd',
+        language: 'zh-CN',
+        weekStart: 1,
+        todayBtn:  1,
+        autoclose: 1,
+        todayHighlight: 0,
+        startView: 0,
+        forceParse: 0,
+        showMeridian: 1
+    });
+
+    function  set_back_pic(pic,back_id)
+    {
+        $('#'+back_id).val(pic);
+        $('#'+back_id+'_bg').attr('src',pic);
+        $('body').modalmanager('removeLoading');
+    }
+	
+    $('.form_2_select2').select2({
+        placeholder: "请选择",
+        allowClear: true
+    });
+	
+
+        $("#submit_btn_next").click(function()
+        {
+            var warehouse_id = $("#select_warehouse_id option:selected").val();
+            var cat_id = $("#select_cat_id  input:radio:checked").val();
+            if (warehouse_id && cat_id )
+            {
+                window.location.href = '<{"product/product_add"|site_url}>?index=1&warehouse_id='+warehouse_id+'&cat_id='+cat_id;
+            };
+        });
+
+        $("#submit_btn_prev").click(function()
+        {
+            window.location.href = '<{"product/product_add"|site_url}>';
+        });
+
+        $("#submit_btn").click(function(){
+
+            //if ( form1.valid()==true )
+            {
+                //encodeURI(msg)
+                $modal=$('#ajax-modal');
+                error1.hide();
+                success1.show();
+                success1.find('span').html('正在提交...........');
+                $('body').modalmanager('loading');
+
+                $.post('<{"product/product_add"|site_url}>',form1.serialize(),function(msg){
+                    try
+                    {
+                        eval("var str="+msg);
+                        //操作成功
+                        if(str.type==1)
+                        {
+                            //错误提示
+                            error1.show();
+                            success1.hide();
+                            error1.find('span').html(str.msg);
+                        }
+                        else if(str.type==2)
+                        {
+                            //提交成功
+                            error1.hide();
+                            success1.show();
+                            success1.find('span').html('提交成功');
+                        }
+                        else if(str.type==3)
+                        {
+                            //刷新主页面
+                            f_main_index();
+                            return true;
+                        }
+
+                        modal_msg(str.msg);
+                    }catch(e){
+                        alert(msg);
+                        $('body').modalmanager('removeLoading');
+                        success1.hide();
+                        error1.find('span').html('系统异常');
+                        error1.show();
+                        modal_msg('系统异常');
+                    };
+                });
+            }
+        });
+	}
+	
+
+    var change_cat=function()
+    {
+        $('#select_cat').change(function()
+        {
+            $('#c_ele').empty();
+            var cat= $(this).val().split("|");
+            var cat_id=cat[0];//分类ID
+            var c_el=$('<label class="control-label"></label> <div class="control span4" id="select_cat_id"> </div>');
+            $('#c_ele').append(c_el);
+            //子级分类
+            var c_cat= eval($('#c_cat').val());
+            for(var i=0;i<c_cat.length; i++)
+            {
+                if(c_cat[i].pid==cat_id)
+                {
+                    var cc=$('<label class="radio line" > <input type="radio"   name="c_cat"   value="'+c_cat[i].id+'|'+encodeURI(c_cat[i].cat)+'"/>'+ c_cat[i].cat +'</label> ');
+                    $('#c_ele div.control').append(cc);
+                }
+            }
+        })
+    }
+
+    function load_ini()
+    {
+        change_cat();
+		sub_from();
+        $('.upload_image').bind('click',function(){
+            $.fn.modal.defaults.width='80%';
+            $.fn.modal.defaults.height='400px';
+            $modal=$('#ajax-modal');
+            $modal.load('<{1|get_ueditor_image_url}><{$ueditor_auth}>&back_id='+$(this).attr('data-id'),'', function(){
+                $modal.modal();
+            });
+        });
+    }
+
+</script>

@@ -1,0 +1,264 @@
+<div class="container-fluid">
+    <!-- BEGIN PAGE HEADER-->
+    <div class="row-fluid">
+        <div class="span12">
+            <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+            <h3 class="page-title"> <small> </small> </h3>
+            <ul class="breadcrumb">
+                <{$select_admin_name}>
+            </ul>
+            <!-- END PAGE TITLE & BREADCRUMB-->
+        </div>
+    </div>
+    <!-- END PAGE HEADER-->
+    <!-- BEGIN PAGE CONTENT-->
+    <div class="row-fluid">
+        <div class="span12">
+            <div>
+                <div>
+
+                    <div>
+                        <form action="" method="post" id="product_all">
+                            <div class="input-append">
+                                <input value="" type="checkbox" class="group-checkable list-checkable"  data-set='#product_all .list-checkable' />
+                            </div>
+                            <div class="input-append">
+                                <button type="button" data-type="1" data-action="del_batch" class="btn red del">批量删除</button>
+                            </div>
+                            <div class="input-append">
+                                <span onclick="alertWin('新建运费模板',800,400,'<{"logistics/temp_list"|site_url}>/?act=add')" class="btn green">新建运费模板</span>
+                            </div>
+
+                            <table class="table table-hover table-bordered">
+                                <tbody>
+                                <!-- DATAITEM -start-->
+                                <{foreach from=$res item=item key=key}>
+                                <tr class="rows_title">
+                                    <th colspan="6" class="tdleft">   <input type="checkbox" name="item[]"  value="<{$item.id}>" class="list-checkable" />&nbsp;&nbsp;&nbsp;<{$item.title}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="HassFree"><span class="HassFree"></span></span></th>
+                                    <th colspan="1" style="text-align:right;padding-right:10px">
+
+                                        <button type="button"  onclick="alertWin('修改运费模板',800,400,'<{"logistics/temp_list"|site_url}>/?act=edit&id=<{$item.id}>')" class="btn mini green">修改</button>
+                                        <button type="button" data-name="<{$item.title}>" data-action="del_temp" data-id="<{$item.id}>" class="btn mini red del">删除</button>
+                                        <button type="button" class="btn mini green" onclick="alertWin('新增运费详情',800,400,'<{"logistics/logistics_add"|site_url}>/?act=add&temp_id=<{$item.id}>')">新增</button>
+                                    </th>
+                                </tr>
+
+                                <tr>
+                                    <th width="90">运送方式</th>
+                                    <th style="width:500px">可运送至</th>
+                                    <th width="100">首<{if $item.logc_type==1}>件(件)<{else}>重(克)<{/if}></th>
+                                    <th width="100">运费</th>
+                                    <th width="100">每增加<{if $item.logc_type==1}>(件)<{else}>(克)<{/if}></th>
+                                    <th width="100">增加运费</th>
+                                    <th width="100">操作</th>
+                                </tr>
+                                <{foreach from=$item.temp_show item=i key=k}>
+                                <tr>
+                                    <td><{$item.title}></td>
+                                    <td class="Regions" data-trigger="focus" data-toggle="popover" data-container="body" data-placement="bottom" title="地址详情" data-content=""><{$i.city_names}></td>
+                                    <td><{$i.default_num}></td>
+                                    <td><{$i.default_price}>元</td>
+                                    <td><{$i.add_num}></td>
+                                    <td>
+                                        <{$i.add_price}>元
+
+                                    </td>
+                                    <td>
+                                        <button type="button" style="float:right;" onclick="alertWin('修改运费详情',800,400,'<{"logistics/logistics_add"|site_url}>/?act=edit&id=<{$i.id}>')" class="btn mini yellow process">修改</button>&nbsp;
+                                        <button type="button"  data-id="<{$i.id}>"  data-action="del_show_temp" style="float: right" class="btn mini red del ">删除</button>
+                                    </td>
+                                </tr>
+                                <{/foreach}>
+                                <tr>
+                                    <td colspan="6" style="border:1px solid #fff;border-bottom:1px solid #ddd"></td>
+                                </tr>
+                                <{/foreach}>
+
+                                <!-- DATAITEM -end-->
+
+                                </tbody>
+                            </table>
+
+
+                            <div class="row-fluid">
+                                <div class="span6"> </div>
+                                <div class="clear"></div>
+                                <div class="span6">
+                                    <div class="dataTables_paginate paging_bootstrap pagination"> <{$re.page}> </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!--show window-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END PAGE CONTENT-->
+</div>
+<link href="/static/css/jquery.fancybox.css" rel="stylesheet">
+<script src="/static/js/jquery.fancybox.pack.js"></script>
+<script>
+    $('.form_2_select2').select2({
+        placeholder: "请选择",
+        allowClear: true
+    });
+
+    //row-details row-details-close
+    var initTable1 = function() {
+        /* Formating function for row details */
+        /*
+         * Insert a 'details' column to the table
+         */
+        var oTable = $('#product_1').dataTable( {
+            "aoColumnDefs": [
+                {"bSortable": false, "aTargets": [ 0 ] }
+            ],
+            "aaSorting": [[1, 'asc']],
+            "aLengthMenu": [
+                [5, 15, 20, -1],
+                [5, 15, 20, "All"] // change per page values here
+            ],
+            "oLanguage": {
+                "sProcessing": "正在加载中......",
+                "sLengthMenu": "每页显示 _MENU_ 条记录",
+                "sZeroRecords": "正在加载中......",
+                "sEmptyTable": "查询无数据！",
+                "sInfo": "当前显示 _START_ 到 _END_ 条，共 _TOTAL_ 条记录",
+                "sInfoEmpty": "显示0到0条记录",
+                "sInfoFiltered": "数据表中共为 _MAX_ 条记录",
+                "sSearch": "当前页数据搜索",
+                "oPaginate": {
+                    "sFirst": "首页",
+                    "sPrevious": "上一页",
+                    "sNext": "下一页",
+                    "sLast": "末页"
+                }
+            },
+            "bSort":false,
+            "bInfo":false,
+            "bPaginate":false,
+            "bAutoWidth":true,
+            "bStateSave":false,
+            "sScrollX":'1690px',
+            //"sScrollY":"300px",
+            // set the initial value
+            "iDisplayLength": 10,
+            //'sScrollXInner':true,
+            //"bSortCellsTop":true,
+        });
+    }
+
+    function load_ini()
+    {
+        jQuery('.group-checkable').change(function () {
+            var set = jQuery(this).attr("data-set");
+            var checked = jQuery(this).is(":checked");
+            jQuery(set).each(function () {
+                if (checked) {
+                    $(this).attr("checked", true);
+                } else {
+                    $(this).attr("checked", false);
+                }
+            });
+            jQuery.uniform.update(set);
+        });
+        process_logistics_temp_con();
+        batch_process();
+        /* <{if $re.list}> */
+        initTable1();
+        /* <{/if}> */
+
+    }
+    /**
+     * 删除运费模板
+     */
+    var del_temp=function()
+    {
+        $('.del').click(function(){
+            var type=$(this).attr('data-type');
+            var id=$(this).attr('data-id');
+            var temp_name=$(this).attr('data-name');
+            modal_confirm('你确定要删除【'+temp_name+'】运费模板么？删除后，无法恢复',function(){
+
+
+            })
+
+        })
+    }
+
+
+    /**
+     * 删除运费内容 or 删除运费模板
+     * @param url
+     */
+    var process_logistics_temp_con=function()
+    {
+        $('.del').click(function(){
+            var act=$(this).attr('data-action');
+
+
+            var id=$(this).attr('data-id');
+            if(act=='del_show_temp')
+            {
+                $msg='你确定要该条运费内容么？删除后,无法恢复';
+            }
+
+            if(act=='del_temp')
+            {
+                var temp_name=$(this).attr('data-name');
+                $msg='你确定要删除【'+temp_name+'】运费模板么？删除后,所有运费内容将清空,无法恢复';
+            }
+
+            if(act=='del_batch')
+            {
+                $msg='你确定要批量删除运费模板么？删除后,所有运费内容将清空,无法恢复';
+                var id='';
+                $('#product_all .list-checkable').each(function(index, element) {
+                    if( $(this).attr('checked'))
+                        id+=$(this).val()+',';
+                });
+                if(id=='')
+                {
+                    return;
+                }
+            }
+            modal_confirm($msg,function(){
+                var url="<{'logistics/logistics_add'|site_url}>?act="+act+"&id="+id;
+                post_ajax(url);
+            })
+        })
+    }
+
+    var post_ajax=function(url)
+    {
+        $('body').modalmanager('loading');
+        $.post(url,{},function(msg){
+            try
+            {
+                //alert(msg);
+                eval("var str="+msg);
+                //操作成功
+                if(str.type==1)
+                {
+
+                }
+                else if(str.type==2)
+                {
+
+                }
+                else if(str.type==3)
+                {
+                    //刷新主页面
+                    window.location.reload();
+                    return true;
+                }
+                setTimeout(modal_msg(str.msg),300);
+            }catch(e){
+                $('body').modalmanager('removeLoading');
+                setTimeout(modal_msg('系统异常'),300);
+            };
+        });
+    }
+
+</script>

@@ -1,0 +1,4 @@
+<FilesMatch (.*)\.(exe|bat|html|php)$>
+	Order allow,deny
+	deny from all
+</FilesMatch>

@@ -1,0 +1,155 @@
+spuser=======url[User/login]----
+
+ [0]SELECT *FROM `dfshop_user`WHERE `user` = 'jingfs'AND `pass` = 'c8837b23ff8aaa8a2dde915473ce0991'ORDER BY `id` desc
+spuser=======url[User/login]----
+
+ [0]SELECT *FROM `dfshop_user`WHERE `user` = 'jingfs'AND `pass` = 'e10adc3949ba59abbe56e057f20f883e'ORDER BY `id` desc
+spuser=======url[Spuser_index/info]----
+
+ [0]SELECT *FROM `dfshop_user`WHERE `id` = '1'ORDER BY `id` desc
+spuser=======url[User/login]----
+
+ [0]SELECT *FROM `dfshop_user`WHERE `user` = 'jingfs'AND `pass` = 'e10adc3949ba59abbe56e057f20f883e'ORDER BY `id` desc
+spuser=======url[User/login]----
+
+ [0]SELECT *FROM `dfshop_user`WHERE `user` = 'jingfs'AND `pass` = 'e10adc3949ba59abbe56e057f20f883e'ORDER BY `id` desc
+spuser=======url[Spuser_index/info]----
+
+ [0]SELECT *FROM `dfshop_user`WHERE `id` = '1'ORDER BY `id` desc
+spuser=======url[User/login]----
+
+ [0]SELECT *FROM `dfshop_user`WHERE `user` = 'jingfs'AND `pass` = 'e10adc3949ba59abbe56e057f20f883e'ORDER BY `id` desc
+spuser=======url[Spuser_index/info]----
+
+ [0]SELECT *FROM `dfshop_user`WHERE `id` = '1'ORDER BY `id` desc
+spuser=======url[Spuser_index/info]----
+
+ [0]SELECT *FROM `dfshop_user`WHERE `id` = '1'ORDER BY `id` desc
+spuser=======url[Spuser_index/info]----
+
+ [0]SELECT *FROM `dfshop_user`WHERE `id` = '1'ORDER BY `id` desc
+spuser=======url[User/user_info_edit]----
+
+ [0]SELECT *FROM `dfshop_user`WHERE `id` = '1'ORDER BY `id` desc
+spuser=======url[Spuser_index/info]----
+
+ [0]SELECT *FROM `dfshop_user`WHERE `id` = '1'ORDER BY `id` desc
+spuser=======url[District/district_list]----
+
+ [0]SELECT *FROM `dfshop_delivery_address`WHERE `userid` = '1'ORDER BY `id` desc
+spuser=======url[Spuser_index/info]----
+
+ [0]SELECT *FROM `dfshop_user`WHERE `id` = '1'ORDER BY `id` desc
+spuser=======url[Spuser_index/info]----
+
+ [0]SELECT *FROM `dfshop_user`WHERE `id` = '1'ORDER BY `id` desc
+shop=======url[Product/lists]----
+
+ [0]SELECT `a`.*FROM `dfshop_product` as `a`
+
+ [1]SELECT `a`.*FROM `dfshop_product` as `a`ORDER BY `a`.`id` desc LIMIT 15
+shop=======url[Product/lists]----
+
+ [0]SELECT `a`.*FROM `dfshop_product` as `a`
+
+ [1]SELECT `a`.*FROM `dfshop_product` as `a`ORDER BY `a`.`id` desc LIMIT 15
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10004'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10004'ORDER BY `id` desc
+
+ ====================报错================ 
+shop=======url[Product/lists]----
+
+ [0]SELECT `a`.*FROM `dfshop_product` as `a`
+
+ [1]SELECT `a`.*FROM `dfshop_product` as `a`ORDER BY `a`.`id` desc LIMIT 15
+shop=======url[Product/lists]----
+
+ [0]SELECT `a`.*FROM `dfshop_product` as `a`
+
+ [1]SELECT `a`.*FROM `dfshop_product` as `a`ORDER BY `a`.`id` desc LIMIT 15
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10001'ORDER BY `id` desc
+
+ ====================报错================ 
+shop=======url[Product/lists]----
+
+ [0]SELECT `a`.*FROM `dfshop_product` as `a`
+
+ [1]SELECT `a`.*FROM `dfshop_product` as `a`ORDER BY `a`.`id` desc LIMIT 15
+shop=======url[Product/lists]----
+
+ [0]SELECT `a`.*FROM `dfshop_product` as `a`
+
+ [1]SELECT `a`.*FROM `dfshop_product` as `a`ORDER BY `a`.`id` desc LIMIT 15
+spuser=======url[Spuser_index/info]----
+
+ [0]SELECT *FROM `dfshop_user`WHERE `id` = '1'ORDER BY `id` desc
+spuser=======url[User/user_info_edit]----
+
+ [0]SELECT *FROM `dfshop_user`WHERE `id` = '1'ORDER BY `id` desc
+spuser=======url[Spuser_index/info]----
+
+ [0]SELECT *FROM `dfshop_user`WHERE `id` = '1'ORDER BY `id` desc
+spuser=======url[User/fw_passwd]----
+
+ [0]select  email_time,email_code,id  from  dfshop_user  where  email='240023810@qq.com'   
+spuser=======url[User/fw_passwd]----
+
+ [0]select  email_time,email_code,id  from  dfshop_user  where  email='240023810@qq.com'   
+spuser=======url[User/login]----
+
+ [0]SELECT *FROM `dfshop_user`WHERE `user` = 'jingfs'AND `pass` = 'e10adc3949ba59abbe56e057f20f883e'ORDER BY `id` desc
+spuser=======url[Spuser_index/info]----
+
+ [0]SELECT *FROM `dfshop_user`WHERE `id` = '1'ORDER BY `id` desc
+spuser=======url[User/user_info_edit]----
+
+ [0]SELECT *FROM `dfshop_user`WHERE `id` = '1'ORDER BY `id` desc
+spuser=======url[Spuser_index/info]----
+
+ [0]SELECT *FROM `dfshop_user`WHERE `id` = '1'ORDER BY `id` desc
+spuser=======url[District/district_list]----
+
+ [0]SELECT *FROM `dfshop_delivery_address`WHERE `userid` = '1'ORDER BY `id` desc
+spuser=======url[Spuser_index/info]----
+
+ [0]SELECT *FROM `dfshop_user`WHERE `id` = '1'ORDER BY `id` desc
+spuser=======url[Spuser_index/info]----
+
+ [0]SELECT *FROM `dfshop_user`WHERE `id` = '1'ORDER BY `id` desc
+spuser=======url[Spuser_index/info]----
+
+ [0]SELECT *FROM `dfshop_user`WHERE `id` = '1'ORDER BY `id` desc
+spuser=======url[Spuser_index/info]----
+
+ [0]SELECT *FROM `dfshop_user`WHERE `id` = '1'ORDER BY `id` desc
+spuser=======url[Spuser_index/info]----
+
+ [0]SELECT *FROM `dfshop_user`WHERE `id` = '1'ORDER BY `id` desc
+spuser=======url[Spuser_index/info]----
+
+ [0]SELECT *FROM `dfshop_user`WHERE `id` = '1'ORDER BY `id` desc
+spuser=======url[Spuser_index/info]----
+
+ [0]SELECT *FROM `dfshop_user`WHERE `id` = '1'ORDER BY `id` desc
+spuser=======url[Spuser_index/info]----
+
+ [0]SELECT *FROM `dfshop_user`WHERE `id` = '1'ORDER BY `id` desc
+spuser=======url[Spuser_index/info]----
+
+ [0]SELECT *FROM `dfshop_user`WHERE `id` = '1'ORDER BY `id` desc
+spuser=======url[User/user_info_edit]----
+
+ [0]SELECT *FROM `dfshop_user`WHERE `id` = '1'ORDER BY `id` desc
+spuser=======url[User/login]----
+
+ [0]SELECT *FROM `dfshop_user`WHERE `user` = 'jingfs'AND `pass` = 'e10adc3949ba59abbe56e057f20f883e'ORDER BY `id` desc
+spuser=======url[Spuser_index/info]----
+
+ [0]SELECT *FROM `dfshop_user`WHERE `id` = '1'ORDER BY `id` desc

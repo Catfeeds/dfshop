@@ -1,0 +1,5 @@
+.base_msg .msg-modal-close { position: absolute; top: 2px; right: 4px; width: 22px; height: 22px; cursor: pointer; z-index: 8040; background-image: url(./image/wap_msg.png); }
+.base_msg .modal-body{border-top:1px solid #666;}
+.base_msg .modal-title { font-weight: bold; font-size: 12px; height: 30px; background: #000; color: #FFF; }
+.base_msg .modal-header { border-bottom: 1px solid #454a5f; }
+.base_msg .modal { border-radius: 5px; border-radius: 5px !important; }

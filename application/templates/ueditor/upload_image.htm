@@ -1,0 +1,52 @@
+
+<div class="modal-header" style="padding:0px;">
+<h3 id="myModalLabel" class="modal-title" > <span style="margin-left:8px;">上传图片</span> </h3>
+</div>
+<div class="modal-body">
+<div class="tabbable tabbable-custom">
+       <div class="portlet box" style=" border:1px solid #EAEAEA;">
+        <div class="portlet-body" style="height:430px; width:99%; padding:0px;"> 
+          <!-- BEGIN FORM-->
+           <iframe width="100%" scrolling="no"  style="border:0px; min-width:800px;" height="400" id='upload_image_id' src=""></iframe>
+          <!-- END FORM--> 
+        </div>
+
+    </div>
+  </div>
+</div>
+<a title="Close" class="msg-modal-close" data-dismiss="modal" aria-hidden="true" href="javascript:;"></a>
+
+<script>
+$modal=$('#ajax-modal');
+function load_win()
+{
+	$('body').modalmanager('removeLoading');
+	$('body').modalmanager('loading');
+}
+function load_Win_rm()
+{
+	$('body').modalmanager('removeLoading');
+}
+
+function close_Win(pic)
+{
+	$('body').modalmanager('removeLoading');
+	$modal.modal('hide');
+	try {
+		set_back_pic(pic,'<{$smarty.get.back_id}>');
+	}catch(e){}
+}
+
+function show_upload()
+{
+	$('#upload_image_id').attr('src',"<{2|get_ueditor_image_url}>"+server_auth+"&up=1"); 
+}
+
+function show_imglist(url)
+{
+	$('#upload_image_id').attr('src',url+server_auth); 
+}
+
+$('#upload_image_id').attr('src',"<{2|get_ueditor_image_url}>"+server_auth+"&up=1&config_width=<{$smarty.get.config_width}>&config_height=<{$smarty.get.config_height}>"); 
+
+</script> 
