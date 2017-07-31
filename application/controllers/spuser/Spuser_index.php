@@ -13,11 +13,11 @@ class Spuser_index extends MY_Controller {
 	public function info()
 	{
 		$de=$this->Spuser_User_model->get_row('*',array('id'=>$this->user_id));
-		$this->ci_smarty->assign('user',$de);		
-		$this->ci_smarty->display_ini('info.htm');   
+		$this->ci_smarty->assign('user',$de);
+		$this->ci_smarty->display_ini('info.htm');
 	}
 
-    //核销提交
+    /*核销提交*/
 	public function iframe()
 	{
 		$this->ci_smarty->assign('width',$_GET['width']);		
