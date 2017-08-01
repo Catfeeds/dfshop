@@ -1,0 +1,31 @@
+.new-search-tab { position: relative; height: 2.5rem; font-size: 0; width: 100%; background-color: #fff; }
+.new-change-eleven { width: 25%; border-right: 0; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; display: inline-block;  font-size: .875rem;
+text-align: center; line-height: 2.4rem; }
+.new-change-eleven span { color: #232326; display: block; }
+.new-change-eleven.active span { color: #f15353 !important; }
+.new-sort-integrative.active span:after { content: ""; display: inline-block; width: 8px; height: 7px; background-position: 0 -109px; margin-left: 4px; }
+.new-change-eleven span:after, .new-change-eleven.active span:after { display: block; background: url(wap_pic.png) no-repeat; background-size: 200px 200px; }
+.new-sort-price.active span.arrow-down:after { content: ""; display: inline-block; width: 8px; height: 10px; background-position: -170px -15px; margin-left: 4px; }
+.new-sort-price.active span.arrow-up:after { content: ""; display: inline-block; width: 8px; height: 10px; background-position: -170px 0; margin-left: 4px; }
+.new-sort-integrative.active span:after { content: ""; display: inline-block; width: 8px; height: 7px; background-position: 0 -109px; margin-left: 4px; }
+.new-sort-price span:after { content: ""; display: inline-block; width: 8px; height: 10px; background-position: -170px -30px; margin-left: 4px; }
+.new-change-eleven .choose-icon { background: url(wap_pic.png) no-repeat; background-size: 200px 200px; background-position: 0px -119px; width: 15px; height: 13px; margin-left: 2px; display: inline-block; }
+.mzjx-floor { height: auto; width: 100%; }
+.cover-floor { width: 100%; height: 100%; position: fixed; top: 0; left: 0; background: rgba(0,0,0,0.7); z-index: 250; }
+.nav_list { position: fixed; width: 100%; background: #fff; z-index: 251; }
+.show-position { width: 100%; background-color: #fff; }
+.integrative-list { padding: 4px 8px 4px 4px; }
+.sidebar-iteam { position: relative; font-size: 0; }
+.sidebar-iteam.checked .tick { display: block; background: url(wap_pic.png) no-repeat; background-size: 200px 200px; background-position: -160px -55px; width: 20px; height: 15px; float: right; margin: 14px 14px 0 4px; }
+.integrative-list .sidebar-iteam.checked .tick { background: url(wap_pic.png) no-repeat; background-size: 200px 200px; background-position: 0px -180px; width: 13px; height: 10px; }
+.integrative-list .sidebar-iteam .sort-of-brand { height: 2.375rem; line-height: 2.375rem;  font-size: .875rem;
+}
+.sidebar-iteam span.sort-of-brand { margin-left: 15px; width: 42%;  font-size: .9375rem;
+}
+.sidebar-iteam .sort-of-brand { width: 35%; height: 2.875rem; line-height: 2.875rem;  font-size: .8125rem;
+color: #252525; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block; }
+
+.hide{ display:none;}
+
+
+.countdown1{clear:both;min-height:300px;position:relative; z-index:1; background:#fff;}

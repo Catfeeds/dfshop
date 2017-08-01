@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.20, created on 2017-07-28 13:42:57
+<?php /* Smarty version 2.6.20, created on 2017-08-01 10:48:28
          compiled from D:%5Cphpstudy%5CWWW%5Cdfshop%5Capplication%5Ctemplates/shop/html_ini.htm */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('modifier', 'site_url', 'D:\\phpstudy\\WWW\\dfshop\\application\\templates/shop/html_ini.htm', 131, false),array('modifier', 'base_site_url', 'D:\\phpstudy\\WWW\\dfshop\\application\\templates/shop/html_ini.htm', 282, false),array('modifier', 'escape', 'D:\\phpstudy\\WWW\\dfshop\\application\\templates/shop/html_ini.htm', 282, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('modifier', 'site_url', 'D:\\phpstudy\\WWW\\dfshop\\application\\templates/shop/html_ini.htm', 127, false),array('modifier', 'base_site_url', 'D:\\phpstudy\\WWW\\dfshop\\application\\templates/shop/html_ini.htm', 278, false),array('modifier', 'escape', 'D:\\phpstudy\\WWW\\dfshop\\application\\templates/shop/html_ini.htm', 278, false),)), $this); ?>
 <!DOCTYPE html>
 
 <!--[if IE 8]> <html lang="utf8" class="ie8"> <![endif]-->
@@ -31,19 +31,15 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'site_url', 
 " rel="stylesheet" type="text/css"/>
 <link href="/static/css/style-metro.css?v=<?php echo $this->_tpl_vars['vsersion']; ?>
 " rel="stylesheet" type="text/css"/>
-<link href=/static/css/bootstrap-modal.css?v=<?php echo $this->_tpl_vars['vsersion']; ?>
-
+<link href="/static/css/bootstrap-modal.css?v=<?php echo $this->_tpl_vars['vsersion']; ?>
 " rel="stylesheet" type="text/css"/>
 <!-- END GLOBAL MANDATORY STYLES -->
 <!-- BEGIN PAGE LEVEL STYLES -->
-<link rel="stylesheet" href=/static/css/jquery.fancybox.css?v=<?php echo $this->_tpl_vars['vsersion']; ?>
-
+<link rel="stylesheet" href="/static/css/jquery.fancybox.css?v=<?php echo $this->_tpl_vars['vsersion']; ?>
 " />
-<link rel="stylesheet" href=/static/wap/wap.css?v=<?php echo $this->_tpl_vars['vsersion']; ?>
-
+<link rel="stylesheet" href="/static/wap/wap.css?v=<?php echo $this->_tpl_vars['vsersion']; ?>
 " />
-<link rel="stylesheet" href=/static/wap/header.css?v=<?php echo $this->_tpl_vars['vsersion']; ?>
-
+<link rel="stylesheet" href="/static/wap/header.css?v=<?php echo $this->_tpl_vars['vsersion']; ?>
 " />
 
 <!-- END PAGE LEVEL STYLES -->

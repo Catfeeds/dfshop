@@ -153,3 +153,105 @@ spuser=======url[User/login]----
 spuser=======url[Spuser_index/info]----
 
  [0]SELECT *FROM `dfshop_user`WHERE `id` = '1'ORDER BY `id` desc
+spuser=======url[User/login]----
+
+ [0]SELECT *FROM `dfshop_user`WHERE `user` = 'jingfs'AND `pass` = 'e10adc3949ba59abbe56e057f20f883e'ORDER BY `id` desc
+spuser=======url[Spuser_index/info]----
+
+ [0]SELECT *FROM `dfshop_user`WHERE `id` = '1'ORDER BY `id` desc
+spuser=======url[User/user_info_edit]----
+
+ [0]SELECT *FROM `dfshop_user`WHERE `id` = '1'ORDER BY `id` desc
+spuser=======url[Spuser_index/info]----
+
+ [0]SELECT *FROM `dfshop_user`WHERE `id` = '1'ORDER BY `id` desc
+spuser=======url[Spuser_index/info]----
+
+ [0]SELECT *FROM `dfshop_user`WHERE `id` = '1'ORDER BY `id` desc
+spuser=======url[District/district_list]----
+
+ [0]SELECT *FROM `dfshop_delivery_address`WHERE `userid` = '1'ORDER BY `id` desc
+spuser=======url[Spuser_index/info]----
+
+ [0]SELECT *FROM `dfshop_user`WHERE `id` = '1'ORDER BY `id` desc
+spuser=======url[Spuser_index/info]----
+
+ [0]SELECT *FROM `dfshop_user`WHERE `id` = '1'ORDER BY `id` desc
+spuser=======url[Spuser_index/info]----
+
+ [0]SELECT *FROM `dfshop_user`WHERE `id` = '1'ORDER BY `id` desc
+spuser=======url[Spuser_index/info]----
+
+ [0]SELECT *FROM `dfshop_user`WHERE `id` = '1'ORDER BY `id` desc
+spuser=======url[Spuser_index/info]----
+
+ [0]SELECT *FROM `dfshop_user`WHERE `id` = '1'ORDER BY `id` desc
+spuser=======url[Spuser_index/info]----
+
+ [0]SELECT *FROM `dfshop_user`WHERE `id` = '1'ORDER BY `id` desc
+spuser=======url[Spuser_index/info]----
+
+ [0]SELECT *FROM `dfshop_user`WHERE `id` = '1'ORDER BY `id` desc
+shop=======url[Product/lists]----
+
+ [0]SELECT `a`.*FROM `dfshop_product` as `a`
+
+ [1]SELECT `a`.*FROM `dfshop_product` as `a`ORDER BY `a`.`id` desc LIMIT 15
+
+ [2]SELECT `cat`, `pid`, `id`FROM `dfshop_cat`WHERE 1 = 1ORDER BY `pid` desc
+shop=======url[Product/lists]----
+
+ [0]SELECT `a`.*FROM `dfshop_product` as `a`
+
+ [1]SELECT `a`.*FROM `dfshop_product` as `a`ORDER BY `a`.`id` desc LIMIT 15
+
+ [2]SELECT `cat`, `pid`, `id`FROM `dfshop_cat`WHERE 1 = 1ORDER BY `pid` desc
+shop=======url[Product/lists]----
+
+ [0]SELECT `a`.*FROM `dfshop_product` as `a`
+
+ [1]SELECT `a`.*FROM `dfshop_product` as `a`ORDER BY `a`.`id` desc LIMIT 15
+
+ [2]SELECT `cat`, `pid`, `id`FROM `dfshop_cat`WHERE 1 = 1ORDER BY `pid` desc
+shop=======url[Product/lists]----
+
+ [0]SELECT `a`.*FROM `dfshop_product` as `a`
+
+ [1]SELECT `a`.*FROM `dfshop_product` as `a`ORDER BY `a`.`id` desc LIMIT 15
+
+ [2]SELECT `cat`, `pid`, `id`FROM `dfshop_cat`WHERE 1 = 1ORDER BY `pid` desc
+shop=======url[Product/lists]----
+
+ [0]SELECT `a`.*FROM `dfshop_product` as `a`
+
+ [1]SELECT `a`.*FROM `dfshop_product` as `a`ORDER BY `a`.`id` desc LIMIT 15
+
+ [2]SELECT `cat`, `pid`, `id`FROM `dfshop_cat`WHERE 1 = 1ORDER BY `pid` desc
+shop=======url[Product/lists]----
+
+ [0]SELECT `a`.*FROM `dfshop_product` as `a`
+
+ [1]SELECT `a`.*FROM `dfshop_product` as `a`ORDER BY `a`.`id` desc LIMIT 15
+
+ [2]SELECT `cat`, `pid`, `id`FROM `dfshop_cat`WHERE 1 = 1ORDER BY `pid` desc
+shop=======url[Product/lists]----
+
+ [0]SELECT `a`.*FROM `dfshop_product` as `a`
+
+ [1]SELECT `a`.*FROM `dfshop_product` as `a`ORDER BY `a`.`id` desc LIMIT 15
+
+ [2]SELECT `cat`, `pid`, `id`FROM `dfshop_cat`WHERE 1 = 1ORDER BY `pid` desc
+shop=======url[Product/lists]----
+
+ [0]SELECT `a`.*FROM `dfshop_product` as `a`
+
+ [1]SELECT `a`.*FROM `dfshop_product` as `a`ORDER BY `a`.`id` desc LIMIT 15
+
+ [2]SELECT `cat`, `pid`, `id`FROM `dfshop_cat`WHERE 1 = 1ORDER BY `pid` desc
+shop=======url[Product/lists]----
+
+ [0]SELECT `a`.*FROM `dfshop_product` as `a`
+
+ [1]SELECT `a`.*FROM `dfshop_product` as `a`ORDER BY `a`.`id` desc LIMIT 15
+
+ [2]SELECT `cat`, `pid`, `id`FROM `dfshop_cat`WHERE 1 = 1ORDER BY `pid` desc
