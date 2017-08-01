@@ -12,10 +12,10 @@ class Score extends MY_Controller
 
     }
 
-
+    //新的分支
     public function score_list()
     {
-
+        
         $this->ci_smarty->assign('show_ajax', 2);
         $this->ci_smarty->assign('seo_title', '我的积分');
         $this->ci_smarty->display_ini('score_list.htm');
