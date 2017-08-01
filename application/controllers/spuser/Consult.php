@@ -13,8 +13,8 @@ class Consult extends MY_Controller
 
     public function consult_list()
     {
-        $this->ci_smarty->assign('show_ajax',2);
-        $this->ci_smarty->assign('seo_title','我的资讯');
+        $this->ci_smarty->assign('show_ajax', 2);
+        $this->ci_smarty->assign('seo_title', '我的资讯');
         $this->ci_smarty->display_ini('consult_list.htm');
     }
 

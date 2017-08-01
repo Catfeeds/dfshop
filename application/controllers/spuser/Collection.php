@@ -14,8 +14,8 @@ class Collection extends MY_Controller
 
     public function collection_list()
     {
-        $this->ci_smarty->assign('show_ajax',2);
-        $this->ci_smarty->assign('seo_title','我的收藏');
+        $this->ci_smarty->assign('show_ajax', 2);
+        $this->ci_smarty->assign('seo_title', '我的收藏');
         $this->ci_smarty->display_ini('collection_list.htm');
     }
 }

@@ -60,7 +60,6 @@ class District extends MY_Controller
             $this->form_validation->set_rules('city','市','required');
             $this->form_validation->set_rules('area','县区','required');
             $this->form_validation->set_rules('address','详细地址','required');
-
             if ($this->form_validation->run() == FALSE)
             {
                 $msg = array(

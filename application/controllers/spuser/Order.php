@@ -13,8 +13,8 @@ class Order extends MY_Controller
 
     public function order_list()
     {
-        $this->ci_smarty->assign('show_ajax',2);
-        $this->ci_smarty->assign('seo_title','我的订单');
+        $this->ci_smarty->assign('show_ajax', 2);
+        $this->ci_smarty->assign('seo_title', '我的订单');
         $this->ci_smarty->display_ini('order_list.htm');
     }
 
