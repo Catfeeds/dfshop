@@ -167,7 +167,7 @@ function load_sub()
 </section>
 
 <!--底部-->
-
+<{if $show_ajax!=1&&$show_ajax!=2}>
 <div id='df_footer' style="<{if $nav_header_hide==1}>display:none;<{/if}>" >
   <div class="floor bottom-bar-pannel">
     <div class="floor-container ">
@@ -181,6 +181,7 @@ function load_sub()
     </div>
   </div>
 </div>
+<{/if}>
 <!--底部 结束--> 
 
 <!-- END PAGE CONTAINER-->

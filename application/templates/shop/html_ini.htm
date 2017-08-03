@@ -108,6 +108,24 @@ function load_sub()
   <div style="clear:both;"></div>
 </section>
 <{/if}>
+
+<{if $show_ajax==2}>
+<section style="background:#E81328; position:fixed; width:100%; color:#fff; z-index:10000; <{if $nav_header_hide==1}>display:none;<{/if}>">
+  <div id="left"> logo </div>
+  <div id="content">
+    <div id="contentInner">
+      <div id="nav_right"> 返回 </div>
+      <div id="nav_content" >
+        <div id="nav_contentInner" >
+          <{$seo_title}>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="clear:both;"></div>
+</section>
+<{/if}>
+
 <style>
 .ac_results li{ line-height:25px; border-bottom:1px solid #ccc;}
 </style>

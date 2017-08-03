@@ -51,7 +51,7 @@
                 <ul class="commodity_list_term">
                     <{foreach from=$item key=k item=i}>
                     <li class="select">
-                        <em aem="0" cart_id="product_<{$i.product_id}>"></em>
+                        <em aem="0" cart_id="<{$i.product_id}>"></em>
                         <img src="<{$i.product_info.pic}>">
                         <div class="div_center">
                             <h4><{$i.product_info.name}></h4>
@@ -68,16 +68,16 @@
                     <{/foreach}>
                 </ul>
                 <!--优惠信息-->
-                <div class="shop_ul_bottom account_info_box">
-                    <ul class="account_info">
+                <!--<div class="shop_ul_bottom account_info_box">-->
+                    <!--<ul class="account_info">-->
 
-                        <li class="i_text">
-                            <span class="info_name xi_cu">包邮</span>
-                            <span class="info_name">商家包邮</span>
-                        </li>
+                        <!--<li class="i_text">-->
+                            <!--<span class="info_name xi_cu">包邮</span>-->
+                            <!--<span class="info_name">商家包邮</span>-->
+                        <!--</li>-->
 
-                    </ul>
-                </div>
+                    <!--</ul>-->
+                <!--</div>-->
             </div>
         </div>
         <{/foreach}>
@@ -461,6 +461,19 @@
             };
         });
     }
+
+
+    //结算
+    $('#confirm_cart').click(function(){
+        var cart_id=$('.commodity_list_term li em.pitch_on');
+        var ids='';
+        for(var i=0;i<cart_id.length;i++)
+        {
+            ids+=$(cart_id[i]).attr('cart_id')+'&';
+        }
+
+        window.location.href="<{'cart/confirm_order'|site_url}>?ids="+ids;
+    })
 
 </script>
 
