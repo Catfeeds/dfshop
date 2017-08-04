@@ -14,12 +14,14 @@ class Product extends MY_Controller {
 		if(empty($_GET['keyword']))
 			return '';
 		$this->load->model('Base_page_model');	
+		
 		//10条关键字	
 		$key_list=$this->Base_page_model
 					   ->where(" `name` like '%".mysql_escape_string($_GET['keyword'])."%'")
 					   ->select_one('name,uptime,s_num,id',tab_m('keyword'))
 					   ->result_array(0,10,' s_num desc,id desc ');
 		$str='';
+		
 		foreach($key_list as $v)
 		{
 			//每次关键字1小时更新一次  //防止频繁导致崩溃
@@ -29,8 +31,7 @@ class Product extends MY_Controller {
 				//$str.="".$v['keyword']."|";
 				$num=$this->Base_page_model
 						  ->where(" name like '%".mysql_escape_string($v['name'])."%'")
-						  ->select_one('id',tab_m('product'))
-						  ->num_rows();
+						  ->select_one('id',tab_m('product'))->num_rows();
 				$this->db->where(array('id'=>$v['id']));
 				//$this->db->update(tab_m('keyword'),array('uptime'=>date('Y-m-d H:i:s'),'s_num'=>$num));
 				//Bsee_keyword_model->update(),array('id'=>$v['id']));	
@@ -51,9 +52,39 @@ class Product extends MY_Controller {
 		return ;
 	}
 	
+	public function get_brand()
+	{
+		if(!empty($_POST['code'])&&!empty($_POST['brand_id']))
+		{
+			$_POST['brand_id']*=1;
+			$ip=get_baseip();
+			$code=md5(date('Ymd').config_item('cookie_authkey').$ip);
+			if($_POST['code']==$code)
+			{
+				$this->load->model('Base_cat_model');
+				$brand=$this->Base_cat_model->get_row(array('id'=>$_POST['brand_id']),'brand_ids');
+				$this->load->model('Base_get_model');
+				$this->Base_get_model->db_one->where_in('id',explode(',',$brand['brand_ids']));
+				$d=array();
+				$d['list']=$this->Base_get_model->get_list(tab_m('brand'),'name,id',array(1=>1));
+				$gg=$this->Base_get_model->get_list(tab_m('cat_gg'),'id,name',array('catid'=>$_POST['brand_id']));
+				foreach($gg as $k=>$v)
+				{
+					$gg[$k]['gg_con']=$this->Base_get_model->get_list(tab_m('cat_gg_con'),'id,name',array('cat_gg_id '=>$v['id']));
+				}
+				$d['gg_list']=$gg;
+				echo json_encode($d);
+				return;
+			}
+		}
+		echo "error";
+		return;
+	}
 	
 	public function lists()
 	{
+		$ip=get_baseip();
+		$this->ci_smarty->assign('code',md5(date('Ymd').config_item('cookie_authkey').$ip));
 		if(!empty($_GET['keyword']))
 		{
 			$this->load->model('Base_page_model');	
@@ -108,8 +139,7 @@ class Product extends MY_Controller {
 		$res['page']=$this->ci_page->prompt();
 		
 		$this->load->model('Base_cat_model');
-		$res['cat_list']=$this->Base_cat_model->get_result_list(array('1'=>1),'cat,pid,id',' pid desc ');
-
+		$res['cat_list']=$this->Base_cat_model->get_result_list(array('1'=>1),'cat,pid,id',' id asc');
 		$this->ci_smarty->assign('re',$res,1,'page');
 		$this->ci_smarty->display_ini('product_list.htm');	
 	}
