@@ -51,7 +51,7 @@
                 <ul class="commodity_list_term">
                     <{foreach from=$item key=k item=i}>
                     <li class="select">
-                        <em aem="0" cart_id="<{$i.product_id}>"></em>
+                        <em aem="0" cart_id="<{$i.product_info.id}>"></em>
                         <img src="<{$i.product_info.pic}>">
                         <div class="div_center">
                             <h4><{$i.product_info.name}></h4>
@@ -61,7 +61,7 @@
                         <div class="div_right">
                             <i onClick="reducew(this)">-</i>
                             <span class="zi"><{$i.quantity}></span>
-                            <input type="hidden" value="<{$i.product_id}>">
+                            <input type="hidden" value="<{$i.product_info.id}>">
                             <i onClick="plusw(this)">+</i>
                         </div>
                     </li>
@@ -101,8 +101,11 @@
     </div>
     <!-- end -->
 </form>
-
+<script src="/static/js/jquery.cookie.min.js"></script>
 <script>
+
+
+   // cookie_prefix_tag test
     var noX = 0;  /* 没选中时点击加减计算数量  */
     var allThis = $(".commodity_box .select em"); /*底部全选*/
     /* 减  */
@@ -427,6 +430,12 @@
                 {
 
                 }
+                else if(str.type==4)
+                {
+                    $.cookie('spuser_df__test-dfshop_com', null);
+                    $.cookie('spuser_df__test-dfshop_com'+str.key,str.msg,{ expires: 1, path: '/',domain:'.test-dfshop.com' });
+                }
+
 
             }catch(e){
                 setTimeout(modal_msg('系统异常'),300);
@@ -454,6 +463,11 @@
                 else if(str.type==3)
                 {
 
+                }
+                else if(str.type==4)
+                {
+                    $.cookie('spuser_df__test-dfshop_com', null);
+                    $.cookie('spuser_df__test-dfshop_com'+str.key,str.msg,{ expires: 1, path: '/',domain:'.test-dfshop.com' });
                 }
 
             }catch(e){

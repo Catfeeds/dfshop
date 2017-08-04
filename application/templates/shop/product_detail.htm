@@ -1,17 +1,28 @@
-
 <link rel="stylesheet" href="/static/wap/detail.css?a=1" />
+
+<div class="jd-header-new-bar" id="itemProductHead">
+  <div id="m_common_header_goback" class="jd-header-icon-back"><span></span></div>
+  <ul class="jd-header-title" id="header-tabs">
+    <li class="header-tab-item">
+      <p class="header-tab-title  header-tab-selected" id="detailView">商品</p>
+    </li>
+    <li class="header-tab-item " id="detailInfo" >
+      <p class="header-tab-title  ">详情</p>
+    </li>
+    <li class="header-tab-item " id="pingjia">
+      <p class="header-tab-title ">评价</p>
+    </li>
+  </ul>
+  <div class="jd-header-icon-shortcut"><span></span></div>
+  <div class="header-bar-border"></div>
+</div>
+
+
+
 <div id="cart1" style="display:none;"  class="cart-concern-btm-fixed five-column">
-  <div class="concern-cart"> 
-    <a class="dong-dong-icn  no_load"  id="imBottom"  href="#"> <em class="btm-act-icn"></em> <span class="focus-info"> 供应商 </span> </a> 
-    <a class="love-heart-icn no_load" id="focusOn" href="#"> <em class="btm-act-icn focus-out" id="attentionFocus"></em> <i class="focus-scale"></i> <span class="focus-info"> 关注 </span> </a> 
-    <a class="cart-car-icn  no_load" href="#"> <em class="btm-act-icn" id="shoppingCart"> <i class="order-numbers" id="carNum"></i> </em> <span class="focus-info">购物车</span> </a> </div>
-  <div class="action-list"> 
-    <a class="yellow-color add_cart no_load" id="add_cart_btn">加入购物车</a>  
-    <a class="red-color directorder no_load" id="buy_pay_btn">立即购买</a>  
-    <a class="yellow-color no_load" style="display:none" id="kanxs_btn" href="#" >查看相似</a> 
-    <a class="red-color directorder no_load" id="tz_btn" style="display:none" >到货通知</a> 
-  </div>   
-</div> 
+  <div class="concern-cart"> <a class="dong-dong-icn  no_load"  id="imBottom"  href="#"> <em class="btm-act-icn"></em> <span class="focus-info"> 供应商 </span> </a> <a class="love-heart-icn no_load" id="focusOn" href="#"> <em class="btm-act-icn focus-out" id="attentionFocus"></em> <i class="focus-scale"></i> <span class="focus-info"> 关注 </span> </a> <a class="cart-car-icn  no_load" href="#"> <em class="btm-act-icn" id="shoppingCart"> <i class="order-numbers" id="carNum"></i> </em> <span class="focus-info">购物车</span> </a> </div>
+  <div class="action-list"> <a class="yellow-color add_cart no_load" id="add_cart_btn">加入购物车</a> <a class="red-color directorder no_load" id="buy_pay_btn">立即购买</a> <a class="yellow-color no_load" style="display:none" id="kanxs_btn" href="#" >查看相似</a> <a class="red-color directorder no_load" id="tz_btn" style="display:none" >到货通知</a> </div>
+</div>
 <div class="flick-menu-mask" id='spec_content_t1' style="display:block;"></div>
 <div class="spec-menu">
   <div class="spec-menu-content spec-menu-show" id='spec_content_t2' style="display:block;">
@@ -20,43 +31,29 @@
       <a class="rt-close-btn-wrap spec-menu-close no_load">
       <p class="flick-menu-close"></p>
       </a>
-      <div class="spec-price" id="specJdPri" style="display: block; padding-top:10px;">
-     	  <span class="yang-pic spec-yang-pic"></span> <span id="spec_price"> <{$de.price}> 元</span> 
-       </div>
-        <div id="specWeightDiv" class="spec-weight"> 
-           <span>原价:</span> <span id="spec_mark_price"><i style="text-decoration:line-through;"><{$de.market_price}> 元</i></span>
-        </div>
-        <div id="specWeightDiv" class="spec-weight">
-           <span>库存:</span> <span id="spec_stock" style="color:red; font-weight:bold;"><{$de.stock}></span> 件  <span id="spec_weight">(0.39kg)</span> 
-       </div> 
-        <div id="specWeightDiv" class="spec-weight">
-           <span>货号:</span> <span id="spec_code"><{$de.stock}></span>  
-       </div> 
-       
-       <!--div id="specWeightDiv" class="spec-weight"> 
+      <div class="spec-price" id="specJdPri" style="display: block; padding-top:10px;"> <span class="yang-pic spec-yang-pic"></span> <span id="spec_price"> <{$de.price}> 元</span> </div>
+      <div id="specWeightDiv" class="spec-weight"> <span>原价:</span> <span id="spec_mark_price"><i style="text-decoration:line-through;"><{$de.market_price}> 元</i></span> </div>
+      <div id="specWeightDiv" class="spec-weight"> <span>库存:</span> <span id="spec_stock" style="color:red; font-weight:bold;"><{$de.stock}></span> 件 <span id="spec_weight">(0.39kg)</span> </div>
+      <div id="specWeightDiv" class="spec-weight"> <span>货号:</span> <span id="spec_code"><{$de.stock}></span> </div>
+      
+      <!--div id="specWeightDiv" class="spec-weight"> 
       		
-      </div-->
+      </div--> 
     </div>
-    <div class="spec-menu-middle">
+    <div class="spec-menu-middle"> 
       <div class="prod-spec" id="prodSpecArea"> 
         <!-- 已选 -->
         <div class="spec-desc"> <span class="part-note-msg">已选</span>
           <div id="select_spec" class="base-txt"> <{$de.name}> <{$gg_con.gg_con_title}> &nbsp;&nbsp;<span class="amount">1件</span> </div>
         </div>
         <{assign var=i  value=0}>
-        <div class="nature-container" > 
-          <div   id="gg_con" data-type='0'>
-           <{foreach item=item key=k1 from=$gg_con.cons}>
-              <div class="pro-color"> <span class="part-note-msg"><{$gg_con_title_gg.$i}></span>
-                <p class="item"> 
-                    <{foreach item=v key=k2 from=$item}>
-                    	<a data-id='<{$k2}>' class="a-item no_load <{if $selected_gg.$i==$k2}>selected<{/if}>" href="javascript:void(0)"><{$v}></a> 
-                    <{/foreach}>
-                    <{assign var=i  value=$i+1}>
-                </p>
-              </div>
-           <{/foreach}> 
-          </div> 
+        <div class="nature-container" >
+          <div   id="gg_con" data-type='0'> <{foreach item=item key=k1 from=$gg_con.cons}>
+            <div class="pro-color"> <span class="part-note-msg"><{$gg_con_title_gg.$i}></span>
+              <p class="item"> <{foreach item=v key=k2 from=$item}> <a data-id='<{$k2}>' class="a-item no_load <{if $selected_gg.$i==$k2}>selected<{/if}>" href="javascript:void(0)"><{$v}></a> <{/foreach}>
+                <{assign var=i  value=$i+1}> </p>
+            </div>
+            <{/foreach}> </div>
           <!--数量-->
           <div id="addCartNum" class="pro-count"> <span class="part-note-msg">数量</span>
             <div class="quantity-wrapper">
@@ -68,12 +65,8 @@
         </div>
       </div>
     </div>
-    <div class="flick-menu-btn spec-menu-btn"> 
-        <a class="yellow-color add_cart no_load" id="add_cart_btn_spec" style="transform-origin: 0px 0px 0px; opacity: 1; transform: scale(1, 1);">加入购物车</a> 
-        <a class="red-color directorder no_load" id="buy_pay_btn_spec" style="transform-origin: 0px 0px 0px; opacity: 1; transform: scale(1, 1);" >立即购买</a>
-        <a class="yellow-color no_load" id="kanxs_btn_spec" style="display:none;">查看相似</a> 
-        <a class="red-color  no_load"   id="tz_btn_spec" style="display:none;">到货通知</a> 
-        <!---
+    <div class="flick-menu-btn spec-menu-btn"> <a class="yellow-color add_cart no_load" id="add_cart_btn_spec" style="transform-origin: 0px 0px 0px; opacity: 1; transform: scale(1, 1);">加入购物车</a> <a class="red-color directorder no_load" id="buy_pay_btn_spec" style="transform-origin: 0px 0px 0px; opacity: 1; transform: scale(1, 1);" >立即购买</a> <a class="yellow-color no_load" id="kanxs_btn_spec" style="display:none;">查看相似</a> <a class="red-color  no_load"   id="tz_btn_spec" style="display:none;">到货通知</a> 
+      <!---
         <{****************
             <a class="red-color  disabled" style="display:none;"   id="waitingForAppointments_spec">等待预约</a> 
             <a class="red-color" style="display:none;"   id="makeAppointments_spec">立即预约</a> 
@@ -82,7 +75,7 @@
             <a class="red-color disabled" style="display: none;" id="appointmentsEnd_spec">预约结束</a> 
             <a class="red-color" style="display: none;" id="yushou_add_cart_spec" onclick="specPresaleButtonToOrder();">立即预定</a> 
         *****************}>
-        --->
+        ---> 
     </div>
   </div>
 </div>
@@ -147,16 +140,18 @@ function  update_space()
 		 }catch(e){}
 	});
 }
+
 /*<{if $de.stock==0}>*/
-$('#buy_pay_btn_spec').hide();
-$('#add_cart_btn_spec').hide();
-$('#kanxs_btn_spec').show();
-$('#tz_btn_spec').show();
-$('#add_cart_btn').hide();
-$('#buy_pay_btn').hide();
-$('#kanxs_btn').show();
-$('#tz_btn').show();
+	$('#buy_pay_btn_spec').hide();
+	$('#add_cart_btn_spec').hide();
+	$('#kanxs_btn_spec').show();
+	$('#tz_btn_spec').show();
+	$('#add_cart_btn').hide();
+	$('#buy_pay_btn').hide();
+	$('#kanxs_btn').show();
+	$('#tz_btn').show();
 /*<{/if}>*/
+
 $('#add_cart_btn,#buy_pay_btn').bind('click',function(){
 	var type=$(this).attr('id');
 	if(type=='add_cart_btn')
@@ -183,6 +178,7 @@ $('#add_cart_btn,#buy_pay_btn').bind('click',function(){
 	}
 });
 
+
 $('#add_cart_spec,#pay_spec,#ck_spec,#tz_spec').bind('click',function(){
 	var type=$(this).attr('id');
 	if(type=='add_cart_spec')
@@ -208,9 +204,7 @@ $('#add_cart_spec,#pay_spec,#ck_spec,#tz_spec').bind('click',function(){
 		
 		
 	}
-	
 });
-
 
 function minus()
 {
@@ -228,6 +222,5 @@ function modify()
 	$('#number').val(($('#number').val()).replace(/[^0-9]*/g,""));
 	$('#number').val($('#number').val()==''?1:$('#number').val()*1);
 }
-
 
 </script>
