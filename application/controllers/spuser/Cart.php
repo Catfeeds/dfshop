@@ -44,15 +44,13 @@ class Cart extends MY_Controller {
             {
                 $cart_list[$k]['product_info']=$this->Base_Product_model->get_row(array('id'=>$v['product_id']),'*');
             }
-            echo '<pre>';
-            //print_r($cart_list);
             //按仓库号分类后的购物车列表
             $new_cart_list=array();
             foreach ( $cart_list as $k=>$v)
             {
                 $new_cart_list[$v['product_info']['warehouse_id']][]=$v;
             }
-            print_r($new_cart_list);
+
         }
         $this->ci_smarty->assign('cart_list',$new_cart_list);
         $this->ci_smarty->assign('show_ajax',1);
@@ -198,6 +196,7 @@ class Cart extends MY_Controller {
             else
             {
                 //用户登陆
+                $m_user_id  = $user_login;
                 $num        = $_POST['num'];
                 $product_id = $_POST['goods_id'];
                 $res=$this->Base_Cart_model->update(array('quantity'=>$num),array('product_id'=>$product_id,'buyer_id'=>$m_user_id));
@@ -285,13 +284,39 @@ class Cart extends MY_Controller {
     /*确认订单*/
     public function confirm_order()
     {
-        //
+        $user_id=$this->is_login();
+
+        if($user_id===FALSE)
+        {
+            header('Location:'.site_url('user/login'));
+            die;
+        }
+        else
+        {
+            /**
+             * 用户登陆后
+             * 确认订单可以由两个页面跳转过来
+             * 1、立即购买            单个商品
+             * 2、购物车，立即购买      单个或多个商品
+             *
+             */
+
+            //查询默认收货地址
+            $this->load->model('Base_Address_model');
+            $default_address=$this->Base_Address_model->get_row(array('userid'=>$user_id,'default'=>1));
+            //查询要购买的商品
+            $ids=$_GET['ids'];
+            $ids=array_filter(explode('|',$ids));
+        
 
 
 
-        $this->ci_smarty->assign('show_ajax',1);
-        $this->ci_smarty->assign('seo_title', '确认订单');
-        $this->ci_smarty->display('confirm_order.htm');
+
+            $this->ci_smarty->assign('show_ajax',2);
+            $this->ci_smarty->assign('seo_title', '确认订单');
+            $this->ci_smarty->display_ini('confirm_order.htm');
+        }
+
     }
 
     /*
