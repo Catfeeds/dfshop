@@ -61,7 +61,7 @@
                         <div class="div_right">
                             <i onClick="reducew(this)">-</i>
                             <span class="zi"><{$i.quantity}></span>
-                            <input type="hidden" value="<{$i.product_info.id}>">
+                            <input  type="hidden" name="<{$i.product_info.id}>" value="<{$i.quantity}>">
                             <i onClick="plusw(this)">+</i>
                         </div>
                     </li>
@@ -220,6 +220,9 @@
             if($(this).hasClass("pitch_on")){
                 /*去该店全选*/
                 $(this).parents("ul").siblings(".select").find("em").removeClass("pitch_on");
+
+                /*将input设置为disable*/
+                $(this).parents("ul").find('div.div_right').find('input').attr('disabled','disabled');
                 /*去底部全选*/
                 $("#all_pitch_on").removeClass("pitch_on");
                 $(this).removeClass("pitch_on");
@@ -228,6 +231,7 @@
                 delete cart_id[carts_id];
             }else{
                 $(this).addClass("pitch_on");
+                $(this).parents("ul").find('div.div_right').find('input').removeAttr('disabled');
                 var n = $(this).parents("ul").children().find(".pitch_on");
                 var n1 = $(this).parents("ul").children();
                 plusMod($(this),totalH,0,noX);
@@ -246,10 +250,18 @@
             /* 全选该店铺  */
             if($(this).hasClass("pitch_on")){
                 /*去底部全选*/
+
                 $("#all_pitch_on").removeClass("pitch_on");
+
                 $(this).removeClass("pitch_on");
                 commodityReduceMod($(this),totalH);
                 $(this).parent().siblings("ul").find("em").removeClass("pitch_on");
+                var ip = $(this).parent().siblings("ul").find('input');
+                for(var i in ip)
+                {
+                    ip.attr('disabled','disabled');
+
+                }
                 delete cart_id[carts_id];
             }else{
 
@@ -257,7 +269,11 @@
                 $(this).addClass("pitch_on");
 
                 $(this).parent().siblings("ul").find("em").addClass("pitch_on");
-
+                var ip = $(this).parent().siblings("ul").find('input');
+                for(var i in ip)
+                {
+                    ip.removeAttr('disabled');
+                }
 //                if(plus != NaN && plus != undefined){
 //                    totalH = parseFloat(totalH)-parseFloat(plus);
 //                }
@@ -285,6 +301,11 @@
             $(this).addClass("pitch_on");
             allThis.removeClass("pitch_on");
             allThis.addClass("pitch_on");
+            var ip=$('.commodity_list_box').find('input');
+            for(var i in ip)
+            {
+                ip.removeAttr('disabled');
+            }
             /*总价格*/
             commodityWhole();
             bot = 1;
@@ -296,6 +317,12 @@
             $(this).removeClass("pitch_on");
             allThis.removeClass("pitch_on");
             $("#total_price b").text("0");
+            var ip=$('.commodity_list_box').find('input');
+            for(var i in ip)
+            {
+                ip.attr('disabled','disabled');
+
+            }
             bot = 0;
             //移除全部对象
             for(var key in cart_id){
@@ -343,7 +370,7 @@
         var $this = $(obj);
         var totalH = $("#total_price b").text(); /* 合计金额  */
         var ise = $this.siblings("span").text();
-        var gc_id = $this.siblings("input").val();
+        var gc_id = $this.siblings("input").attr('name');
         if(noX <= 0){
             noX = 0;
         }else{
@@ -352,9 +379,11 @@
 
         if(parseInt(ise) <= 1){
             $this.siblings("span").text("1");
+            $this.siblings("input").val(1);
         }else{
             var n =parseInt(ise)-1;
             $this.siblings("span").text(n);
+            $this.siblings("input").val(n);
             cart_goods_num_change(n,gc_id);
             if($this.parent().parent().children("em").hasClass("pitch_on")){
                 var mo = $this.parent().parent().children("em");
@@ -372,14 +401,16 @@
         var $this = $(obj);
         var totalH = $("#total_price b").text(); /* 合计金额 */
         var ise = $this.siblings("span").text(); /* 商品数量 */
-        var gc_id = $this.siblings("input").val(); /*商品id*/
+        var gc_id = $this.siblings("input").attr('name'); /*商品id*/
         var stock_num=$this.parent().prev().find('span b').text();/*库存商品数*/
         if(parseInt(ise)>=parseInt(stock_num)){
-           var n =parseInt(ise)
+           var n =parseInt(ise);
+           $this.siblings("input").val(n)
         }
         else
         {
             var n =parseInt(ise)+1;
+            $this.siblings("input").val(n)
             cart_goods_num_change(n,gc_id);
         }
         noX++;
@@ -483,12 +514,15 @@
         var ids='';
         for(var i=0;i<cart_id.length;i++)
         {
-            ids+=$(cart_id[i]).attr('cart_id')+'&';
+            ids+=$(cart_id[i]).attr('cart_id')+'|';
         }
-
+        if(ids=='')
+        {
+            return;
+        }
         window.location.href="<{'cart/confirm_order'|site_url}>?ids="+ids;
     })
 
 </script>
-
-</body></html>
+</body>
+</html>

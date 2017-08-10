@@ -1,0 +1,578 @@
+<body class="page-header-fixed page-boxed">
+    <div class="container">
+        <style>
+            .step1 {
+                width: 100%;
+                position: relative;
+                top: 0;
+                background-color: #fff;
+                padding: 14px 13px 12px 10px;
+            }
+            .border-1px {
+                position: relative;
+            }
+            .border-1px:before, .border-1px:after {
+                border-top: 1px solid #e0e0e0;
+                content: ' ';
+                display: block;
+                width: 100%;
+                position: absolute;
+                left: 0;
+            }
+            .border-1px:before {
+                top: 0;
+            }
+            a.s-href:link, a.s-href:visited, a.s-href:hover, a.s-href:active {
+                color: transparent;
+                text-decoration: none;
+            }
+            a.s-href {
+                display: block;
+                width: 100%;
+                height: 100%;
+                color: transparent;
+                text-decoration: none;
+            }
+            a {
+                color: transparent;
+                text-decoration: none;
+            }
+            a, button, input {
+                outline: 0 none;
+                text-decoration: none;
+            }
+            .step1 .step1-in .mt_new {
+                padding: 0 0 10px 0;
+                overflow: hidden;
+                color: #252525;
+            }
+            .step1 .s1-name {
+                float: left;
+                font-size: 1em;
+                color: #252525;
+                font-weight: bold;
+                margin-left: 23px;
+            }
+            .step1 .s1-phone {
+                margin-left: 2.6em;
+            }
+            .step1 .s1-phone {
+                float: left;
+                font-size: 1em;
+                font-weight: bold;
+            }
+            .s1-default-new {
+                float: left;
+                height: 17px;
+                line-height: 15px;
+                color: #f23030;
+                background-color: #fff;
+                font-size: 12px;
+                text-align: center;
+                margin-left: 14px;
+                border: 1px solid #f23030;
+                border-radius: 2px;
+                position: relative;
+                top: 2px;
+                padding: 0 5px;
+            }
+            .step1 .step1-in .mc {
+                font-size: 14px;
+                color: #232326;
+                line-height: 22px;
+                position: relative;
+            }
+            .step1 .step1-in-con {
+                padding-right: 10px;
+                padding-left: 23px;
+            }
+            .s-point {
+                position: absolute;
+                right: .625em;
+                top: 50%;
+                width: .5625em;
+                height: 1em;
+                margin-top: -0.5em;
+                background-size: .5625em 1em;
+            }
+            .middle-box {
+                overflow: hidden;
+                margin-top: 10px;
+            }
+            .border-1px-top {
+                position: relative;
+            }
+            .border-1px-top:before {
+                border-top: 1px solid #e3e5e9;
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 0;
+                width: 100%;
+                -webkit-transform: scaleY(0.5);
+                /*transform: scaleY(0.5);*/
+            }
+            .commodity-list {
+                padding-right: 0;
+            }
+            .step3 {
+                overflow: hidden;
+                background-color: #fff;
+                padding-left: 12px;
+            }
+            .s-list {
+                margin: 0;
+                background: 0;
+            }
+
+            .bg_sign {
+                background: #fff;
+            }
+            .commodity-list .s-item.new-s-item {
+                padding: 15px 0 14px 0;
+            }
+
+            .commodity-list .s-item {
+                padding: 15px 0 15px 0;
+            }
+            .border-1px-bottom-middle {
+                position: relative;
+            }
+
+            .s-item {
+                position: relative;
+                padding: 18px 28px 18px 0;
+                line-height: 1.2em;
+                overflow: hidden;
+            }
+            .sam-box-container {
+                display: -webkit-box;
+                padding-right: 0;
+            }
+            .box-container {
+                display: -webkit-box;
+                padding-right: 60px;
+            }
+            .commodity-list .box-container .sitem-l {
+                padding-right: 10px;
+            }
+            .s-list .samwid {
+                width: 87px;
+                float: left;
+                text-align: center;
+            }
+            .s-list .sitem-l .samsl-img {
+                width: 77px;
+                height: 77px;
+                position: relative;
+            }
+            .step3 .sitem-l .sl-img img {
+                max-width: 100%;
+            }
+            .s-list .sitem-l .samsl-img:after {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 200%;
+                height: 200%;
+                content: '';
+                border: 1px solid #e3e5e9;
+                border-radius: 4px;
+                -webkit-border-radius: 4px;
+                transform: scale(0.5);
+                -webkit-transform: scale(0.5);
+                transform-origin: top left;
+                -webkit-transform-origin: top left;
+            }
+            .commodity-list .box-container .sitem-m {
+                width: auto;
+                clear: both;
+                float: none;
+                -webkit-box-flex: 1;
+            }
+            .step3 .sitem-m {
+                float: left;
+                width: 9.825em;
+                padding-right: 10px;
+                width: 53.125%;
+                font-size: .875em;
+                color: #232326;
+            }
+
+
+            .sitem-m .oneline-tit {
+                font-size: 14px;
+                line-height: 16px;
+                color: #232326;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+            .sitem-weight {
+                font-size: 12px;
+                color: #848689;
+                height: 14px;
+                line-height: 14px;
+                margin: 3px 0 3px;
+                overflow: hidden;
+            }
+            .sitem-btm-detail.edit-wrapper {
+                position: relative;
+                height: 24px;
+            }
+            .sitem-btm-detail {
+                height: 17px;
+                white-space: nowrap;
+                font-size: 0;
+                line-height: 17px;
+                overflow: hidden;
+            }
+            .cf {
+                zoom: 1;
+            }
+
+            .cf:before, .cf:after {
+                content: "";
+                display: table;
+            }
+
+            .sitem-btm-detail.edit-wrapper .sitem-sam-l {
+                vertical-align: middle;
+                line-height: 24px;
+            }
+            .sitem-sam-l {
+                float: left;
+            }
+
+            .sitem-btm-detail span {
+                font-size: 13px;
+            }
+            .sam-cost-red {
+                color: #f23030;
+            }
+            .sam-cost-price {
+                color: #1a68bc;
+                font-size: 16px !important;
+                float: left;
+            }
+
+            .sam-cost-price em {
+                font-size: 12px !important;
+            }
+            .sam-hund {
+                font-size: 16px !important;
+            }
+            .sam-cost-price em {
+                font-size: 12px !important;
+            }
+            .edit-wrapper #moneyTip2 {
+                right: -1px;
+                top: 3px;
+            }
+            .sitem-btm-detail span {
+                font-size: 13px;
+            }
+            .sam-num {
+                float: right;
+                color: #848689;
+                font-size: 12px;
+                margin-top: 4px;
+            }
+
+
+            .quantity-wrapper {
+                position: absolute;
+                background-color: #fff;
+                top: 0;
+                right: 0;
+                width: 84px;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                white-space: nowrap;
+                height: 100%;
+                font-size: 0;
+            }
+
+            body, input, textarea, select, button, table {
+                font-size: 16px;
+                line-height: 1.25em;
+            }
+            a, button, input {
+                outline: 0 none;
+                text-decoration: none;
+            }
+
+            .quantity-wrapper .quantity-decrease, .quantity-wrapper .quantity-increase {
+                position: relative;
+                width: 25px;
+                height: 100%;
+                display: inline-block;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                background-repeat: no-repeat;
+                background-size: 12px 12px;
+                background-position: center center;
+            }
+
+            .quantity-wrapper .quantity {
+                -webkit-appearance: none;
+                border: 0;
+                text-align: center;
+                vertical-align: top;
+                width: 34px;
+                height: 100%;
+                padding: 0;
+                font-size: 14px;
+                color: #232326;
+                display: inline-block;
+            }
+            .quantity-wrapper .quantity-decrease {
+                background-image: url("/static/plus.jpg");
+            }
+            .quantity-wrapper .quantity-increase {
+                background-image: url("/static/minus.jpg");
+            }
+            .quantity-wrapper .quantity-decrease, .quantity-wrapper .quantity-increase {
+                position: relative;
+                width: 25px;
+                height: 100%;
+                display: inline-block;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                background-repeat: no-repeat;
+                background-size: 20px 12px;
+                background-position: center center;
+            }
+
+
+
+            .sam-server {
+                position: relative;
+                font-size: 0;
+            }
+            .seven-return {
+                margin-left: 0;
+                height: 15px;
+                font-size: 12px;
+                color: #6679b3;
+                display: block;
+                margin-top: 3px;
+                margin-right: 5px;
+                line-height: 15px;
+            }
+
+
+
+            .panel-default {
+                border-radius: 0;
+            }
+
+            .panel {
+                margin-bottom: 10px;
+                font-size: 14px;
+            }
+
+            .panel-default {
+                border-color: #e6e9ed;
+            }
+
+            .panel {
+                background-color: #fff;
+                border: none;
+                border-radius: 4px;
+                -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+                -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+                box-shadow: 0 1px 2px rgba(0,0,0,.2);
+                -webkit-border-radius: 4px;
+                -moz-border-radius: 4px;
+            }
+
+            .panel-default {
+                border-color: #ddd;
+            }
+
+            .panel {
+                margin-bottom: 20px;
+                background-color: #fff;
+                border: 1px solid transparent;
+                border-radius: 4px;
+                -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+                box-shadow: 0 1px 1px rgba(0,0,0,.05);
+            }
+
+        </style>
+        <div class="w checkout" style="padding:0px;">
+
+
+            <div class="step1 border-1px">
+                <div class="m step1-in ">
+                    <a href="/norder/address.action?sid=0f551217093799ac3dd408803744a17b&amp;isExposedPay=true"
+                       class="s-href">
+                        <div class="mt_new">
+                            <div class="s1-name">
+                                <span id="address-name">陈梅容</span>
+                            </div>
+                            <div class="s1-phone">
+                                <span id="address-mobile">158****1315</span>
+                            </div>
+
+
+                            <div class="s1-default-new" id="address-default"
+                                 style="transform-origin: 0px 0px 0px; opacity: 1; transform: scale(1,1);">
+                                默认
+                            </div>
+                        </div>
+
+                        <div class="mc step1-in-con">
+                            <i class="icon-map-marker"></i>
+                            <span id="address-where">河南郑州市新密市城区东大街万客隆后麻将广场</span>
+                        </div>
+                        <input type="hidden" id="addressId" value="33154747">
+
+                    </a>
+                </div>
+
+                <b class="s1-borderB"></b>
+                <i class="icon-chevron-right s-point"></i>
+            </div>
+
+
+            <div class="middle-box border-1px-top">
+
+
+                <div class="step3 s-list commodity-list bg_sign"
+                     onclick="pingClick(&quot;true&quot;, &quot;MNeworder_ShieldProduct&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;)">
+                    <div class="s-item new-s-item border-1px-bottom-middle">
+                        <div class="box-container sam-box-container">
+                            <div class="sitem-l samwid">
+                                <div class="sl-img samsl-img">
+                                    <img src="//img10.360buyimg.com/n4/jfs/t5890/174/7563671062/465290/98e32de4/59718151Ne909312b.jpg">
+                                </div>
+                            </div>
+
+                            <div class="sitem-m" style="position: relative">
+
+                                <div class="oneline-tit">弥雅 5mm天然橡胶瑜伽垫 加宽66cm双面防滑瑜珈健身垫 红色肌理</div>
+
+                                <div class="sitem-weight">
+                                    2.940kg×2
+                                </div>
+
+
+                                <div class="sitem-btm-detail edit-wrapper cf">
+                                    <div class="sitem-sam-l cf">
+                                        <span class="sam-cost-price sam-cost-red"><em class="sam-y">￥</em><span
+                                                class="sam-hund">279</span><em>.00</em></span>
+                                        <em class="icon-detailed margrt" id="moneyTip2"></em>
+                                    </div>
+                                    <span class="sam-num" style="margin-top:0">2.940kg×2</span>
+
+
+                                    <div class="quantity-wrapper">
+                                        <input type="hidden" id="maxNum" value="200">
+                                        <input type="hidden" id="minNum" value="1">
+                                        <a class="quantity-decrease" id="subnum"
+                                           href="javascript:modifyWare(1,4286256,2 ,'','','-1',-1);"
+                                           onclick="stopSub();">-</a>
+                                        <input type="tel" size="4" value="2" name="num" id="numNow" class="quantity"
+                                               onchange="checkLimitToast();modifyWare(1,4286256,2,'','','-1')">
+
+                                        <a class="quantity-increase" id="addnum"
+                                           href="javascript:modifyWare(1,4286256,2 ,'','','-1',1);"
+                                           onclick="stopSub();">+</a>
+                                    </div>
+                                </div>
+                                <div class="sam-server">
+                                    <span class="seven-return rtn-ok">
+                                        <img src="//st.360buyimg.com/order/images/order/sevenok.png" width="15" height="15">
+                                        支持7天无理由
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="control-group" style="margin-top: 10px;">
+                            <div class="controls">
+                                <textarea class="span12" rows="3" placeholder="订单备注(选填)"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="control-group" style="margin-top: 10px;">
+                            <div class="panel panel-default">
+                                <!--积分相关开始  -->
+                                <!--<div class="selectBox">-->
+                                    <!--&lt;!&ndash;-->
+                                     <!--<div class="selectcheckbox" id="11_0-0-0UsePointNumber0"-->
+                                          <!--onclick="IsUsePointNumber(11_0-0-0,this, 0)" >-->
+                                                    <!--<span class="glyphicon glyphicon-ok"></span>-->
+                                     <!--</div>-->
+                                    <!--&ndash;&gt;-->
+                                    <!--&lt;!&ndash;  Modify by jack.xu to be sure the params like 0_8c_b are type of string in the arguelist of function &ndash;&gt;-->
+                                    <!--<div class="selectcheckbox checked" id="11_0-0-0UsePointNumber0" onclick="IsUsePointNumber('11_0-0-0',this,'0')">-->
+
+                                        <!--<span class="glyphicon glyphicon-ok"></span>-->
+                                    <!--</div>-->
+
+                                    <!--<span>使用积分(可用<span class="MemberPointNumber" id="11_0-0-0MemberPointNumber0">0</span>点)</span>-->
+
+                                    <!--<span style="" id="11_0-0-0spanPointNumber0"><input class="txtPointNumber" value="0" onblur="setvalue('11_0-0-0',this,'0')" style="width:50px;" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'');$('#11_0-0-0IntegralOffset0').html(0);}else{this.value=this.value.replace(/\D/g,'');}" onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" id="11_0-0-0txtPointNumber0" type="text">点,抵应付金额<span style="color:red">￥</span><span style="color:red" class="IntegralOffset" id="11_0-0-0IntegralOffset0">0</span></span>-->
+
+                                <!--</div>-->
+
+                                <span style="display:none" id="OldMemberPointNumber">0</span>
+                                <span style="display:none" id="NewMemberPointNumber">0</span>
+                                <span style="display:none" id="PointToCashRate">100</span>
+                                <span style="display:none" id="PonitToCash_MaxAmount">5.00</span>
+                                <!--积分相关结束-->
+
+                                <div style="  text-align: right; ">
+                                    <div class="last">
+
+                                        <p class="">
+                                            <span>商品金额：</span>¥<span id="11_0-0-0goodsmenoy0" class="Exemption">245.00 </span>
+                                        </p>
+                                        <p class="">
+                                            <span>商品税金：</span>¥<label id="11_0-0-0kjtRateTotal0" style="margin-bottom: 0;">0.00</label>
+                                        </p>
+                                        <p class="">
+                                            <span>优惠减免：</span>¥<span id="11_0-0-0Exemption0" class="Exemption">0.00</span><span style="display: none" id="11_0-0-0oldExemption0">0.00</span>
+                                            <span style="display: none">是否包邮<span id="11_0-0-0bFreeShipping0" class="bFreeShipping"></span></span>
+                                        </p>
+                                        <p class=" shippingTypes">
+                                            运费金额：<span>¥<label style="font-weight: normal; margin-bottom: 0;" id="11_0-0-0shipcost0">0.00</label></span>
+                                        </p>
+                                        <p class="">
+                                            应付总额：<span><strong class="text-danger">¥<label class="sumtotal" id="11_0-0-0total0" style="margin-bottom: 0;">245.00</label><label style="display: none" id="11_0-0-0oldtotal0">245.00</label></strong></span>
+                                        </p>
+                                        <p style="display:none" class="">
+                                            兑换商品扣除积分：<span>0</span>
+                                        </p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button id="btn_confirm" class="btn btn-block red"><i class="icon-ok"></i>提交订单</button>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
