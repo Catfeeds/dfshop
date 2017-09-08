@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.20, created on 2017-07-20 11:31:51
+<?php /* Smarty version 2.6.20, created on 2017-08-15 13:56:30
          compiled from D:%5Cphpstudy%5CWWW%5Cdfshop%5Capplication%5Ctemplates/admin/login.htm */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'config_item', 'D:\\phpstudy\\WWW\\dfshop\\application\\templates/admin/login.htm', 10, false),)), $this); ?>

@@ -52,7 +52,7 @@ class CI_Input {
 
 	/**
 	 * IP address of the current user
-	 *
+	 * 当前用户的ip地址
 	 * @var	string
 	 */
 	protected $ip_address = FALSE;
@@ -192,7 +192,7 @@ class CI_Input {
 
 			return $output;
 		}
-
+		
 		if (isset($array[$index]))
 		{
 			$value = $array[$index];
@@ -602,6 +602,7 @@ class CI_Input {
 	protected function _sanitize_globals()
 	{
 		// Is $_GET data allowed? If not we'll set the $_GET to an empty array
+		
 		if ($this->_allow_get_array === FALSE)
 		{
 			$_GET = array();

@@ -26,7 +26,7 @@
       <div class="content">
         <div class="tt"><a href="<{"product/detail"|site_url}>?id=<{$item.id}>"><{$item.name}></a></div>
         <div class="price"> <em>¥<i><{$item.price}></i> </em> <del>¥ <{$item.market_price}></del> </div>
-        <a class="cou-btn cou-btn2" href="<{'cart/insert_cart'|base_site_url:'u'}>?id=<{$item.id}>">加入购物车</a> </div>
+        <a class="cou-btn cou-btn2" href="<{'cart/add_cart'|base_site_url:'u'}>?id=<{$item.id}>">加入购物车</a> </div>
     </div>
   </div>
   <div style="clear:both;"></div>
@@ -66,10 +66,8 @@
         
         <div class="clear"></div>
         <{*类型规格*}>
-        <div id='gg_con'>
+        <div id='gg_con' class="search_param"  data-v="search_gg:0">
         	
-        
-        
         </div>
         <div class="clear"></div>
       </div>
@@ -109,15 +107,18 @@
 var resetall=function(){
 	$('.integrative-list>li').removeClass('checked');
 	$('#searchSort20>li').removeClass('active');
+	
 };
 
 var cat_back=function(){
 	$('#s_con').removeClass('hide');	
 	$('#s_con_cat').addClass('hide');
+	$('#gg_brand').attr('data-v','');
+	$('#gg_con').attr('data-v','');
 }
 
 var gg_tamp_htm=function(name,htm){
-	 return '<div   class="search_param"  data-v="search_gg[]:0" class="line1">'
+	 return '<div    class="line1">'
 		   +'<div class="title-line2 bottom-title"> <span class="title">'+name+'</span> <span class="selected"></span><i class="down"></i></div>'
 		   +'<div class="clear"></div>'
 		   +'<div class="brand_list">'
@@ -133,21 +134,88 @@ var gg_click=function(){
 		//class="active"
 		var idd=$(this).attr('id');
 		var type=$(this).attr('data-type');
+		
 		if($('#'+idd).find('span').hasClass('active')==true)
-		{
 			$('#'+idd).find('span').removeClass('active');
-			
-		}
 		else
-		{
 			$('#'+idd).find('span').addClass('active');
-			
+	
+		if(type==1)
+		{
+			var brand_id='';
+			$('#gg_brand .gg_item').each(function(index, element) {
+				if($(this).find('span').hasClass('active')==true)
+				{
+					brand_id+=(brand_id==''?'':',')+$(this).attr('data-id');
+				}
+			});
+			$('#gg_brand').attr('data-v','search_brand:'+brand_id);
 		}
+		
+		if(type==2)
+		{
+			var brand_id='';
+			$('#gg_con .gg_item').each(function(index, element) {
+				if($(this).find('span').hasClass('active')==true)
+				{
+					brand_id+=(brand_id==''?'':',')+$(this).attr('data-id');
+				}
+			});
+			$('#gg_con').attr('data-v','search_gg_id:'+brand_id);
+		}
+		
 	});
+}
+
+var cat_brand=function(catid){
+	 var baseTime=new Date();	
+	$.post('<{"product/get_brand"|site_url}>?t='+baseTime.getTime(),{brand_id:catid,code:'<{$code}>'},function(msg){
+		try
+		{ 
+			eval("var d="+msg);
+			var str='';
+			var k=0;
+			var brand=d.list;
+			for(var df in brand)
+			{
+				//class="active"
+				k++;
+				str+='<div data-type="1" id="gg_'+k+'" class="gg_item" data-id="'+brand[df].id+'" ><span ><i></i>'+brand[df].name+'</span></div>';
+			}
+			
+			if(str=='')
+				$('#gg_brand').hide();
+			else
+				$('#gg_brand').show();	
+				
+			$('#brand_list').html(str);
+			var cat=d.gg_list;
+			var htm='';
+			var gg='';
+			str='';
+			for(var j in cat)
+			{
+				//class="active"
+				gg=cat[j].gg_con;
+				htm='';
+				for(var i in gg)
+				{
+					k++;
+					htm+='<div data-type="2" id="gg_'+k+'" class="gg_item" data-id="'+gg[i].id+'"><span ><i></i>'+gg[i].name+'</span></div>';
+				}
+				str+=gg_tamp_htm(cat[j].name,htm);
+			}
+			$('#gg_con').html(str);
+			gg_click();
+		}
+		catch(e){}
+	})
 }
 
 function load_ini()
 {
+	/*<{*首次加载*}>*/
+	cat_brand('<{$smarty.get.search_cat}>');
 	$('#search1,#search2,#search3,#search4,#search12,#search13,#search14,#catelogy_back').bind('click',function(){
 		var type=$(this).attr('id');
 		if(type=='search1')
@@ -227,50 +295,7 @@ function load_ini()
 					$('#selected_cat').attr('data-v',"search_cat:"+d.id);
 					/*<{*---------品牌----------*}>*/
 					if(d.id!='')
-					{
-						  var baseTime=new Date();	
-						  $.post('<{"product/get_brand"|site_url}>?t='+baseTime.getTime(),{brand_id:d.id,code:'<{$code}>'},function(msg){
-							try
-							{ 
-							 	eval("var d="+msg);
-								var str='';
-								var k=0;
-								var brand=d.list;
-								for(var df in brand)
-								{
-									//class="active"
-									k++;
-									str+='<div data-type="1" id="gg_'+k+'" class="gg_item" data-id="'+brand[df].id+'" ><span ><i></i>'+brand[df].name+'</span></div>';
-								}
-								
-								if(str=='')
-									$('#gg_brand').hide();
-								else
-									$('#gg_brand').show();	
-									
-								$('#brand_list').html(str);
-								var cat=d.gg_list;
-								var htm='';
-								var gg='';
-								str='';
-								for(var j in cat)
-								{
-									//class="active"
-									gg=cat[j].gg_con;
-									htm='';
-									for(var i in gg)
-									{
-										k++;
-										htm+='<div data-type="2" id="gg_'+k+'" class="gg_item" data-id="'+gg[i].id+'"><span ><i></i>'+gg[i].name+'</span></div>';
-									}
-									str+=gg_tamp_htm(cat[j].name,htm);
-								}
-								$('#gg_con').html(str);
-								gg_click();
-							}
-							catch(e){}
-						})
-					}
+						cat_brand(d.id);
 				})
             });
 		}
@@ -292,8 +317,7 @@ function load_ini()
 			 	v=dd[1];
 			 str+=(str==''?'':"&")+dd[0]+"="+v;
         });
-		
-		alert(str);
+		window.location='<{"product/lists"|site_url}>?'+str;
 	});
 	
 }	

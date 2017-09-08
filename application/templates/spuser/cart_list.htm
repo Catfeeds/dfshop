@@ -29,7 +29,7 @@
 </div>
 <div style="height:44px;"></div>
 
-<form method="post" name="cart_form" target="_self" id="cart_form" action="#">
+<form method="post" name="cart_form" target="_self" id="cart_form" action="<{'cart/confirm_order'|site_url}>">
     <!--list-->
     <div class="commodity_list_box">
         <div class="cart_top">
@@ -61,7 +61,7 @@
                         <div class="div_right">
                             <i onClick="reducew(this)">-</i>
                             <span class="zi"><{$i.quantity}></span>
-                            <input  type="hidden" name="<{$i.product_info.id}>" value="<{$i.quantity}>">
+                            <input disabled="disabled" type="hidden" name="<{$i.product_info.id}>" value="<{$i.quantity}>">
                             <i onClick="plusw(this)">+</i>
                         </div>
                     </li>
@@ -95,7 +95,7 @@
             <dt>合计：<p id="total_price">¥<b>0</b></p></dt>
             <dd>不含运费</dd>
         </dl>
-        <input type="hidden" name="gcs" id="gcs">
+        <!--<input type="hidden" name="gcs" id="gcs">-->
         <a class="settle_btn no_load" href="javascript:void(0);" id="confirm_cart">结算</a>
         <a class="settle_btn no_load" href="javascript:void(0);" id="confirm_cart1" onClick="big_cart_remove()">删除</a>
     </div>
@@ -222,7 +222,7 @@
                 $(this).parents("ul").siblings(".select").find("em").removeClass("pitch_on");
 
                 /*将input设置为disable*/
-                $(this).parents("ul").find('div.div_right').find('input').attr('disabled','disabled');
+                $(this).parents("li").find('div.div_right').find('input').attr('disabled','disabled');
                 /*去底部全选*/
                 $("#all_pitch_on").removeClass("pitch_on");
                 $(this).removeClass("pitch_on");
@@ -231,7 +231,7 @@
                 delete cart_id[carts_id];
             }else{
                 $(this).addClass("pitch_on");
-                $(this).parents("ul").find('div.div_right').find('input').removeAttr('disabled');
+                $(this).parents("li").find('div.div_right').find('input').removeAttr('disabled');
                 var n = $(this).parents("ul").children().find(".pitch_on");
                 var n1 = $(this).parents("ul").children();
                 plusMod($(this),totalH,0,noX);
@@ -510,17 +510,17 @@
 
     //结算
     $('#confirm_cart').click(function(){
-        var cart_id=$('.commodity_list_term li em.pitch_on');
-        var ids='';
-        for(var i=0;i<cart_id.length;i++)
+        var form=$('#cart_form');
+        var ip=$('.commodity_list_box').find('input').not(':disabled');
+        var num=ip.length;
+        if(num>0)
         {
-            ids+=$(cart_id[i]).attr('cart_id')+'|';
+            form.submit();
         }
-        if(ids=='')
+        else
         {
             return;
         }
-        window.location.href="<{'cart/confirm_order'|site_url}>?ids="+ids;
     })
 
 </script>

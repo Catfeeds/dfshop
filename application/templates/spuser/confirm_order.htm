@@ -411,6 +411,7 @@
             }
 
         </style>
+        <form action="<{'cart/create_order'|site_url}>" method="post">
         <div class="w checkout" style="padding:0px;">
 
 
@@ -420,10 +421,10 @@
                        class="s-href">
                         <div class="mt_new">
                             <div class="s1-name">
-                                <span id="address-name">陈梅容</span>
+                                <span id="address-name"><{$default_address.name}></span>
                             </div>
                             <div class="s1-phone">
-                                <span id="address-mobile">158****1315</span>
+                                <span id="address-mobile"><{$default_address.mobile}></span>
                             </div>
 
 
@@ -435,9 +436,9 @@
 
                         <div class="mc step1-in-con">
                             <i class="icon-map-marker"></i>
-                            <span id="address-where">河南郑州市新密市城区东大街万客隆后麻将广场</span>
+                            <span id="address-where"><{$default_address.area}><{$default_address.address}></span>
                         </div>
-                        <input type="hidden" id="addressId" value="33154747">
+                        <input type="hidden" id="addressId" name="address_id" value="<{$default_address.id}>">
 
                     </a>
                 </div>
@@ -449,48 +450,52 @@
 
             <div class="middle-box border-1px-top">
 
-
+                <{foreach from=$goods_order item=item key=key}>
                 <div class="step3 s-list commodity-list bg_sign"
                      onclick="pingClick(&quot;true&quot;, &quot;MNeworder_ShieldProduct&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;)">
                     <div class="s-item new-s-item border-1px-bottom-middle">
+                       <{foreach from=$item item=i key=k}>
+                        <{if is_numeric($k)}>
                         <div class="box-container sam-box-container">
                             <div class="sitem-l samwid">
                                 <div class="sl-img samsl-img">
-                                    <img src="//img10.360buyimg.com/n4/jfs/t5890/174/7563671062/465290/98e32de4/59718151Ne909312b.jpg">
+                                    <img src="<{$i.pic}>">
                                 </div>
                             </div>
 
                             <div class="sitem-m" style="position: relative">
 
-                                <div class="oneline-tit">弥雅 5mm天然橡胶瑜伽垫 加宽66cm双面防滑瑜珈健身垫 红色肌理</div>
+                                <div class="oneline-tit"><{$i.name}></div>
 
                                 <div class="sitem-weight">
-                                    2.940kg×2
+                                    <{$i.weight}>g×<{$i.qty}>
                                 </div>
 
 
                                 <div class="sitem-btm-detail edit-wrapper cf">
                                     <div class="sitem-sam-l cf">
                                         <span class="sam-cost-price sam-cost-red"><em class="sam-y">￥</em><span
-                                                class="sam-hund">279</span><em>.00</em></span>
+                                                class="sam-hund"><{$i.price}></span>
                                         <em class="icon-detailed margrt" id="moneyTip2"></em>
                                     </div>
-                                    <span class="sam-num" style="margin-top:0">2.940kg×2</span>
+                                    <input type="hidden" name="goods_id[<{$key}>][]" value="<{$i.id}>">
+                                    <input type="hidden" name="quantity[<{$key}>][]" value="<{$i.qty}>">
+                                    <!--<span class="sam-num" style="margin-top:0">2.940kg×2</span>-->
 
 
-                                    <div class="quantity-wrapper">
-                                        <input type="hidden" id="maxNum" value="200">
-                                        <input type="hidden" id="minNum" value="1">
-                                        <a class="quantity-decrease" id="subnum"
-                                           href="javascript:modifyWare(1,4286256,2 ,'','','-1',-1);"
-                                           onclick="stopSub();">-</a>
-                                        <input type="tel" size="4" value="2" name="num" id="numNow" class="quantity"
-                                               onchange="checkLimitToast();modifyWare(1,4286256,2,'','','-1')">
+                                    <!--<div class="quantity-wrapper">-->
+                                        <!--<input type="hidden" id="maxNum" value="200">-->
+                                        <!--<input type="hidden" id="minNum" value="1">-->
+                                        <!--<a class="quantity-decrease" id="subnum"-->
+                                           <!--href="javascript:modifyWare(1,4286256,2 ,'','','-1',-1);"-->
+                                           <!--onclick="stopSub();">-</a>-->
+                                        <!--<input type="tel" size="4" value="<{$i.qty}>" name="num" id="numNow" class="quantity"-->
+                                               <!--onchange="checkLimitToast();modifyWare(1,4286256,2,'','','-1')">-->
 
-                                        <a class="quantity-increase" id="addnum"
-                                           href="javascript:modifyWare(1,4286256,2 ,'','','-1',1);"
-                                           onclick="stopSub();">+</a>
-                                    </div>
+                                        <!--<a class="quantity-increase" id="addnum"-->
+                                           <!--href="javascript:modifyWare(1,4286256,2 ,'','','-1',1);"-->
+                                           <!--onclick="stopSub();">+</a>-->
+                                    <!--</div>-->
                                 </div>
                                 <div class="sam-server">
                                     <span class="seven-return rtn-ok">
@@ -500,10 +505,11 @@
                                 </div>
                             </div>
                         </div>
-
+                        <{/if}>
+                       <{/foreach}>
                         <div class="control-group" style="margin-top: 10px;">
                             <div class="controls">
-                                <textarea class="span12" rows="3" placeholder="订单备注(选填)"></textarea>
+                                <textarea class="span12" name="remark[<{$key}>][]" rows="3" placeholder="订单备注(选填)"></textarea>
                             </div>
                         </div>
 
@@ -539,7 +545,7 @@
                                     <div class="last">
 
                                         <p class="">
-                                            <span>商品金额：</span>¥<span id="11_0-0-0goodsmenoy0" class="Exemption">245.00 </span>
+                                            <span>商品金额：</span>¥<span id="11_0-0-0goodsmenoy0" class="Exemption"><{$item.total_price}> </span>
                                         </p>
                                         <p class="">
                                             <span>商品税金：</span>¥<label id="11_0-0-0kjtRateTotal0" style="margin-bottom: 0;">0.00</label>
@@ -549,30 +555,28 @@
                                             <span style="display: none">是否包邮<span id="11_0-0-0bFreeShipping0" class="bFreeShipping"></span></span>
                                         </p>
                                         <p class=" shippingTypes">
-                                            运费金额：<span>¥<label style="font-weight: normal; margin-bottom: 0;" id="11_0-0-0shipcost0">0.00</label></span>
+                                            运费金额：<span>¥<label style="font-weight: normal; margin-bottom: 0;" id="11_0-0-0shipcost0"><{$item.total_logistics_fee}></label></span>
                                         </p>
                                         <p class="">
-                                            应付总额：<span><strong class="text-danger">¥<label class="sumtotal" id="11_0-0-0total0" style="margin-bottom: 0;">245.00</label><label style="display: none" id="11_0-0-0oldtotal0">245.00</label></strong></span>
+                                            应付总额：<span><strong class="text-danger">¥<label class="sumtotal" id="11_0-0-0total0" style="margin-bottom: 0;"><{$item.total_price+$item.total_logistics_fee}></label><label style="display: none" id="11_0-0-0oldtotal0">245.00</label></strong></span>
                                         </p>
                                         <p style="display:none" class="">
                                             兑换商品扣除积分：<span>0</span>
                                         </p>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
-
-                        <div class="form-actions">
-                            <button id="btn_confirm" class="btn btn-block red"><i class="icon-ok"></i>提交订单</button>
-                        </div>
-
                     </div>
+                </div>
+                <{/foreach}>
+                <div class="form-actions">
+                    <button id="btn_confirm" class="btn btn-block red"><i class="icon-ok"></i>提交订单</button>
                 </div>
 
             </div>
         </div>
-
+        </form>
     </div>
 
 </body>

@@ -110,3 +110,6 @@ ALTER TABLE `dfshop_cat_gg_product_group` ADD `con` TEXT NULL DEFAULT NULL COMME
 ALTER TABLE `dfshop_user` ADD `email_code` INT( 4 ) NOT NULL DEFAULT '0' COMMENT 'email 找回密码验证码' AFTER `sex`;
 ALTER TABLE `dfshop_user` ADD `email_time` INT( 10 ) NOT NULL DEFAULT '0' AFTER `email_code` ; 	
 ALTER TABLE `dfshop_user` ADD `email` VARCHAR( 100 ) NULL DEFAULT NULL COMMENT '注册邮箱' AFTER `sex` ;
+
+------------------------------------------------------------------------------------------
+ALTER TABLE `dfshop_product` ADD `brand_id` INT( 8 ) NOT NULL DEFAULT '0' COMMENT '品牌ID' AFTER `brand` 

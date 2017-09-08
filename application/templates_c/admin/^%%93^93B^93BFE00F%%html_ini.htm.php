@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.20, created on 2017-07-14 10:34:11
+<?php /* Smarty version 2.6.20, created on 2017-08-03 10:59:42
          compiled from D:%5Cphpstudy%5CWWW%5Cdfshop%5Capplication%5Ctemplates/admin/html_ini.htm */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'site_url', 'D:\\phpstudy\\WWW\\dfshop\\application\\templates/admin/html_ini.htm', 172, false),)), $this); ?>

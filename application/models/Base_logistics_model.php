@@ -178,7 +178,6 @@ class Base_Logistics_model  extends CI_Model
      */
     public function logistics_list()
     {
-
         $CI = & get_instance();
         $CI->load->model('Base_get_model');
         return $CI->Base_get_model->get_list(tab_m('logistics_temp_con_show'),'*',array(1=>1));

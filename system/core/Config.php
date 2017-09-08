@@ -52,21 +52,21 @@ class CI_Config {
 
 	/**
 	 * List of all loaded config values
-	 *
+	 * 所有已经加载的配置列表
 	 * @var	array
 	 */
 	public $config = array();
 
 	/**
 	 * List of all loaded config files
-	 *
+	 * 所有已经加载的配置文件
 	 * @var	array
 	 */
 	public $is_loaded =	array();
 
 	/**
 	 * List of paths to search when trying to load a config file.
-	 *
+	 * 配置文件的路径
 	 * @used-by	CI_Loader
 	 * @var		array
 	 */
@@ -133,11 +133,12 @@ class CI_Config {
 			foreach (array($file, ENVIRONMENT.DIRECTORY_SEPARATOR.$file) as $location)
 			{
 				$file_path = $path.'config/'.$location.'.php';
+				//如果已经加载过  就返回TRUE
 				if (in_array($file_path, $this->is_loaded, TRUE))
 				{
 					return TRUE;
 				}
-
+				//如果文件不存在 跳过
 				if ( ! file_exists($file_path))
 				{
 					continue;

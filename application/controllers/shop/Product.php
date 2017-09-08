@@ -98,27 +98,44 @@ class Product extends MY_Controller {
 		$this->ci_page->Page();
 		$this->ci_page->url=site_url($this->class."/".$this->method);
 		$wsql="  "; 
-		if(isset($_GET))
+		
+		$get_check_num=array(' a.price>= '=>'search_minPrice',' a.price<= '=>'search_maxPrice');
+		$get_check_split_num=array('a.catid'=>'search_cat','a.brand_id'=>'search_brand','b.gg_con_id'=>'search_gg_id');
+		
+		
+		foreach($get_check_num as $name=>$v)
 		{
-			//非模糊查询的字段
-			$search_key_ar=array('warehoust_id');
-			//姓名模糊查询字段
-			$search_key_ar_more=array('name');
-			foreach($_GET as $k=>$v)
+			if(!empty($_GET[$v]))
+				$_GET[$v]*=1;
+			else
+				$_GET[$v]=0;
+				
+			if(!empty($_GET[$v]))	
+				$wsql.="  and  {$name}".$_GET[$v]; 	
+		}
+		
+		$wsql_in=array();
+		foreach($get_check_split_num as $name=>$v)
+		{
+			if(!empty($_GET[$v]))
 			{
-				$skey=substr($k,7,strlen($k)-7);
-				if($k!='search_page_num'&&substr($k,0,7)=='search_'&&!in_array($v,array('all','')))
+				$dd=explode(',',$_GET[$v]);
+				foreach($dd as $k=>$v)
 				{
-					//非模糊查询
-					if(in_array($skey,$search_key_ar))
-						$wsql.=" and a.{$skey}='{$v}'";
-					//模糊查询
-					if(in_array($skey,$search_key_ar_more))
-						$wsql.=" and a.{$skey} like '%{$v}%'";
-				}
-			}
+					$dd[$k]*=1;
+				}	
+				$_GET[$v]=@array_filter($dd);
+				$_GET[$v]=@array_unique($_GET[$v]);
+			}	
+			else
+				$_GET[$v]=0;
+				
+			if(!empty($_GET[$v]))	
+				$wsql_in[$name]=$_GET[$v];
 		}
 
+		$distinct=!empty($_GET['search_gg_id'])?true:false;
+			
 		$search_page_num=array('all'=>15,1=>15,2=>30,3=>50);
 		//===================查询 end=========================
 		$this->ci_page->listRows=!isset($_GET['search_page_num'])||empty($search_page_num[$_GET['search_page_num']])?15:$search_page_num[$_GET['search_page_num']];
@@ -126,15 +143,20 @@ class Product extends MY_Controller {
 		if(!$this->ci_page->__get('totalRows'))
 		{
 			$this->ci_page->totalRows =$this->Base_page_model
-				->where($wsql)
-				->select_one('a.*',tab_m('product')." as a ")
+				->where($wsql,'',$wsql_in)
+				->select_one(($distinct?'b.product_id,':'').'a.*',tab_m('product')." as a ",$distinct)
+				->left_join(tab_m('cat_gg_product_search')." as b",'a.id=b.product_id',!empty($_GET['search_gg_id'])?true:false)
 				->num_rows();
 		}
+		
 		$res=array();
+		
 		$de=$this->Base_page_model
-				->where($wsql)
-				->select_one('a.*',tab_m('product')." as a ")
+				->where($wsql,'',$wsql_in)
+				->select_one(($distinct?'b.product_id,':'').'a.*',tab_m('product')." as a ",$distinct)
+				->left_join(tab_m('cat_gg_product_search')." as b",'a.id=b.product_id',!empty($_GET['search_gg_id'])?true:false)
 				->result_array($this->ci_page->firstRow,$this->ci_page->listRows,' a.id desc ');
+				
 		$res['list']=$de;
 		$res['page']=$this->ci_page->prompt();
 		
@@ -267,5 +289,7 @@ class Product extends MY_Controller {
 		$this->ci_smarty->assign('nav_header_hide',1);		
 		$this->ci_smarty->display_ini('product_detail.htm');	
 	}
+
+	
 }
 	

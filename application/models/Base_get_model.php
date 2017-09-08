@@ -6,14 +6,16 @@ class Base_get_model extends CI_Model
     public function __construct()
     {  
 	    //切换数据库
-		$this->db_one=$this->db;
+		$this->db_one = & $this->db;
 	}
 	
 	function  get_list($tab,$fields='*',$where='',$order_by=' id desc')
 	{
 		if(empty($where))
 			return array();
-		$this->db_one->where($where);
+		if($where[0]!=1&&empty($where[1]))
+			$this->db_one->where($where);
+			
 		return $this->db_one->select($fields)
 					->from($tab)
 					->order_by($order_by)
@@ -25,6 +27,7 @@ class Base_get_model extends CI_Model
 	{
 		if(empty($where))
 			return array();
+			
 		$this->db_one->where($where);
 		return $this->db_one->select($fields)
 					->from($tab)

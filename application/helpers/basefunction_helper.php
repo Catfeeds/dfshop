@@ -24,11 +24,11 @@ if ( ! function_exists('base_site_url') )
 
 	function base_site_url($c,$type='member.php')
 	{
+		//<{"cart/add_cart"|base_site_url:"u"}>
 		if($type==='u')
 			$type='user.php';
 		if($type==='index')
 			$type='index.php';
-				
 		return config_item('base_url')."/".$type."/".$c;
 	}
 }

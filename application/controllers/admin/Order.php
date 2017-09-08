@@ -10,8 +10,6 @@ class Order extends MY_Controller
         $this->load->library('CI_Smarty');
         $this->get_admin_name();
     }
-
-
     /**
      * 订单管理
      */

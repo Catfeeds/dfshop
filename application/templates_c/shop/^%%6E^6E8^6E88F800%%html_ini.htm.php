@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.20, created on 2017-08-01 10:48:28
+<?php /* Smarty version 2.6.20, created on 2017-08-03 10:59:46
          compiled from D:%5Cphpstudy%5CWWW%5Cdfshop%5Capplication%5Ctemplates/shop/html_ini.htm */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('modifier', 'site_url', 'D:\\phpstudy\\WWW\\dfshop\\application\\templates/shop/html_ini.htm', 127, false),array('modifier', 'base_site_url', 'D:\\phpstudy\\WWW\\dfshop\\application\\templates/shop/html_ini.htm', 278, false),array('modifier', 'escape', 'D:\\phpstudy\\WWW\\dfshop\\application\\templates/shop/html_ini.htm', 278, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('modifier', 'site_url', 'D:\\phpstudy\\WWW\\dfshop\\application\\templates/shop/html_ini.htm', 145, false),array('modifier', 'base_site_url', 'D:\\phpstudy\\WWW\\dfshop\\application\\templates/shop/html_ini.htm', 195, false),array('modifier', 'escape', 'D:\\phpstudy\\WWW\\dfshop\\application\\templates/shop/html_ini.htm', 195, false),)), $this); ?>
 <!DOCTYPE html>
 
 <!--[if IE 8]> <html lang="utf8" class="ie8"> <![endif]-->
@@ -132,6 +132,25 @@ function load_sub()
   <div style="clear:both;"></div>
 </section>
 <?php endif; ?>
+
+<?php if ($this->_tpl_vars['show_ajax'] == 2): ?>
+<section style="background:#E81328; position:fixed; width:100%; color:#fff; z-index:10000; <?php if ($this->_tpl_vars['nav_header_hide'] == 1): ?>display:none;<?php endif; ?>">
+  <div id="left"> logo </div>
+  <div id="content">
+    <div id="contentInner">
+      <div id="nav_right"> 返回 </div>
+      <div id="nav_content" >
+        <div id="nav_contentInner" >
+          <?php echo $this->_tpl_vars['seo_title']; ?>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="clear:both;"></div>
+</section>
+<?php endif; ?>
+
 <style>
 .ac_results li{ line-height:25px; border-bottom:1px solid #ccc;}
 </style>
@@ -175,107 +194,6 @@ $("#keyword").autocomplete('<?php echo ((is_array($_tmp="product/search")) ? $th
 #nav_content {float: right;width: 100%;}
 #nav_contentInner {margin-right:80px;height:45px;line-height:45px; text-align:center; }
 </style>
-
-<!---分类-->
-<section class="panel-left-tab panel-left-in" id="panel-left-box" >
-  <h2><i class="sort-left-ico"></i>全部分类</h2>
-  <div class="overflow-list">
-    <ul class="first-classify">
-      <li> <a href="javascript:;"><b class="ico right"></b>厨房日用</a>
-        <ul class="second-classify">
-          <li> <a href="#"><b class="ico right"></b>酒杯</a> </li>
-        </ul>
-      </li>
-      <li> <a href="javascript:;"><b class="ico right"></b>健康保健</a>
-        <ul class="second-classify">
-          <li> <a href="#"><b class="ico right"></b>蜂蜜</a> </li>
-        </ul>
-      </li>
-      <li> <a href="javascript:;"><b class="ico right"></b>休闲食品</a>
-        <ul class="second-classify">
-          <li> <a href="#"><b class="ico right"></b>糖果</a> </li>
-          <li> <a href="#"><b class="ico right"></b>肉干肉脯</a> </li>
-          <li> <a href="#"><b class="ico right"></b>巧克力</a> </li>
-          <li> <a href="#"><b class="ico right"></b>坚果</a> </li>
-          <li> <a href="#"><b class="ico right"></b>海产水产</a> </li>
-          <li> <a href="#"><b class="ico right"></b>果干果脯</a> </li>
-          <li> <a href="#"><b class="ico right"></b>冲调饮品</a> </li>
-          <li> <a href="#"><b class="ico right"></b>饼干膨化</a> </li>
-        </ul>
-      </li>
-      <li> <a href="javascript:;"><b class="ico right"></b>少儿产品</a>
-        <ul class="second-classify">
-          <li> <a href="#"><b class="ico right"></b>文具</a> </li>
-          <li> <a href="#"><b class="ico right"></b>玩具</a> </li>
-        </ul>
-      </li>
-      <li> <a href="javascript:;"><b class="ico right"></b>母婴童玩</a>
-        <ul class="second-classify">
-          <li> <a href="#"><b class="ico right"></b>宝宝喂养</a> </li>
-          <li> <a href="#"><b class="ico right"></b>车床玩具</a> </li>
-          <li> <a href="#"><b class="ico right"></b>孕妇必备</a> </li>
-          <li> <a href="#"><b class="ico right"></b>纸尿裤</a> </li>
-          <li> <a href="#"><b class="ico right"></b>清洁洗护</a> </li>
-          <li> <a href="#"><b class="ico right"></b>药品保健</a> </li>
-          <li> <a href="#"><b class="ico right"></b>宝宝辅食</a> </li>
-          <li> <a href="#"><b class="ico right"></b>宝宝奶粉</a> </li>
-        </ul>
-      </li>
-      <li> <a href="javascript:;"><b class="ico right"></b>美容美妆</a>
-        <ul class="second-classify">
-          <li> <a href="#"><b class="ico right"></b>美体护理</a> </li>
-          <li> <a href="#"><b class="ico right"></b>美发护发</a> </li>
-          <li> <a href="#"><b class="ico right"></b>彩妆工具</a> </li>
-          <li> <a href="#"><b class="ico right"></b>眼线笔睫毛</a> </li>
-        </ul>
-      </li>
-      <li> <a href="javascript:;"><b class="ico right"></b>酒水软饮</a>
-        <ul class="second-classify">
-          <li> <a href="#"><b class="ico right"></b>饮料</a> </li>
-          <li> <a href="#"><b class="ico right"></b>水</a> </li>
-          <li> <a href="#"><b class="ico right"></b>葡萄酒</a> </li>
-          <li> <a href="#"><b class="ico right"></b>啤酒</a> </li>
-          <li> <a href="#"><b class="ico right"></b>果汁</a> </li>
-          <li> <a href="#"><b class="ico right"></b>白酒</a> </li>
-        </ul>
-      </li>
-      <li> <a href="javascript:;"><b class="ico right"></b>家居生活</a>
-        <ul class="second-classify">
-          <li> <a href="#"><b class="ico right"></b>油</a> </li>
-          <li> <a href="#"><b class="ico right"></b>饮料</a> </li>
-          <li> <a href="#"><b class="ico right"></b>水</a> </li>
-          <li> <a href="#"><b class="ico right"></b>葡萄酒</a> </li>
-          <li> <a href="#"><b class="ico right"></b>啤酒</a> </li>
-          <li> <a href="#"><b class="ico right"></b>果汁</a> </li>
-          <li> <a href="#"><b class="ico right"></b>白酒</a> </li>
-        </ul>
-      </li>
-      <li> <a href="javascript:;"><b class="ico right"></b>精选套餐</a>
-        <ul class="second-classify">
-          <li> <a href="#"><b class="ico right"></b>饮料</a> </li>
-          <li> <a href="#"><b class="ico right"></b>水</a> </li>
-          <li> <a href="#"><b class="ico right"></b>葡萄酒</a> </li>
-          <li> <a href="#"><b class="ico right"></b>啤酒</a> </li>
-          <li> <a href="#"><b class="ico right"></b>果汁</a> </li>
-          <li> <a href="#"><b class="ico right"></b>白酒</a> </li>
-        </ul>
-      </li>
-      <li> <a href="javascript:;"><b class="ico right"></b>中万之友</a>
-        <ul class="second-classify">
-          <li> <a href="#"><b class="ico right"></b>饮料</a> </li>
-          <li> <a href="#"><b class="ico right"></b>水</a> </li>
-          <li> <a href="#"><b class="ico right"></b>葡萄酒</a> </li>
-          <li> <a href="#"><b class="ico right"></b>啤酒</a> </li>
-          <li> <a href="#"><b class="ico right"></b>果汁</a> </li>
-          <li> <a href="#"><b class="ico right"></b>白酒</a> </li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-</section>
-<!--分类结束--> 
-
-
 
 <!--右边挂件-->
 <section id="sideWidget" style="background-color:rgba(0,0,0,0.6);<?php if ($this->_tpl_vars['nav_header_hide'] == 1): ?>display:none;<?php endif; ?>"> <a href="javascript:;" onClick="modal_msg('主页')" class="sideWidget-btn"><i class="icon-home" ></i>&nbsp;</a><!-- 返回主页 --> 

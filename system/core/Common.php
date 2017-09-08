@@ -634,6 +634,18 @@ if ( ! function_exists('_error_handler'))
 		{
 			exit(1); // EXIT_ERROR
 		}
+
+		//_error_handler是为了作为自定义的错误处理程序来处理错误，在CodeInniter.php可以看到有这样一句set_error_handler('_error_handler');就是设置自定义处理函数。
+
+		//现在我们来看代码，第一行是这个$is_error = (((E_ERROR | E_PARSE | E_COMPILE_ERROR | E_CORE_ERROR | E_USER_ERROR) & $severity) === $severity);注意这里的&和|是位运算。当我们出现的错误是上面几种错误的时候，进行与运算后错误码并没有发生变化，判断后得到$is_error为true,这个时候set_status_header(500)，否则不需要设置500。
+
+		//if (($severity & error_reporting()) !== $severity)获取应该报告何种错误，如果不需要报错，退出当前方法。
+
+		//$_error->log_exception($severity, $message, $filepath, $line)用来记录日志。
+
+		//if (str_ireplace(array('off', 'none', 'no', 'false', 'null'), '', ini_get('display_errors')))判断报错是否开启，开启的话打印错误。
+
+		//最后判断$is_error为true,因为这种情况表示是严重的错误了，所以执行exit。
 	}
 }
 
@@ -663,6 +675,7 @@ if ( ! function_exists('_exception_handler'))
 		}
 
 		exit(1); // EXIT_ERROR
+
 	}
 }
 

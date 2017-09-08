@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.20, created on 2017-07-28 11:34:45
+<?php /* Smarty version 2.6.20, created on 2017-08-08 10:43:40
          compiled from D:%5Cphpstudy%5CWWW%5Cdfshop%5Capplication%5Ctemplates/spuser/html_ini.htm */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'base_site_url', 'D:\\phpstudy\\WWW\\dfshop\\application\\templates/spuser/html_ini.htm', 176, false),array('modifier', 'site_url', 'D:\\phpstudy\\WWW\\dfshop\\application\\templates/spuser/html_ini.htm', 178, false),array('modifier', 'escape', 'D:\\phpstudy\\WWW\\dfshop\\application\\templates/spuser/html_ini.htm', 178, false),)), $this); ?>
@@ -197,7 +197,7 @@ unset($_smarty_tpl_vars);
 </section>
 
 <!--底部-->
-
+<?php if ($this->_tpl_vars['show_ajax'] != 1): ?>
 <div id='df_footer' style="<?php if ($this->_tpl_vars['nav_header_hide'] == 1): ?>display:none;<?php endif; ?>" >
   <div class="floor bottom-bar-pannel">
     <div class="floor-container ">
@@ -215,6 +215,7 @@ unset($_smarty_tpl_vars);
     </div>
   </div>
 </div>
+<?php endif; ?>
 <!--底部 结束--> 
 
 <!-- END PAGE CONTAINER-->

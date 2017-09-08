@@ -1,0 +1,61 @@
+
+<link href="/static/wap/Cart/css/weixin.css" rel="stylesheet" type="text/css">
+<link href="/static/wap/Cart/css/ionic.min.css" rel="stylesheet" type="text/css">
+<link href="/static/wap/Cart/css/signin.css" rel="stylesheet" type="text/css">
+<link href="/static/wap/Cart/css/share.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="/static/wap/Cart/js/ionic.bundle.min.js"></script>
+<script type="text/javascript" src="/static/wap/Cart/js/runend.js"></script>
+<script type="text/javascript">
+    //定义全局变量
+    var i=0;
+    //金额总和
+    var money=0;
+    //计算合计价格
+    var cart_money=new Object();
+    //全部商品ID
+    var cart_id=new Object();
+    //备份商品ID，用于全选后去掉全选又再次全选
+    var cart_id_copy=new Object();
+
+</script>
+<body class="grade-a platform-browser platform-win32 platform-ready">
+<div id="totop"><a></a></div>
+<div class="header_box">
+    <div class="bar bar-header">
+        <a class="back" href="#">返回</a>
+        <div id="tite" class="h1 title" style=" width: 72%; margin: 0 auto; ">购物车</div>
+        <a class="rig_shai no_load" id="rem_s" href="javascript:void(0)" style="margin-right: 2%;position: absolute; top: 5px; right: 3%;">编辑</a>
+    </div>
+</div>
+<div style="height:44px;"></div>
+
+<form method="post" name="cart_form" target="_self" id="cart_form" action="<{'cart/confirm_order'|site_url}>">
+    <!--list-->
+    <div style=" width: 60%; margin: 0 auto; ">
+        购物车什么也没有？继续逛逛
+    </div>
+    <!-- end -->
+
+    <!-- footer -->
+    <div style="height:55px;"></div>
+    <div class="settle_box">
+        <dl class="all_check select">
+            <dt><span id="all_pitch_on"></span><em>全选</em></dt>
+        </dl>
+        <dl class="total_amount">
+            <dt>合计：<p id="total_price">¥<b>0</b></p></dt>
+            <dd>不含运费</dd>
+        </dl>
+        <!--<input type="hidden" name="gcs" id="gcs">-->
+        <a class="settle_btn no_load" href="javascript:void(0);" id="confirm_cart">结算</a>
+        <a class="settle_btn no_load" href="javascript:void(0);" id="confirm_cart1" onClick="big_cart_remove()">删除</a>
+    </div>
+    <!-- end -->
+</form>
+<script src="/static/js/jquery.cookie.min.js"></script>
+<script>
+
+
+</script>
+</body>
+</html>

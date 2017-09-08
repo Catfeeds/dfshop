@@ -36,7 +36,7 @@ class MY_Controller extends CI_Controller{
 			}
 
 			//检测是否登陆，如果登陆，返回登陆用户信息，否则返回false
-			if(empty($this->cur_user) && $this->method!='login' && $this->method!='reg' && $this->method!='fw_passwd'){
+			if(empty($this->cur_user) && $this->class!='Cart' && $this->method!='login' && $this->method!='reg' && $this->method!='fw_passwd'){
 				
 				header("location:".site_url("user/login").(!empty($_GET['ref_url'])?("?ref_url=".urlencode($_GET['ref_url'])):''));  
 				die;

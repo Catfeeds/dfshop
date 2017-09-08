@@ -23,11 +23,11 @@ class Base_cat_model extends CI_Model
         return $CI->Base_update_model->update(tab_m('cat'),$data,$where);
     }
 
-    public function get_row($where)
+    public function get_row($where,$filed)
     {
         $CI = & get_instance();
         $CI->load->model('Base_get_model');
-        return $CI->Base_get_model->get_row(tab_m('cat'),'*',$where);
+        return $CI->Base_get_model->get_row(tab_m('cat'),$filed='*',$where);
     }
 	
 	public function get_row_field($field,$where)

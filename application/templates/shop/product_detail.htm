@@ -1,22 +1,1020 @@
 <link rel="stylesheet" href="/static/wap/detail.css?a=1" />
+<style>
+	.m_common_new_top {
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 100;
+		width: 100%;
+	}
 
-<div class="jd-header-new-bar" id="itemProductHead">
-  <div id="m_common_header_goback" class="jd-header-icon-back"><span></span></div>
-  <ul class="jd-header-title" id="header-tabs">
-    <li class="header-tab-item">
-      <p class="header-tab-title  header-tab-selected" id="detailView">商品</p>
-    </li>
-    <li class="header-tab-item " id="detailInfo" >
-      <p class="header-tab-title  ">详情</p>
-    </li>
-    <li class="header-tab-item " id="pingjia">
-      <p class="header-tab-title ">评价</p>
-    </li>
-  </ul>
-  <div class="jd-header-icon-shortcut"><span></span></div>
-  <div class="header-bar-border"></div>
+	.jd-header {
+		min-height: 44px;
+		padding: 0;
+		margin: 0;
+		text-decoration: none;
+		color: #252525;
+		width: 100%;
+	}
+	.jd-header, .jd-header a {
+		font-family: PingFangSC-Regular,Helvetica,"Droid Sans",Arial,sans-serif;
+		color: #252525;
+		text-decoration: none;
+		font-size: 16px;
+	}
+	.jd-header-new-bar {
+		width: 100%;
+		position: relative;
+		background: #efefef url(<{""|base_url}>static/img/header-bg.png) repeat-x 0 0;
+		background-size: 100% 44px;
+		min-height: 44px;
+		z-index: 20;
+	}
+	#header-tabs {
+		overflow: hidden;
+		margin: 0 80px;
+		-webkit-tap-highlight-color: rgba(255,0,0,0);
+		display: -moz-box;
+		display: -webkit-box;
+
+	}
+	.jd-header-title {
+		margin: 0 50px;
+		text-align: center;
+		height: 44px;
+		line-height: 44px;
+		font-size: 16px;
+	}
+	.header-tab-item {
+		text-align: center;
+		-moz-box-flex: 1;
+		-webkit-box-flex: 1;
+
+		width: 1%;
+		overflow: hidden;
+		white-space: nowrap;
+	}
+	.header-tab-selected {
+		font-size: 15px;
+		line-height: 15px;
+		padding-top: 15px;
+		padding-bottom: 12px;
+		border-bottom: 2px solid #222;
+		font-weight: 600;
+		width: 34px;
+		text-align: center;
+	}
+	.header-tab-title {
+		font-size: 14px;
+		line-height: 14px;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		color: #222;
+		width: 28px;
+		margin: 0 auto;
+	}
+	.jd-header-icon-category, .jd-header-icon-shortcut {
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 40px;
+		height: 44px;
+		overflow: hidden;
+	}
+	.jd-header-icon-shortcut span {
+		width: 20px;
+		height: 20px;
+		background-position: -60px 0;
+		margin: 12px 10px 0 10px;
+	}
+	.header-bar-border {
+		border-bottom: 1px solid #bbb;
+		border-width: 0 0 1px 0;
+		margin-top: -1px;
+	}
+	.header-tab-selected {
+		font-size: 15px;
+		line-height: 15px;
+		padding-top: 15px;
+		padding-bottom: 12px;
+		border-bottom: 2px solid #222;
+		font-weight: 600;
+		width: 34px;
+		text-align: center;
+	}
+	.jd-header-icon-back, .jd-header-icon-logo {
+		position: absolute;
+		width: 40px;
+		height: 44px;
+	}
+	.jd-header-title {
+		margin: 0 50px;
+		text-align: center;
+		height: 44px;
+		line-height: 44px;
+		font-size: 16px;
+	}
+	 .jd-header-icon-shortcut {
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 40px;
+		height: 44px;
+		overflow: hidden;
+	}
+	.jd-header-shortcut {
+		display: table;
+		width: 100%;
+		background: #404042;
+		height: 57px;
+	}
+	.jd-header-shortcut li {
+		display: table-cell;
+		width: 20%;
+		text-align: center;
+	}
+	.jd-header-shortcut a {
+		border: 0;
+		color: #fff;
+	}
+	.jd-header, .jd-header a {
+		font-family: PingFangSC-Regular,Helvetica,"Droid Sans",Arial,sans-serif;
+		color: #252525;
+		text-decoration: none;
+		font-size: 16px;
+	}
+	.jd-header-shortcut span.shortcut-home {
+		background-position: -30px -27px;
+	}
+	.jd-header-shortcut span {
+		width: 30px;
+		height: 30px;
+		margin-top: 6px;
+	}
+	.jd-header-shortcut span, .jd-header-shortcut strong {
+		display: block;
+		margin: 0 auto;
+		color: #fff;
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 1;
+	}
+	.jd-header-shortcut span, .jd-header-shortcut strong {
+		display: block;
+		margin: 0 auto;
+		color: #fff;
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 1;
+	}
+	.hot-search-bar span i:before, .jd-auto-complete-list li:before, .jd-footer-platforms li a.badge:after, .jd-footer-platforms li a:before, .jd-header-icon-back span, .jd-header-icon-cancel span, .jd-header-icon-category span, .jd-header-icon-close:after, .jd-header-icon-logo span, .jd-header-icon-search span, .jd-header-icon-shortcut span, .jd-header-shortcut span, .jd-search-tab li.sort-by-integrative a:after, .jd-search-tab li.sort-by-integrative.active a:after, .jd-search-tab li.sort-by-price a:after, .jd-search-tab li.sort-by-price.active a.arrow-down:after, .jd-search-tab li.sort-by-price.active a.arrow-up:after, .landing-keywords a:before, .region-title-back i, .sidebar-btn-location:after, .sidebar-categories .arrow, .sidebar-categories li.checked .tick, .supplier-arrow-right
+	{
+		display: block;
+		background: url(<{""|base_url}>static/img/jd-sprites.png) no-repeat;
+		background-size: 200px 200px;
+	}
+	.jd-header-shortcut span {
+		width: 30px;
+		height: 30px;
+		margin-top: 6px;
+	}
+	.jd-header-shortcut span, .jd-header-shortcut strong {
+		display: block;
+		margin: 0 auto;
+		color: #fff;
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 1;
+	}
+	.jd-header-shortcut span.shortcut-categories {
+		background-position: -60px -27px;
+	}
+	.jd-header-shortcut span.shortcut-cart {
+		background-position: -90px -27px;
+	}
+	.jd-header-shortcut span.shortcut-my-account {
+		background-position: -120px -27px;
+	}
+	.jd-header-shortcut span.shortcut-my-history {
+		background-position: -10px -105px;
+	}
+	.jd-header-icon-shortcut span {
+		width: 20px;
+		height: 20px;
+		background-position: -60px 0;
+		margin: 12px 10px 0 10px;
+	}
+	.jd-header-icon-back span, .jd-header-icon-cancel span, .jd-header-icon-search span, .jd-header-icon-shortcut span {
+		text-indent: -100px;
+		overflow: hidden;
+	}
+	.jd-header-icon-back span {
+		width: 20px;
+		height: 20px;
+		background-position: -20px 0;
+		margin: 12px 0 0 10px;
+	}
+	.hide{
+		display: none;
+	}
+	.sift-tab {
+		width: 100%;
+		height: 42px;
+		position: relative;
+		background-color: #fff;
+	}
+	.tab-lst {
+		display: -moz-box;
+		display: -webkit-box;
+		width: 100%;
+		position: relative;
+	}
+	.tab-lst li {
+		-moz-box-flex: 1;
+		-webkit-box-flex: 1;
+		width: 1%;
+		text-align: center;
+	}
+	.tab-lst li a.on {
+		color: #f15353 !important;
+	}
+	.jd-header, .jd-header a {
+		font-family: PingFangSC-Regular,Helvetica,"Droid Sans",Arial,sans-serif;
+		color: #252525;
+		text-decoration: none;
+		font-size: 16px;
+	}
+	.tab-lst li a {
+		display: block;
+		font-size: 13px;
+		color: #9a9a9a;
+		padding: 13px 0 8px 0;
+		line-height: 20px;
+		text-shadow: 1px 1px 1px rgba(255,255,255,.2);
+	}
+
+	#tabs {
+		overflow: hidden;
+		width: 100%;
+		background-color: #fff;
+		font-family: SimHei,"Helvetica Neue",Arial,"Droid Sans",sans-serif;
+		position: relative;
+	}
+	#tabs::before {
+		position: absolute;
+		content: '';
+		-webkit-transform: scaleY(.5);
+		transform: scaleY(.5);
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 1px;
+		border-bottom: 1px solid #e2e2e2;
+		z-index: 10;
+	}
+	.tab-item {
+		float: left;
+		overflow: hidden;
+		width: 20%;
+		text-align: center;
+		white-space: nowrap;
+		color: #9a9a9a;
+		-webkit-tap-highlight-color: transparent;
+	}
+	.tab-assess-title {
+		font-size: 12px;
+		line-height: 12px;
+		padding-top: 10px;
+		padding-bottom: 5px;
+	}
+	.tab-assess-num {
+		font-size: 11px;
+		line-height: 11px;
+		padding-bottom: 9px;
+	}
+	.tab-hover {
+		color: #f15353;
+	}
+
+
+</style>
+<style>
+
+
+
+
+	.new-wt { background-color: #f0f2f5;  }
+	.header-slider {  position: relative;  width: 100%;  overflow: hidden;  }
+	.header-slider-con {  overflow: hidden;  }
+	.header-slider-item {  float: left;  overflow: hidden;  display: inline;  width: 100%;  }
+	.page-content {  background-color: #f0f2f5;  }
+	.scroll-imgs {  text-align: center;  background-color: #fff;  height: auto;  font-size: 0;  }
+	.slide {  width: 320px;  height: 320px;  overflow: hidden;  display: inline-block;  position: relative;  }
+	.slide .tittup {  width: 38px;  height: 100%;  display: block;  position: absolute;  right: -45px;  top: 0;  display: -webkit-box;  -webkit-box-align: center;  }
+	.slide .arrow-box {  width: 15px;  height: 15px;  position: relative;  -webkit-transition: 1s;  transition: 1s;  }
+	.slide .arrow {
+		width: 15px;
+		height: 15px;
+		display: block;
+		background-color: #fff;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: url(../images/5.4/product-detail-sprites-mjs.png?v=1) no-repeat #fff;
+		background-size: 100px 100px;
+		background-position: 0 -67px;
+	}
+	.slide .arrow2 {
+		width: 15px;
+		height: 15px;
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: url(../images/5.4/product-detail-sprites-mjs.png?v=1) no-repeat #fff;
+		background-size: 100px 100px;
+		background-position: -15px -67px;
+	}
+	.slide .tittup .inner {
+		width: 18px;
+		display: block;
+		font-size: 12px;
+		color: #252525;
+		margin-left: 7px;
+		line-height: 17px;
+	}
+	.page-nub {
+		height: 50px;
+		width: 100%;
+		line-height: 50px;
+		text-align: center;
+		position: relative;
+		z-index: 100;
+	}
+	.slide .page-nub {
+		font-size: 16px;
+		z-index: 11;
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		-webkit-border-radius: 50%;
+		background: rgba(0,0,0,.15);
+		right: 15px;
+		bottom: 11px;
+		text-align: center;
+		line-height: 40px;
+		overflow: hidden;
+	}
+	.slide .fz18 {
+		font-size: 14px;
+		display: inline-block;
+		color: #fff;
+		margin-right: -3px;
+	}
+	.page-nub em {
+		font-style: normal;
+		font-size: 15px;
+	}
+	.slide .nub-bg {
+		display: inline-block;
+		color: #fff;
+		font-size: 12px;
+	}
+	.slide .fz12 {
+		font-size: 12px;
+		color: #fff;
+		margin-left: -3px;
+	}
+
+	.slide ul li {
+		width: 320px;
+		height: 320px;
+		visibility: visible;
+		position: relative;
+		float: left;
+		display: -webkit-box;
+		-webkit-box-pack: center;
+		-webkit-box-align: center;
+		background-color: #fff;
+		background-size: 100% 100%;
+	}
+	.price-floor {
+		padding-bottom: 10px;
+		padding-top: 7px;
+	}
+	.goods-part {
+		padding-left: 10px;
+		background-color: #fff;
+	}
+	.bdr-tb {
+		position: relative;
+	}
+	.bdr-tb::before {
+		position: absolute;
+		content: '';
+		-webkit-transform: scaleY(.5);
+		transform: scaleY(.5);
+		top: -1px;
+		left: 0;
+		width: 100%;
+		height: 1px;
+		border-top: 1px solid #e3e5e9;
+		z-index: 10;
+	}
+	.bdr-b {
+		position: relative;
+	}
+
+	.basic-info .prod-title {
+		position: relative;
+	}
+
+	.prod-title a {
+		text-underline: none;
+		display: block;
+	}
+	.prod-title .title-text-wrap {
+		display: inline-block;
+		font-size: 0;
+		color: #232326;
+		margin-right: 10px;
+		line-height: 20px;
+		text-align: left;
+	}
+	.prod-title .title-text-wrap .title-text {
+		font-size: 16px;
+		color: #232326;
+		line-height: 20px;
+	}
+	.basic-info .prod-price-wrap .prod-price {
+		font-size: 23px;
+		font-family: Helvetica;
+		color: #f23030;
+		font-weight: 700;
+		line-height: 23px;
+		float: left;
+		margin-top: 7px;
+		margin-right: 6px;
+	}
+	.yang-pic {
+		float: left;
+		display: block;
+		background: url(<{""|base_url}>static/img/product-detail-sprites-mjs.png) no-repeat 0 0;
+		background-size: 100px 100px;
+		background-position: -14px -17px;
+		width: 10px;
+		height: 12px;
+		margin-top: 7px;
+	}
+	.yang-pic-price {
+		display: block;
+		float: left;
+		margin-left: 3px;
+		line-height: 23px;
+	}
+	.big-price {
+		display: inline-block;
+		font-size: 23px;
+		line-height: 23px;
+	}
+	.small-price {
+		display: inline-block;
+		font-size: 17px;
+		line-height: 17px;
+	}
+	.basic-info .prod-price-wrap .prod-price:after {
+		font-size: 0;
+		display: block;
+		visibility: hidden;
+		clear: both;
+		height: 0;
+		content: '';
+	}
+	.depreciate-arrival-inform-box {
+		float: right;
+		margin-right: 10px;
+		margin-top: 5px;
+		z-index: 4000;
+		overflow: hidden;
+		height: 26px;
+		width: 63px;
+	}
+	.depreciate-arrival-inform {
+		border: 1px solid #bfbfbf;
+		color: #686868;
+		font-size: 24px;
+		height: 50px;
+		width: 124px;
+		line-height: 50px;
+		text-align: center;
+		border-radius: 6px;
+		-webkit-border-radius: 6px;
+		transform: scale(.5,.5);
+		-webkit-transform: scale(.5,.5);
+		transform-origin: left top;
+		-webkit-transform-origin: left top;
+	}
+	.basic-info .prod-price-wrap:after {
+		font-size: 0;
+		display: block;
+		visibility: hidden;
+		clear: both;
+		height: 0;
+		content: '';
+	}
+	.basic-info .prod-act {
+		font-size: 13px;
+		color: #81838e;
+		margin: 11px 10px 0 0;
+		line-height: 17px;
+		text-align: justify;
+	}
+	.borb::after {
+		border-bottom: 0 solid #e3e5e9;
+	}
+	.bdr-b::after {
+		position: absolute;
+		content: '';
+		-webkit-transform: scaleY(.5);
+		transform: scaleY(.5);
+		bottom: -1px;
+		left: 0;
+		width: 100%;
+		height: 1px;
+		border-bottom: 1px solid #e3e5e9;
+		z-index: 10;
+	}
+
+	.bdr-tb::after {
+		position: absolute;
+		content: '';
+		-webkit-transform: scaleY(.5);
+		transform: scaleY(.5);
+		bottom: -1px;
+		left: 0;
+		width: 100%;
+		height: 1px;
+		border-bottom: 1px solid #e3e5e9;
+		z-index: 10;
+	}
+	.mar-t {
+		margin-top: 9px;
+	}
+	.goods-part {
+		padding-left: 10px;
+		background-color: #fff;
+	}
+	.bdr-tb {
+		position: relative;
+	}
+	.bdr-tb::before {
+		position: absolute;
+		content: '';
+		-webkit-transform: scaleY(.5);
+		transform: scaleY(.5);
+		top: -1px;
+		left: 0;
+		width: 100%;
+		height: 1px;
+		border-top: 1px solid #e3e5e9;
+		z-index: 10;
+	}
+	.prod-whitebar {
+		padding: 15px 0;
+		position: relative;
+	}
+	.prod-whitebar .part-note-msg {
+		float: left;
+	}
+	.part-note-msg {
+		display: inline-block;
+		line-height: 15px;
+		font-size: 13px;
+		color: #81838e;
+		width: 26px;
+		white-space: normal;
+		height: auto;
+	}
+	.prod-whitebar-txt {
+		margin-left: 34px;
+		font-size: 13px;
+		color: #252525;
+		line-height: 15px;
+		margin-right: 28px;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
+	 .prod-coupon, .prod-spec {
+		height: auto;
+		padding-top: 15px;
+		font-size: 0;
+		padding-bottom: 15px;
+	}
+	.part-note-msg {
+		display: inline-block;
+		line-height: 15px;
+		font-size: 13px;
+		color: #81838e;
+		width: 26px;
+		white-space: normal;
+		height: auto;
+	}
+	.coupon-total-nums {
+		height: 15px;
+		display: inline-block;
+		line-height: 15px;
+		font-size: 13px;
+		color: #848689;
+		letter-spacing: 1px;
+		float: right;
+		margin-right: 10px;
+	}
+	.coupon-slider {
+		margin-left: 27px;
+		white-space: nowrap;
+		overflow: hidden;
+		margin-top: 10px;
+	}
+	.coupons-container {
+		height: 62px;
+		overflow: hidden;
+	}
+	.jd-slider-container {
+		-webkit-transition: .5s;
+	}
+	.prod-promotion {
+		padding-top: 15px;
+		padding-bottom: 11px;
+	}
+	.prod-promotion-container {
+		position: relative;
+	}
+	.prod-promotion-container .part-note-msg {
+		position: absolute;
+	}
+	.part-note-msg {
+		display: inline-block;
+		line-height: 15px;
+		font-size: 13px;
+		color: #81838e;
+		width: 26px;
+		white-space: normal;
+		height: auto;
+	}
+	.promotion-down .promotion-content {
+		max-height: 62px;
+		overflow: hidden;
+	}
+	.promotion-content {
+		margin: 0 35px 0 34px;
+	}
+	.promotion-down .promotion-item {
+		margin-bottom: 8px;
+		line-height: 15px;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+		vertical-align: top;
+	}
+	.promotion-down .promotion-info {
+		display: none;
+	}
+	.promotion-item.promotion-info {
+		font-size: 13px;
+		line-height: 15px;
+		color: #252525;
+		vertical-align: top;
+	}
+	.promotion-down .promotion-item {
+		margin-bottom: 8px;
+		line-height: 15px;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+	}
+
+	.promotion-down .label-icon-div {
+		vertical-align: top;
+	}
+	.label-icon-div {
+		font-style: normal;
+		display: inline-block;
+		height: 14px;
+		line-height: 20px;
+		font-size: 0;
+		width: auto;
+		border-radius: 2px;
+		position: relative;
+		box-sizing: border-box;
+		overflow: hidden;
+	}
+	.have-not-icon-div::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		border: 1px solid #f23030;
+		border-radius: 3px;
+		transform: scale(.5,.5);
+		-webkit-transform: scale(.5,.5);
+		transform-origin: left top;
+		-webkit-transform-origin: left top;
+		box-sizing: border-box;
+		height: 28px;
+		width: 200%;
+		z-index: 1;
+	}
+	.label-text {
+		display: inline-block;
+		padding: 2px 2px;
+		font-size: 10px;
+		color: #f23030;
+		line-height: 10px;
+		height: 14px;
+	}
+	.promotion-item a {
+		margin-left: 5px;
+	}
+	.promotion-item .promotion-item-text {
+		font-size: 13px;
+		color: #252525;
+		line-height: 15px;
+		vertical-align: top;
+	}
+	.promotion-down .icon-arrow-right {
+		display: none;
+	}
+
+	.promotion-down .icon-arrow-position {
+		background-position: 3px 6px;
+		top: 0;
+	}
+	.icon-arrow {
+		position: absolute;
+		right: 7px;
+		width: 15px;
+		height: 15px;
+		background-image: url(<{""|base_url}>static/img/product-detail-sprites-mjs.png);
+		background-repeat: no-repeat;
+		background-size: 100px 100px;
+	}
+	.promotion-item a {
+		margin-left: 5px;
+	}
+	.promotion-down .icon-arrow-position {
+		background-position: 3px 6px;
+		top: 0;
+	}
+
+	.borb::after {
+		border-bottom: 0 solid #e3e5e9;
+	}
+	.bdr-b::after {
+		position: absolute;
+		content: '';
+		-webkit-transform: scaleY(.5);
+		transform: scaleY(.5);
+		bottom: -1px;
+		left: 0;
+		width: 100%;
+		height: 1px;
+		border-bottom: 1px solid #e3e5e9;
+		z-index: 10;
+	}
+	.bdr-tb::after {
+		position: absolute;
+		content: '';
+		-webkit-transform: scaleY(.5);
+		transform: scaleY(.5);
+		bottom: -1px;
+		left: 0;
+		width: 100%;
+		height: 1px;
+		border-bottom: 1px solid #e3e5e9;
+		z-index: 10;
+	}
+	.promotion-up .promotion-item {
+		margin-bottom: 10px;
+	}
+	.promotion-up .icon-arrow-position {
+		background-position: 3px -5px;
+		top: 0;
+	}
+	.icon-arrow-right {
+		background-position: 5px -16px;
+	}
+
+
+
+
+
+
+</style>
+<div class="m_common_new_top">
+	<div id="content"></div>
+	<div  style="width: 1903px;" class="jd-header">
+		<div class="jd-header-new-bar" id="itemProductHead">
+			<div id="m_common_header_goback" class="jd-header-icon-back"><span></span></div>
+				<ul class="jd-header-title" id="header-tabs">
+					<li class="header-tab-item" id="detailView">
+						<p class="header-tab-title  " >商品</p>
+					</li>
+					<li class="header-tab-item " id="detailInfo" >
+						<p class="header-tab-title  ">详情</p>
+					</li>
+					<li class="header-tab-item " id="pingjia">
+						<p class="header-tab-title ">评价</p>
+					</li>
+				</ul>
+			<div class="jd-header-icon-shortcut"><span></span></div>
+			<div class="header-bar-border"></div>
+		</div>
+		<ul id="m_common_header_shortcut" class="jd-header-shortcut hide">
+			<li id="m_common_header_shortcut_m_index">
+				<a class="J_ping" report-eventid="MCommonHead_home" report-pageparam="15658611435" href="//m.jd.com/index.html">
+					<span class="shortcut-home"></span>
+					<strong>首页</strong>
+				</a>
+			</li>
+			<li class="J_ping" report-eventid="MCommonHead_CategorySearch" report-pageparam="15658611435" id="m_common_header_shortcut_category_search">
+				<a href="//so.m.jd.com/category/all.html">
+					<span class="shortcut-categories"></span>
+					<strong>分类搜索</strong>
+				</a>
+			</li>
+			<li class="J_ping" report-eventid="MCommonHead_Cart" report-pageparam="15658611435" id="m_common_header_shortcut_p_cart">
+				<a href="//p.m.jd.com/cart/cart.action" id="html5_cart">
+					<span class="shortcut-cart"></span>
+					<strong>购物车</strong>
+				</a>
+			</li>
+			<li id="m_common_header_shortcut_h_home" class=" current">
+				<a class="J_ping" report-eventid="MCommonHead_MYJD" report-pageparam="15658611435" href="//home.m.jd.com/myJd/home.action?sid=4aef73d1d1897754f3ef00399b8be026">
+					<span class="shortcut-my-account"></span>
+					<strong>我的京东</strong>
+				</a>
+			</li>
+			<li id="m_common_header_shortcut_h_history" class=" current">
+				<a class="J_ping" report-eventid="MProductdetail_Cookies" report-pageparam="15658611435" href="//home.m.jd.com/myJd/history/wareHistory.action?functionId=liulanjilu">
+					<span class="shortcut-my-history"></span>
+					<strong>浏览记录</strong>
+				</a>
+			</li>
+		</ul>
+		<div id="fixed" class="sift-tab"  style="display: none" >
+			<ul class="tab-lst">
+				<li><a href="#"  value="wareInfo" class="on J_ping tab-lst-a" >商品介绍</a></li>
+				<li><a href="#"  value="wareStandard" class="J_ping tab-lst-a" >规格参数</a></li>
+				<li><a href="#"  value="warePack" class="J_ping tab-lst-a" >包装售后</a></li>
+			</ul>
+		</div>
+		<ul id="tabs" style="display: none" >
+			<li class="tab-item J_ping tab-hover"  >
+				<p class="tab-assess-title">全部评价</p>
+				<p class="tab-assess-num tab-assess-rednum">2    </p>
+			</li>
+			<li class="tab-item J_ping"  >
+				<p class="tab-assess-title">好评</p>
+				<p class="tab-assess-num">2
+				</p>
+			</li>
+			<li class="tab-item J_ping">
+				<p class="tab-assess-title">中评</p>
+				<p class="tab-assess-num">0    </p>
+			</li>
+			<li class="tab-item J_ping">
+				<p class="tab-assess-title">差评</p>
+				<p class="tab-assess-num">0    </p>
+			</li>
+			<li class="tab-item J_ping" >
+				<p class="tab-assess-title">有图</p>
+				<p class="tab-assess-num">0    </p>
+			</li>
+		</ul>
+	</div>
 </div>
 
+
+<div id="mainLayout">
+	<div id="mainStay" class="new-wt">
+		<div class="miblebox" id="goods-img-box" style="height:auto;">
+			<div class="hold-div-top" style="height:44px;"></div>
+			<div class="header-slider" style="width: 1903px;">
+				<div class="header-slider-con" style="width: 5709px; height: 1915px;">
+					<li class="header-slider-item" id="productTabLi" style="width: 1903px; height: 1915px;">
+						<div class="page-content" id="mainLayout">
+							<div class="scroll-imgs">
+								<div id="slide" class="slide" style="width: 640px; height: 640px; cursor: pointer;">
+									<ul style="width: 3200px; height: 640px;">
+										<li style="transition: all 0ms ease; height: 640px; width: 640px; transform: translate3d(0px, 0px, 0px);">
+											<img src="" alt="">
+										</li>
+									</ul>
+									<div class="tittup">
+										<div class="arrow-box" >
+											<em class="arrow"></em>
+											<em class="arrow2"></em>
+											<span class="inner"></span>
+										</div>
+									</div>
+									<div class="page-nub" id="slidePageNub">
+										<em data-slide-num="slideNub" class="fz18">1</em>
+										<em class="nub-bg">/</em>
+										<em data-slide-num="slideSum" class="fz12">5</em>
+									</div>
+
+								</div>
+
+							</div>
+							<div class="goods-part bdr-tb price-floor">
+								<div class="basic-info bdr-b borb">
+									<div class="prod-title">
+										<a href="" class="detailInfoClick J_ping" >
+											<span class="title-text-wrap">
+												<span class="title-text-wrap">
+													【男女款】Columbia哥伦比亚户外17秋冬新品钛金防水徒步鞋DM1222/DL1222 469/男款 45
+												</span>
+											</span>
+										</a>
+									</div>
+									<div id="js-normalPrice" class="prod-price-wrap" >
+										<div class="prod-price">
+											<span class="yang-pic"></span>
+											<span class="yang-pic-price" id="jdPrice-copy">
+												<span class="big-price">1499</span><span class="small-price">.00</span>
+											</span>
+										</div>
+										<div class="depreciate-arrival-inform-box">
+											<div class="depreciate-arrival-inform  J_ping" id="depreciateInformPr" report-pageparam="15658611435" report-eventid="MProductdetail_PriceNotice" report-eventlevel="5">降价通知</div>
+										</div>
+
+									</div>
+									<div class="prod-act">"立体轻盈防水 轻盈缓震技术 奥米• 户外抓地技术大底"</div>
+								</div>
+							</div>
+							<div id="couponActivity" class="goods-part bdr-tb mar-t">
+								<!-- 新增选择白条分期入口 开始-->
+								<div id="whiteBarInfo" data="【白条支付】首单立减5元" report-eventid="MProductdetail_Debt" report-eventlevel="4" class="prod-whitebar whitebar-flick bdr-b J_ping" style="display:none;">
+									<span class="part-note-msg">白条</span>
+									<div class="prod-whitebar-txt">【白条支付】首单立减5元</div>
+								</div>
+								<!-- 优惠券 -->
+								<div pop-conf="false" pop-data="true" class="prod-coupon bdr-b" id="couponDivShow" style="display:none">
+									<span class="part-note-msg">领券</span>
+									<span class="coupon-total-nums"></span>
+									<div class="coupon-slider J_ping" report-eventid="MProductdetail_CouponSlide" report-pageparam="15658611435" report-eventlevel="5">
+										<ul class="jd-slider-container coupons-container" id="couponlist"></ul>
+									</div>
+								</div>
+
+								<!-- 促销 start-->
+								<!-- 增加borb样式  mjs  20151030 -->
+								<!-- 促销 start-->
+								<!-- 增加borb样式  mjs  20151030 -->
+								<div class="prod-promotion bdr-b borb arrow-fold">
+									<!--promotion-up/down来控制展开还是缩起-->
+									<div class="prod-promotion-container promotion-down J_ping" id="prodPromotion"  >
+										<span class="part-note-msg">促销</span>
+										<div class="promotion-content arrow-fold">
+											<!--第一行提示信息 当点击的还是才会显示出来-->
+											<div class="promotion-item promotion-info">
+												<span>可享受以下优惠</span>
+											</div>
+											<!--优惠信息-->
+
+											<!--优惠信息-->
+											<div class="promotion-item item-import">
+												<i class="label-icon-div have-not-icon-div">
+													<span class="label-text">满减</span>
+												</i>
+												<a onclick="activityTrailer(&quot;//so.m.jd.com/list/itemSearch.action?activityId=5437559503&amp;skuId=15658611435&quot;,&quot;{\&quot;activitySTip\&quot;:\&quot;7Nq3z4Sx0ug2+EBRoRmg3l93AFN3rRZrPfHYm+oYvaoT9eDj7fXYGA==\&quot;}&quot;)" href="javascript:void(0)" report-eventid="MProductdetail_Promotion" report-eventlevel="5" report-eventparam="15658611435_https://so.m.jd.com/list/itemSearch.action?activityId=5437559503&amp;activitySTip=满590元减30元，满890元减50元&amp;skuId=15658611435" report-pageparam="15658611435">
+													<span class="promotion-item-text">满590元减30元，满890元减50元</span>
+													<span class="promotion-left"><em class="icon-arrow icon-arrow-right"></em></span>
+												</a>
+											</div>
+											<!--赠品信息-->
+
+											<!--套装优惠金额计算-->
+										</div>
+												<span class="promotion-left">
+													<em class="icon-arrow icon-arrow-position arrow-fold"></em>
+												</span>
+									</div>
+								</div>
+								<!-- 促销end-->
+
+								<!-- 调整样式分割线结束位置   mjs 20151030 -->
+							</div>
+						</div>
+					</li>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
 
 <div id="cart1" style="display:none;"  class="cart-concern-btm-fixed five-column">
@@ -80,6 +1078,66 @@
   </div>
 </div>
 <script>
+	/**
+	 * 导航切换
+	 */
+	$(".header-tab-item").click(function(){
+		$(this).find('p').addClass('header-tab-selected');
+		$(this).siblings().find('p').removeClass('header-tab-selected');
+		var nav=$(this).attr('id');
+		if(nav=='detailInfo')
+		{
+			$('#fixed').show();
+			$('#tabs').hide();
+		}
+		else if(nav=='pingjia')
+		{
+			$('#tabs').show();
+			$('#fixed').hide();
+		}else if(nav=='detailView')
+		{
+			$('#tabs').hide();
+			$('#fixed').hide();
+		}
+
+	})
+	/**
+	 * 首页 分类 等 切换
+	 */
+	$('.jd-header-icon-shortcut').click(function(){
+
+		$('#m_common_header_shortcut').toggleClass('hide');
+	})
+	/**
+	 * 详情 导航
+	 */
+	$('#fixed').find('li a').click(function(){
+		$(this).addClass('on').parents('li').siblings().find('a').removeClass('on');
+	});
+	/**
+	 * 评价 导航
+	 */
+	$('#tabs').find('li').click(function(){
+		$(this).addClass('tab-hover').siblings().removeClass('tab-hover');
+	})
+
+
+
+	/**
+	 * 促销
+	 */
+	$('.promotion-left').click(function(){
+
+		if($(this).parent().hasClass('promotion-down'))
+		{
+			$(this).parent().removeClass('promotion-down').addClass('promotion-up');
+		}
+		else
+		{
+			$(this).parent().removeClass('promotion-up').addClass('promotion-down');
+		}
+
+	})
 var default_product_id='<{$smarty.get.id}>';
 var product_id='<{$smarty.get.id}>';
 $('.flick-menu-close').bind('click',function(){

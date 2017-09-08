@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.20, created on 2017-07-25 09:31:34
+<?php /* Smarty version 2.6.20, created on 2017-08-15 13:57:19
          compiled from district_list.htm */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'substr', 'district_list.htm', 51, false),array('modifier', 'site_url', 'district_list.htm', 52, false),)), $this); ?>

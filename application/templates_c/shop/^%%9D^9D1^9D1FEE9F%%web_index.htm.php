@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.20, created on 2017-07-14 10:42:48
+<?php /* Smarty version 2.6.20, created on 2017-08-03 11:02:43
          compiled from web_index.htm */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'site_url', 'web_index.htm', 128, false),)), $this); ?>

@@ -50,27 +50,33 @@ class CI_Log {
 
 	/**
 	 * Path to save log files
-	 *
+	 * 保存log文件的路径
 	 * @var string
 	 */
 	protected $_log_path;
 
 	/**
 	 * File permissions
-	 *
+	 * 文件的权限
 	 * @var	int
 	 */
 	protected $_file_permissions = 0644;
 
 	/**
-	 * Level of logging
-	 *
+	 * Level of logging  允许写入日志的阈值，默认为1
+	 * 					 0 =Disables logging ,Error logging Turned off  不记录日志，错误日志关闭
+	 * 					 1 =Error Messages(including php errors)   		记录错误信息
+	 * 					 2 =Debug Messages								记录debug信息
+	 * 					 3 =informational Messages						记录提示信息
+	 * 					 4 =All Messages								记录全部信息
 	 * @var int
 	 */
 	protected $_threshold = 1;
 
 	/**
-	 * Array of threshold levels to log
+	 * Array of threshold levels to log  也是允许写日志的阈值，但与$_threshold有些不同
+	 * 									 比如设置配置文件$config['log_threshold'] =3,这个值会读到$_threshold属性中，那么写日志允许的level可以是1、2、3
+	 * 									 可是如果设置$config['log_threshold'] = array(3),那么系统会把这个3读到$_threshold_array数组中，写日志level为3，其他的1和2 不允许
 	 *
 	 * @var array
 	 */
@@ -167,6 +173,7 @@ class CI_Log {
 
 		$level = strtoupper($level);
 
+		//判断是否允许写入
 		if (( ! isset($this->_levels[$level]) OR ($this->_levels[$level] > $this->_threshold))
 			&& ! isset($this->_threshold_array[$this->_levels[$level]]))
 		{

@@ -29,11 +29,12 @@ class Base_Product_model extends CI_Model
         $CI->load->model('Base_get_model');
         return $CI->Base_get_model->get_row(tab_m('product'),$fields,$where);
     }
-    public function get_product_con_row($where)
+	
+    public function get_product_con_row($where,$fields='*')
     {
         $CI = & get_instance();
         $CI->load->model('Base_get_model');
-        return $CI->Base_get_model->get_row(tab_m('product_detail'),'*',$where);
+        return $CI->Base_get_model->get_row(tab_m('product_detail'),$fields,$where);
     }
 
     public function insert_product_con($arr)

@@ -60,11 +60,11 @@ class Base_gg_model extends CI_Model
         
     }
 
-    public function get_con_result($where,$fields='*')
+    public function get_con_result($where,$fields='*',$order_by=' id desc')
     {
         $CI = & get_instance();
         $CI->load->model('Base_get_model');
-        return $CI->Base_get_model->get_list(tab_m('cat_gg_con'),$fields,$where);
+        return $CI->Base_get_model->get_list(tab_m('cat_gg_con'),$fields,$where,$order_by);
     }
 
 }

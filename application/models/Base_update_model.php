@@ -36,6 +36,27 @@ class Base_update_model extends CI_Model
 		return $falg?true:false;
 	}	
 	
+	function  get_list($tab,$fields='*',$where='',$order_by=' id desc')
+	{
+		if(empty($where))
+			return array();
+		if($where[0]!=1&&empty($where[1]))
+			$this->db_one->where($where);
+			
+		return $this->db_one->select($fields)
+					->from($tab)
+					->order_by($order_by)
+					->get()
+					->result_array();
+	}
+	
+	
+	function query($sql)
+	{
+		$this->db_one->query($sql);			
+	}	
+	
+	
 	//特殊业务必须用到主表  如用户金额修改,前查询
 	function get_row($tab,$where,$fileds='*')
 	{
