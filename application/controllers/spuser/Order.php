@@ -34,7 +34,6 @@ class Order extends MY_Controller
      */
     public function order_cancel()
     {
-
         $orderId=$this->input->get('orderId',true);
         if(empty($orderId))
         {

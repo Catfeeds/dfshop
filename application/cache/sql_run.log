@@ -3429,3 +3429,465 @@ shop=======url[Product/detail]----
  [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
 
  [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/lists]----
+
+ [0]SELECT `a`.*FROM `dfshop_product` as `a`
+
+ [1]SELECT `a`.*FROM `dfshop_product` as `a`ORDER BY `a`.`id` desc LIMIT 15
+
+ [2]SELECT `cat`, `pid`, `id`FROM `dfshop_cat`ORDER BY `id` asc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/detail]----
+
+ [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
