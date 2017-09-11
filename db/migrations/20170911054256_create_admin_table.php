@@ -44,6 +44,6 @@ class CreateAdminTable extends AbstractMigration
             ->addIndex(array('status'))
             ->addIndex(array('user'))
             ->addIndex(array('group_id'))
-            ->create();
+            ->update();
     }
 }

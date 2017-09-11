@@ -4,6 +4,7 @@
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/inflector" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/fzaninotto/faker" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/illuminate/console" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/illuminate/container" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/illuminate/contracts" />
@@ -48,6 +49,7 @@
           <root url="file://D:/code" />
           <root url="file://$MODULE_DIR$/vendor/composer" />
           <root url="file://$MODULE_DIR$/vendor/doctrine/inflector" />
+          <root url="file://$MODULE_DIR$/vendor/fzaninotto/faker" />
           <root url="file://$MODULE_DIR$/vendor/illuminate/console" />
           <root url="file://$MODULE_DIR$/vendor/illuminate/container" />
           <root url="file://$MODULE_DIR$/vendor/illuminate/contracts" />
@@ -88,6 +90,7 @@
           <root url="file://D:/code" />
           <root url="file://$MODULE_DIR$/vendor/composer" />
           <root url="file://$MODULE_DIR$/vendor/doctrine/inflector" />
+          <root url="file://$MODULE_DIR$/vendor/fzaninotto/faker" />
           <root url="file://$MODULE_DIR$/vendor/illuminate/console" />
           <root url="file://$MODULE_DIR$/vendor/illuminate/container" />
           <root url="file://$MODULE_DIR$/vendor/illuminate/contracts" />

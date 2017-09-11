@@ -9,7 +9,7 @@ define('DEF_INDEX','web');
 define('CSRF_PROTECTION',0);
 define('WEB_DIR','');
 
-include(dirname(__FILE__).'/lib/ini.php');
+//include(dirname(__FILE__).'/lib/ini.php');
 
 
 /**
