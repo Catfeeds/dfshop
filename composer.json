@@ -1,0 +1,12 @@
+{
+    "name": "49896/dfshop",
+    "type": "project",
+    "authors": [
+        {
+            "name": "49896",
+            "email": "240023810@qq.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
