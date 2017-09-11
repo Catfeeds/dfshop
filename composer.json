@@ -8,5 +8,9 @@
         }
     ],
     "minimum-stability": "stable",
-    "require": {}
+    "require": {
+        "recca0120/laravel-tracy": "^1.8",
+        "vlucas/phpdotenv": "^2.4",
+        "robmorgan/phinx": "^0.9.1"
+    }
 }

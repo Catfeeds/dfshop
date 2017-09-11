@@ -1,5 +1,7 @@
 <?php
-
+	require'../vendor/autoload.php';
+	use Recca0120\LaravelTracy\Tracy;
+	Tracy::instance();
 //分销商后台
 define('WEB_NAME','shop');
 define('INDEX_PAGE',substr($_SERVER['SCRIPT_NAME'],1)?substr($_SERVER['SCRIPT_NAME'],1):'index.php');
@@ -7,7 +9,7 @@ define('DEF_INDEX','web');
 define('CSRF_PROTECTION',0);
 define('WEB_DIR','');
 
-include(dirname(__FILE__).'/lib/ini.php');	
+include(dirname(__FILE__).'/lib/ini.php');
 
 
 /**
@@ -326,6 +328,11 @@ $routing['function']   = '';
 		exit(3); // EXIT_CONFIG
 	}
 	define('VIEWPATH', $view_folder.DIRECTORY_SEPARATOR);
+
+
+
+
+
 /*
  * --------------------------------------------------------------------
  * LOAD THE BOOTSTRAP FILE
@@ -333,4 +340,5 @@ $routing['function']   = '';
  *
  * And away we go...
  */
+
 require_once BASEPATH.'/core/CodeIgniter.php';
