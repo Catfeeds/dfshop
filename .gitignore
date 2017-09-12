@@ -1,6 +1,14 @@
-application/templates_c
+application/templates_c/
 /.gitignore
 application/cache/
 application/logs/
 
 /vendor/
+.idea/dataSources.local.xml
+.idea/inspectionProfiles/
+.idea/workspace.xml
+.svn/
+
+views/admin/
+views/shop/
+views/spuser/

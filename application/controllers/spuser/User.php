@@ -19,7 +19,7 @@ class User extends MY_Controller
         if (!empty($_POST)) {
 
 
-            $this->load->library('session');
+           // $this->load->library('session');
 
             //验证码
             if (!isset($_POST['code']) || isset($_SESSION["authrand"]) && strtolower($_SESSION["authrand"]) !== trim(strtolower($_POST['code']))) {
@@ -35,8 +35,8 @@ class User extends MY_Controller
 
                     $this->ci_smarty->assign('succecc_msg', -1);
                 } else {
-                    $username = $this->input->post('username', true);
-                    $password = $this->input->post('password', true);
+                    $username = $this->input->post('username', TRUE);
+                    $password = $this->input->post('password', TRUE);
                     //=========验证通过
                     $this->load->model('Spuser_User_model');
                     $user = $this->Spuser_User_model->get_row('*', array('user' => $username, 'pass' => md5($password)));
@@ -116,7 +116,7 @@ class User extends MY_Controller
     public function reg()
     {
         if (!empty($_POST)) {
-            $this->load->library('session');
+           // $this->load->library('session');
 
             //验证码
             if (!isset($_POST['code']) || isset($_SESSION["authrand"]) && strtolower($_SESSION["authrand"]) !== trim(strtolower($_POST['code']))) {

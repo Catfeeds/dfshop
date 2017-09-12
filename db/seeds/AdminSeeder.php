@@ -2,7 +2,7 @@
 
 
 use Phinx\Seed\AbstractSeed;
-
+use Carbon\Carbon;
 class AdminSeeder extends AbstractSeed
 {
     /**
@@ -15,14 +15,18 @@ class AdminSeeder extends AbstractSeed
      */
     public function run()
     {
+
+        $faker = Faker\Factory::create('zh_CN');
         $admin = $this->table('dfshop_admin');
+        $admin->truncate();
         $data = [];
         foreach (range(1, 10) as $index) {
             $data[] = [
-                'user'     => 'user' . $index,
+                'user'     => $faker->email,
                 'password' => md5('123456'),
                 'group_id' => 0,
-                'name'     => 'name' . $index,
+                'name'     => $faker->name,
+                'lastlogotime'=>Carbon::now()->subDay(1)
             ];
         }
 

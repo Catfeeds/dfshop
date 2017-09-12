@@ -3945,3 +3945,2988 @@ shop=======url[Product/detail]----
  [0]SELECT *FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
 
  [1]SELECT `con`, `gg_con_title`, `gg_con_title_gg`, `gg_con_ids`, `select_md5`FROM `dfshop_cat_gg_product`WHERE `product_id` = '10009'ORDER BY `id` desc
+shop=======url[Product/lists]----
+
+ [0]SELECT `a`.*FROM `dfshop_product` as `a`
+
+ [1]SELECT `a`.*FROM `dfshop_product` as `a`ORDER BY `a`.`id` desc LIMIT 15
+
+ [2]SELECT `cat`, `pid`, `id`FROM `dfshop_cat`ORDER BY `id` asc
+spuser=======url[User/login]----
+
+ [0]SELECT *FROM `dfshop_user`WHERE `user` = 'jingfs'AND `pass` = 'e10adc3949ba59abbe56e057f20f883e'ORDER BY `id` desc
+spuser=======url[Spuser_index/info]----
+
+ [0]SELECT *FROM `dfshop_user`WHERE `id` = '1'ORDER BY `id` desc
+spuser=======url[Order/order_list]----
+
+ [0]SELECT *FROM `dfshop_product_order`
+
+ [1]SELECT *FROM `dfshop_product_order`ORDER BY `id` desc LIMIT 5
+
+ [2]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [3]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [4]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [5]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [6]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [7]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [8]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [9]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [10]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [11]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [12]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [13]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [14]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [15]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [16]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [17]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [18]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [19]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [20]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [21]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [22]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [23]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [24]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [25]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [26]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [27]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [28]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [29]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [30]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [31]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [32]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [33]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [34]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [35]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [36]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [37]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [38]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [39]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [40]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [41]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [42]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [43]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [44]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [45]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [46]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [47]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [48]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [49]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+spuser=======url[Order/order_list]----
+
+ [0]SELECT *FROM `dfshop_product_order`
+
+ [1]SELECT *FROM `dfshop_product_order`ORDER BY `id` desc LIMIT 5
+
+ [2]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [3]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [4]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [5]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [6]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [7]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [8]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [9]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [10]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [11]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [12]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [13]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [14]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [15]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [16]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [17]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [18]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [19]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [20]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [21]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [22]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [23]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [24]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [25]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [26]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [27]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [28]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [29]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [30]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [31]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [32]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [33]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [34]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [35]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [36]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [37]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [38]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [39]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [40]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [41]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [42]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [43]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [44]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [45]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [46]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [47]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [48]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [49]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+spuser=======url[Spuser_index/info]----
+
+ [0]SELECT *FROM `dfshop_user`WHERE `id` = '1'ORDER BY `id` desc
+spuser=======url[Order/order_list]----
+
+ [0]SELECT *FROM `dfshop_product_order`
+
+ [1]SELECT *FROM `dfshop_product_order`ORDER BY `id` desc LIMIT 5
+
+ [2]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [3]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [4]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [5]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [6]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [7]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [8]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [9]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [10]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [11]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [12]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [13]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [14]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [15]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [16]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [17]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [18]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [19]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [20]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [21]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [22]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [23]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [24]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [25]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [26]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [27]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [28]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [29]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [30]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [31]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [32]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [33]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [34]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [35]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [36]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [37]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [38]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [39]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [40]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [41]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [42]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [43]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [44]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [45]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [46]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [47]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [48]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [49]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+spuser=======url[Order/order_list]----
+
+ [0]SELECT *FROM `dfshop_product_order`
+
+ [1]SELECT *FROM `dfshop_product_order`ORDER BY `id` desc LIMIT 5
+
+ [2]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [3]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [4]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [5]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [6]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [7]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [8]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [9]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [10]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [11]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [12]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [13]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [14]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [15]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [16]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [17]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [18]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [19]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [20]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [21]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [22]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [23]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [24]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [25]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [26]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [27]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [28]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [29]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [30]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [31]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [32]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [33]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [34]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [35]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [36]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [37]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [38]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [39]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [40]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [41]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [42]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [43]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [44]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [45]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [46]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [47]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [48]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [49]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+spuser=======url[Order/order_list]----
+
+ [0]SELECT *FROM `dfshop_product_order`
+
+ [1]SELECT *FROM `dfshop_product_order`ORDER BY `id` desc LIMIT 5
+
+ [2]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [3]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [4]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [5]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [6]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [7]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [8]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [9]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [10]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [11]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [12]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [13]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [14]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [15]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [16]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [17]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [18]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [19]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [20]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [21]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [22]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [23]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [24]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [25]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [26]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [27]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [28]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [29]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [30]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [31]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [32]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [33]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [34]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [35]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [36]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [37]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [38]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [39]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [40]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [41]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [42]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [43]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [44]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [45]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [46]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [47]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [48]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [49]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+spuser=======url[Order/order_list]----
+
+ [0]SELECT *FROM `dfshop_product_order`
+
+ [1]SELECT *FROM `dfshop_product_order`ORDER BY `id` desc LIMIT 5
+
+ [2]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [3]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [4]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [5]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [6]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [7]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [8]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [9]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [10]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [11]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [12]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [13]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [14]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [15]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [16]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [17]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [18]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [19]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [20]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [21]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [22]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [23]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [24]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [25]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [26]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [27]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [28]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [29]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [30]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [31]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [32]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [33]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [34]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [35]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [36]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [37]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [38]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [39]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [40]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [41]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [42]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [43]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [44]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [45]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [46]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [47]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [48]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [49]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+spuser=======url[Order/order_list]----
+
+ [0]SELECT *FROM `dfshop_product_order`
+
+ [1]SELECT *FROM `dfshop_product_order`ORDER BY `id` desc LIMIT 5
+
+ [2]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [3]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [4]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [5]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [6]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [7]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [8]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [9]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [10]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [11]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [12]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [13]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [14]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [15]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [16]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [17]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [18]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [19]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [20]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [21]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [22]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [23]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [24]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [25]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [26]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [27]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [28]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [29]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [30]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [31]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [32]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [33]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [34]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [35]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [36]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [37]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [38]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [39]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [40]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [41]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [42]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [43]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [44]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [45]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [46]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [47]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [48]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [49]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+spuser=======url[Order/order_list]----
+
+ [0]SELECT *FROM `dfshop_product_order`
+
+ [1]SELECT *FROM `dfshop_product_order`ORDER BY `id` desc LIMIT 5
+
+ [2]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [3]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [4]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [5]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [6]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [7]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [8]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [9]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [10]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [11]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [12]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [13]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [14]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [15]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [16]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [17]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [18]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [19]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [20]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [21]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [22]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [23]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [24]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [25]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [26]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [27]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [28]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [29]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [30]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [31]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [32]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [33]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [34]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [35]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [36]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [37]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [38]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [39]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [40]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [41]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [42]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [43]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [44]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [45]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [46]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [47]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [48]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [49]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+spuser=======url[Order/order_list]----
+
+ [0]SELECT *FROM `dfshop_product_order`
+
+ [1]SELECT *FROM `dfshop_product_order`ORDER BY `id` desc LIMIT 5
+
+ [2]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [3]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [4]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [5]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [6]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [7]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [8]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [9]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [10]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [11]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [12]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [13]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [14]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [15]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [16]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [17]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [18]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [19]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [20]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [21]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [22]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [23]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [24]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [25]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [26]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [27]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [28]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [29]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [30]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [31]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [32]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [33]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [34]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [35]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [36]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [37]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [38]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [39]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [40]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [41]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [42]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [43]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [44]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [45]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [46]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [47]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [48]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [49]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+spuser=======url[Order/order_list]----
+
+ [0]SELECT *FROM `dfshop_product_order`
+
+ [1]SELECT *FROM `dfshop_product_order`ORDER BY `id` desc LIMIT 5
+
+ [2]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [3]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [4]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [5]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [6]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [7]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [8]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [9]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [10]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [11]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [12]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [13]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [14]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [15]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [16]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [17]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [18]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [19]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [20]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [21]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [22]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [23]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [24]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [25]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [26]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [27]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [28]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [29]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [30]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [31]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [32]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [33]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [34]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [35]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [36]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [37]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [38]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [39]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [40]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [41]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [42]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [43]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [44]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [45]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [46]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [47]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [48]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [49]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+spuser=======url[Order/order_list]----
+
+ [0]SELECT *FROM `dfshop_product_order`
+
+ [1]SELECT *FROM `dfshop_product_order`ORDER BY `id` desc LIMIT 5
+
+ [2]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [3]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [4]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [5]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [6]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [7]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [8]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [9]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [10]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [11]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [12]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [13]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [14]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [15]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [16]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [17]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [18]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [19]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [20]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [21]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [22]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [23]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [24]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [25]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [26]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [27]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [28]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [29]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [30]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [31]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [32]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [33]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [34]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [35]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [36]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [37]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [38]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [39]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [40]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [41]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [42]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [43]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [44]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [45]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [46]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [47]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [48]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [49]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+spuser=======url[Order/order_list]----
+
+ [0]SELECT *FROM `dfshop_product_order`
+
+ [1]SELECT *FROM `dfshop_product_order`ORDER BY `id` desc LIMIT 5
+
+ [2]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [3]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [4]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [5]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [6]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [7]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [8]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [9]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [10]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [11]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [12]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [13]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [14]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [15]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [16]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [17]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [18]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [19]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [20]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [21]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [22]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [23]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [24]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [25]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [26]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [27]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [28]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [29]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [30]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [31]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [32]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [33]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [34]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [35]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [36]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [37]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [38]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [39]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [40]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [41]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [42]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [43]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [44]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [45]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [46]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [47]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [48]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [49]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+spuser=======url[Order/order_list]----
+
+ [0]SELECT *FROM `dfshop_product_order`
+
+ [1]SELECT *FROM `dfshop_product_order`ORDER BY `id` desc LIMIT 5
+
+ [2]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [3]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [4]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [5]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [6]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [7]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [8]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [9]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [10]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [11]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [12]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [13]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [14]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [15]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [16]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [17]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [18]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [19]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [20]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [21]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [22]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [23]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [24]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [25]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [26]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [27]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [28]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [29]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [30]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [31]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [32]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [33]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [34]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [35]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [36]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [37]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [38]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [39]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [40]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [41]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [42]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [43]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [44]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [45]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [46]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [47]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [48]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [49]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+spuser=======url[Order/order_list]----
+
+ [0]SELECT *FROM `dfshop_product_order`
+
+ [1]SELECT *FROM `dfshop_product_order`ORDER BY `id` desc LIMIT 5
+
+ [2]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [3]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [4]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [5]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [6]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [7]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [8]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [9]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [10]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [11]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [12]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [13]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [14]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [15]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [16]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [17]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [18]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [19]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [20]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [21]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [22]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [23]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [24]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [25]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [26]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [27]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [28]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [29]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [30]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [31]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [32]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [33]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [34]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [35]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [36]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [37]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [38]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [39]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [40]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [41]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [42]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [43]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [44]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [45]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [46]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [47]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [48]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [49]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+spuser=======url[Order/order_list]----
+
+ [0]SELECT *FROM `dfshop_product_order`
+
+ [1]SELECT *FROM `dfshop_product_order`ORDER BY `id` desc LIMIT 5
+
+ [2]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [3]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [4]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [5]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [6]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [7]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [8]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [9]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [10]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [11]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [12]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [13]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [14]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [15]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [16]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [17]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [18]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [19]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [20]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [21]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [22]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [23]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [24]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [25]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [26]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [27]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [28]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [29]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [30]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [31]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [32]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [33]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [34]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [35]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [36]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [37]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [38]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [39]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [40]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [41]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [42]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [43]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [44]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [45]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [46]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [47]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [48]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [49]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+spuser=======url[Order/order_list]----
+
+ [0]SELECT *FROM `dfshop_product_order`
+
+ [1]SELECT *FROM `dfshop_product_order`ORDER BY `id` desc LIMIT 5
+
+ [2]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [3]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [4]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [5]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [6]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [7]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [8]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [9]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [10]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [11]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [12]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [13]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [14]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [15]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [16]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [17]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [18]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [19]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [20]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [21]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [22]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [23]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [24]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [25]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [26]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [27]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [28]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [29]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [30]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [31]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [32]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [33]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [34]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [35]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [36]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [37]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [38]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [39]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [40]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [41]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [42]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [43]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [44]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [45]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [46]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [47]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [48]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [49]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+spuser=======url[Order/order_list]----
+
+ [0]SELECT *FROM `dfshop_product_order`
+
+ [1]SELECT *FROM `dfshop_product_order`ORDER BY `id` desc LIMIT 5
+
+ [2]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [3]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [4]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [5]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [6]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [7]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [8]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [9]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [10]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [11]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [12]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [13]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [14]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [15]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [16]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [17]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [18]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [19]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [20]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [21]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [22]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [23]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [24]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [25]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [26]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [27]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [28]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [29]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [30]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [31]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [32]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [33]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [34]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [35]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [36]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [37]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [38]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [39]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [40]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [41]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [42]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [43]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [44]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [45]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [46]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [47]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [48]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [49]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+spuser=======url[Order/order_list]----
+
+ [0]SELECT *FROM `dfshop_product_order`
+
+ [1]SELECT *FROM `dfshop_product_order`ORDER BY `id` desc LIMIT 5
+spuser=======url[Order/order_list]----
+
+ [0]SELECT *FROM `dfshop_product_order`
+
+ [1]SELECT *FROM `dfshop_product_order`ORDER BY `id` desc LIMIT 5
+spuser=======url[Order/order_list]----
+
+ [0]SELECT *FROM `dfshop_product_order`
+
+ [1]SELECT *FROM `dfshop_product_order`ORDER BY `id` desc LIMIT 5
+
+ [2]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [3]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [4]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [5]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [6]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [7]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [8]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [9]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [10]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [11]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [12]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [13]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [14]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [15]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [16]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [17]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [18]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [19]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [20]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [21]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [22]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [23]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [24]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [25]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [26]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [27]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [28]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [29]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [30]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [31]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [32]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [33]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [34]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [35]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [36]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [37]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [38]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [39]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [40]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [41]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [42]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [43]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [44]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [45]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [46]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [47]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [48]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [49]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+spuser=======url[Order/order_list]----
+
+ [0]SELECT *FROM `dfshop_product_order`
+
+ [1]SELECT *FROM `dfshop_product_order`ORDER BY `id` desc LIMIT 5
+spuser=======url[Order/order_list]----
+
+ [0]SELECT *FROM `dfshop_product_order`
+
+ [1]SELECT *FROM `dfshop_product_order`ORDER BY `id` desc LIMIT 5
+
+ [2]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [3]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [4]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [5]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [6]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [7]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [8]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [9]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [10]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [11]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [12]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [13]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [14]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [15]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [16]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [17]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [18]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [19]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [20]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [21]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [22]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [23]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [24]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [25]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [26]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [27]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [28]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [29]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [30]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [31]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [32]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [33]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [34]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [35]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [36]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [37]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [38]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [39]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [40]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [41]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [42]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [43]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [44]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [45]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [46]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [47]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [48]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [49]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+spuser=======url[Order/order_list]----
+
+ [0]SELECT *FROM `dfshop_product_order`
+
+ [1]SELECT *FROM `dfshop_product_order`ORDER BY `id` desc LIMIT 5
+spuser=======url[Order/order_list]----
+
+ [0]SELECT *FROM `dfshop_product_order`
+
+ [1]SELECT *FROM `dfshop_product_order`ORDER BY `id` desc LIMIT 5
+
+ [2]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [3]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [4]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [5]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [6]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [7]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [8]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [9]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [10]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [11]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [12]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [13]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [14]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [15]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [16]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [17]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [18]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [19]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [20]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [21]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [22]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [23]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [24]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [25]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [26]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [27]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [28]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [29]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [30]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [31]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [32]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [33]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [34]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [35]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [36]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [37]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [38]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [39]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [40]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [41]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [42]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [43]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [44]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [45]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [46]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [47]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [48]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [49]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+spuser=======url[Order/order_list]----
+
+ [0]SELECT *FROM `dfshop_product_order`
+
+ [1]SELECT *FROM `dfshop_product_order`ORDER BY `id` desc LIMIT 5
+
+ [2]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [3]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [4]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [5]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [6]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [7]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [8]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [9]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [10]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [11]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [12]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [13]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [14]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [15]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [16]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [17]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [18]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [19]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [20]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [21]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [22]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [23]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [24]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [25]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [26]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [27]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [28]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [29]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [30]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [31]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [32]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [33]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [34]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [35]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [36]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [37]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [38]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [39]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [40]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [41]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [42]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [43]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [44]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [45]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [46]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [47]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [48]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [49]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+spuser=======url[Order/order_list]----
+
+ [0]SELECT *FROM `dfshop_product_order`
+
+ [1]SELECT *FROM `dfshop_product_order`ORDER BY `id` desc LIMIT 5
+
+ [2]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [3]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [4]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [5]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [6]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [7]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [8]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [9]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [10]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [11]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [12]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [13]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [14]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [15]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [16]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [17]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [18]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [19]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [20]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [21]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [22]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [23]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [24]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [25]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [26]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [27]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [28]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [29]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [30]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [31]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [32]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [33]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [34]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [35]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [36]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [37]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [38]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [39]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [40]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [41]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [42]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [43]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [44]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [45]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [46]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [47]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [48]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [49]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+spuser=======url[Order/order_list]----
+
+ [0]SELECT *FROM `dfshop_product_order`
+
+ [1]SELECT *FROM `dfshop_product_order`ORDER BY `id` desc LIMIT 5
+
+ [2]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [3]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [4]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [5]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [6]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [7]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [8]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [9]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [10]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [11]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [12]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [13]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [14]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [15]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [16]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [17]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [18]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [19]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [20]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [21]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [22]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [23]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [24]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [25]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [26]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [27]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [28]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [29]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [30]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [31]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [32]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [33]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [34]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [35]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [36]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [37]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [38]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [39]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [40]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [41]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [42]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [43]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [44]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [45]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [46]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [47]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [48]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [49]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+spuser=======url[Order/order_list]----
+
+ [0]SELECT *FROM `dfshop_product_order`
+
+ [1]SELECT *FROM `dfshop_product_order`ORDER BY `id` desc LIMIT 5
+
+ [2]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [3]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [4]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [5]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [6]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [7]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [8]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [9]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [10]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [11]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [12]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [13]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [14]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [15]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [16]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [17]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [18]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [19]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [20]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [21]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [22]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [23]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [24]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [25]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [26]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [27]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [28]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [29]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [30]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [31]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [32]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [33]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [34]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [35]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [36]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [37]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [38]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [39]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [40]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [41]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [42]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [43]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [44]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [45]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [46]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [47]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [48]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [49]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+spuser=======url[Order/order_list]----
+
+ [0]SELECT *FROM `dfshop_product_order`
+
+ [1]SELECT *FROM `dfshop_product_order`ORDER BY `id` desc LIMIT 5
+
+ [2]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [3]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [4]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [5]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [6]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [7]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [8]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [9]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [10]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [11]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [12]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [13]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [14]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [15]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [16]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [17]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [18]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [19]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [20]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [21]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [22]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [23]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [24]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [25]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [26]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [27]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [28]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [29]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [30]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [31]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [32]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [33]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [34]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [35]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [36]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [37]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [38]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [39]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [40]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [41]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [42]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [43]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [44]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [45]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [46]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [47]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [48]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [49]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+spuser=======url[Order/order_list]----
+
+ [0]SELECT *FROM `dfshop_product_order`
+
+ [1]SELECT *FROM `dfshop_product_order`ORDER BY `id` desc LIMIT 5
+
+ [2]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [3]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [4]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [5]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [6]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [7]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [8]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [9]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [10]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [11]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [12]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [13]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [14]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [15]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [16]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [17]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [18]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [19]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [20]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [21]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [22]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [23]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [24]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [25]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [26]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [27]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [28]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [29]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [30]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [31]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [32]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [33]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [34]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [35]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [36]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [37]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [38]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [39]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [40]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [41]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [42]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [43]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [44]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [45]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [46]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [47]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [48]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [49]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+spuser=======url[Order/order_list]----
+
+ [0]SELECT *FROM `dfshop_product_order`
+
+ [1]SELECT *FROM `dfshop_product_order`ORDER BY `id` desc LIMIT 5
+
+ [2]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [3]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [4]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [5]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [6]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [7]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [8]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [9]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [10]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [11]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [12]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [13]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [14]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [15]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [16]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [17]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [18]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [19]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [20]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [21]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [22]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [23]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [24]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [25]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [26]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [27]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [28]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [29]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [30]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [31]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [32]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [33]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [34]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [35]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [36]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [37]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [38]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [39]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [40]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [41]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [42]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [43]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [44]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [45]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [46]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [47]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [48]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [49]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+spuser=======url[Order/order_list]----
+
+ [0]SELECT *FROM `dfshop_product_order`WHERE `status` =0
+
+ [1]SELECT *FROM `dfshop_product_order`WHERE `status` =0ORDER BY `id` desc LIMIT 5
+spuser=======url[Order/order_list]----
+
+ [0]SELECT *FROM `dfshop_product_order`WHERE `status` = 1
+
+ [1]SELECT *FROM `dfshop_product_order`WHERE `status` = 1ORDER BY `id` desc LIMIT 5
+
+ [2]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [3]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [4]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [5]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [6]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [7]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [8]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [9]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [10]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [11]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [12]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [13]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+spuser=======url[Order/order_list]----
+
+ [0]SELECT *FROM `dfshop_product_order`WHERE `status` = 2
+
+ [1]SELECT *FROM `dfshop_product_order`WHERE `status` = 2ORDER BY `id` desc LIMIT 5
+
+ [2]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [3]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [4]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [5]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [6]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [7]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [8]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [9]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [10]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [11]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [12]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [13]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [14]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [15]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [16]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [17]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [18]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [19]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [20]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [21]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [22]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [23]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [24]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [25]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+spuser=======url[Order/order_list]----
+
+ [0]SELECT *FROM `dfshop_product_order`
+
+ [1]SELECT *FROM `dfshop_product_order`ORDER BY `id` desc LIMIT 5
+
+ [2]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [3]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [4]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [5]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [6]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [7]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [8]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [9]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [10]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [11]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [12]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [13]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [14]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [15]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [16]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [17]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [18]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [19]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [20]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [21]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [22]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [23]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [24]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [25]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [26]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [27]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [28]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [29]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [30]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [31]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [32]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [33]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [34]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [35]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [36]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [37]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [38]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [39]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [40]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [41]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [42]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [43]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [44]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [45]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [46]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [47]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [48]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [49]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+spuser=======url[Order/order_list]----
+
+ [0]SELECT *FROM `dfshop_product_order`WHERE `status` =0
+
+ [1]SELECT *FROM `dfshop_product_order`WHERE `status` =0ORDER BY `id` desc LIMIT 5
+spuser=======url[Order/order_list]----
+
+ [0]SELECT *FROM `dfshop_product_order`WHERE `status` = 1
+
+ [1]SELECT *FROM `dfshop_product_order`WHERE `status` = 1ORDER BY `id` desc LIMIT 5
+
+ [2]SELECT *FROM `dfshop_product_order_pro`ORDER BY `id` desc
+
+ [3]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [4]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10008'ORDER BY `id` desc
+
+ [5]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [6]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [7]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc
+
+ [8]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10000'ORDER BY `id` desc
+
+ [9]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10009'ORDER BY `id` desc
+
+ [10]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10005'ORDER BY `id` desc
+
+ [11]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10003'ORDER BY `id` desc
+
+ [12]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10002'ORDER BY `id` desc
+
+ [13]SELECT `pic`FROM `dfshop_product`WHERE `id` = '10001'ORDER BY `id` desc

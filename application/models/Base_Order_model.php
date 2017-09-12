@@ -52,17 +52,18 @@ class Base_Order_model  extends CI_Model
                 ->select_one('*',tab_m($this->_tableName))
                 ->num_rows();
         }
-
         $res=array();
         $de=$this->Base_page_model
             ->where($status)
             ->select_one('*',tab_m('product_order'))
             ->result_array($this->ci_page->firstRow,$this->ci_page->listRows,' id desc ');
+
         foreach ($de as $k=> $v)
         {
             $de[$k]['orderProList']=$this->Base_OrderPro_model->getList($v['id'],$v['buyer_id']);
         }
-       
+
+
 
         $res['list']=$de;
         $res['page']=$this->ci_page->prompt();
