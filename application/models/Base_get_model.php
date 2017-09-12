@@ -13,8 +13,15 @@ class Base_get_model extends CI_Model
 	{
 		if(empty($where))
 			return array();
-		if($where[0]!=1&&empty($where[1]))
-			$this->db_one->where($where);
+		if(!is_array($where))
+		{
+            $this->db_one->where($where);
+        }
+        else if($where[0]!=1&&empty($where[1]))
+        {
+            $this->db_one->where($where);
+        }
+
 			
 		return $this->db_one->select($fields)
 					->from($tab)
